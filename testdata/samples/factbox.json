@@ -1,0 +1,40 @@
+{
+  "uuid": "e1220a95-129b-40d8-906b-30a25a0d10ee",
+  "uri": "core://factbox/e1220a95-129b-40d8-906b-30a25a0d10ee",
+  "type": "core/factbox",
+  "title": "Facts of life",
+  "links": [
+    {
+      "rel": "byline",
+      "title": "TT/Journalist Name"
+    }
+  ],
+  "content": [
+    {
+      "type": "core/paragraph",
+      "data": {
+        "text": "Basic info"
+      }
+    },
+    {
+      "type": "tt/visual",
+      "data": {
+        "caption": "Illustrating photograph."
+      },
+      "links": [
+        {
+          "uri": "http://tt.se/media/image/sdlAh_UuIyXsC0",
+          "url": "https://tt.se/media/image/sdlAh_UuIyXsC0_NormalPreview.jpg",
+          "type": "tt/picture",
+          "data": {
+            "credit": "Photographer/TT",
+            "height": "683",
+            "hiresScale": "2.9052734375",
+            "width": "1024"
+          },
+          "rel": "self"
+        }
+      ]
+    }
+  ]
+}
