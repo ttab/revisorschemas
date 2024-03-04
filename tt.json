@@ -126,6 +126,37 @@
       ]
     },
     {
+      "match": {"type": {"const":"core/factbox"}},
+      "content": [
+        {
+          "name": "TT visual element",
+          "description": "This can be either a picture or a graphic",
+          "declares": {"type":"tt/visual"},
+          "data": {
+            "caption": {"allowEmpty":true}
+          },
+          "links": [
+            {
+              "declares": {"rel":"self"},
+              "attributes": {
+                "uri": {},
+                "url": {},
+                "type": {
+                  "enum": ["tt/picture", "tt/graphic"]
+                }
+              },
+              "data": {
+                "credit": {"allowEmpty":true},
+                "height": {"format":"int"},
+                "width": {"format":"int"},
+                "hiresScale": {"format":"float"}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "match": {"type": {"const":"core/article"}},
       "links": [
         {

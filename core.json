@@ -97,6 +97,109 @@
       "declares": "core/story"
     },
     {
+      "name": "Factbox",
+      "declares": "core/factbox",
+      "attributes": {
+        "title": {}
+      },
+      "links": [
+        {
+          "declares": {"rel":"byline"},
+          "attributes": {
+            "title": {}
+          }
+        }
+      ],
+      "content":[
+        {
+          "declares": {"type":"core/heading-1"},
+          "data": {
+            "text":{
+              "allowEmpty":true,
+              "format": "html"
+            }
+          }
+        },
+        {
+          "declares": {"type":"core/heading-2"},
+          "data": {
+            "text":{
+              "allowEmpty":true,
+              "format": "html"
+            }
+          }
+        },
+        {
+          "declares": {"type":"core/heading-3"},
+          "data": {
+            "text":{
+              "allowEmpty":true,
+              "format": "html"
+            }
+          }
+        },
+        {
+          "declares": {"type":"core/paragraph"},
+          "data": {
+            "text":{
+              "allowEmpty":true,
+              "format": "html"
+            }
+          }
+        },
+        {
+          "declares": {"type":"core/unordered-list"},
+          "content": [
+            {
+              "declares": {"type":"core/paragraph"},
+              "data": {
+                "text":{
+                  "allowEmpty":true,
+                  "format": "html"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "declares": {"type":"core/ordered-list"},
+          "content": [
+            {
+              "declares": {"type":"core/paragraph"},
+              "data": {
+                "text":{
+                  "allowEmpty":true,
+                  "format": "html"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Table",
+          "declares": {"type":"core/table"},
+          "data": {
+            "caption": {"allowEmpty":true, "optional":true},
+            "meta": {"allowEmpty":true},
+            "thead": {
+              "format": "html",
+              "htmlPolicy": "table",
+              "optional": true
+            },
+            "tbody": {
+              "format": "html",
+              "htmlPolicy": "table"
+            },
+            "tfoot": {
+              "format": "html",
+              "htmlPolicy": "table",
+              "optional": true
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "Person",
       "description": "Used to describe people",
       "declares": "core/person",
@@ -441,7 +544,12 @@
           ]
         },
         {
+          "name": "Inline factbox",
           "declares": {"type":"core/factbox"},
+          "deprecated": {
+            "label": "inline-factbox",
+            "doc": "Use 'core/factbox-v2' instead"
+          },
           "attributes": {
             "title": {"allowEmpty":true}
           },
@@ -451,6 +559,17 @@
           "blocksFrom":[
             {"docType":"core/article", "kind": "content", "global":true}
           ]
+        },
+        {
+          "name": "External factbox",
+          "declares": {"type":"core/factbox-v2"},
+          "attributes": {
+            "title": {"allowEmpty":true},
+            "uuid": {}
+          },
+          "data": {
+            "version": {"format":"int"}
+          }
         },
         {
           "name": "Table",
