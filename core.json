@@ -523,10 +523,33 @@
       "meta": [
         {
           "declares": {"type":"core/newsvalue"},
+          "maxCount": 1,
+          "attributes": {
+            "value": {
+              "description": "The assigned newsvalue, optional if score is used. Will become mandatory.",
+              "format": "int",
+              "optional": true
+            }
+          },
           "data": {
-            "duration": {"format":"int", "optional": true},
-            "score": {"format":"int"},
-            "end": {"format":"RFC3339", "optional":true}
+            "duration": {
+              "description": "Duration in seconds, can represent the halving time for the score in a scoring algorithm.",
+              "format":"int",
+              "optional": true
+            },
+            "score": {
+              "format":"int",
+              "optional": true,
+              "deprecated": {
+                "label": "newsvalue-score",
+                "doc": "use the value attribute instead"
+              }
+            },
+            "end": {
+              "description": "The cut-off time that the document has no newsvalue",
+              "format":"RFC3339",
+              "optional":true
+            }
           }
         }
       ],
@@ -784,7 +807,25 @@
             "registration": {"allowEmpty":true},
             "start": {"format":"RFC3339"},
             "end": {"format":"RFC3339"},
-            "priority": {"format":"int"}
+            "priority": {
+              "format":"int",
+              "optional": true,
+              "deprecated": {
+                "label": "event-prio",
+                "doc": "Use newsvalue block instead"
+              }
+            }
+          }
+        },
+        {
+          "description": "Newsvalue will become mandatory in the future",
+          "declares": {"type":"core/newsvalue"},
+          "maxCount": 1,
+          "attributes": {
+            "value": {
+              "description": "The assigned newsvalue",
+              "format":"int"
+            }
           }
         }
       ],
@@ -927,9 +968,27 @@
             "startDate": {"time":"2006-01-02"},
             "end": {"format":"RFC3339"},
             "endDate": {"time":"2006-01-02"},
-            "priority": {"format":"int"},
+            "priority": {
+              "format":"int",
+              "optional": true,
+              "deprecated": {
+                "label": "newscoverage-prio",
+                "doc": "Use newsvalue block instead"
+              }
+            },
             "publicDescription":{"allowEmpty":true},
             "slug": {"allowEmpty":true}
+          }
+        },
+        {
+          "description": "Newsvalue will become mandatory in the future",
+          "declares": {"type":"core/newsvalue"},
+          "maxCount": 1,
+          "attributes": {
+            "value": {
+              "description": "The assigned newsvalue",
+              "format":"int"
+            }
           }
         }
       ],
