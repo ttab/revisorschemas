@@ -269,6 +269,50 @@
       "declares": "core/channel"
     },
     {
+      "name": "Factbox",
+      "description": "A factbox that can be used in articles",
+      "declares": "core/factbox",
+      "content": [
+        {
+          "declares": {"type":"core/paragraph"},
+          "data": {
+            "text":{
+              "allowEmpty":true,
+              "format": "html"
+            }
+          }
+        },
+        {
+          "declares": {"type":"core/unordered-list"},
+          "content": [
+            {
+              "declares": {"type":"core/paragraph"},
+              "data": {
+                "text":{
+                  "allowEmpty":true,
+                  "format": "html"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "declares": {"type":"core/ordered-list"},
+          "content": [
+            {
+              "declares": {"type":"core/paragraph"},
+              "data": {
+                "text":{
+                  "allowEmpty":true,
+                  "format": "html"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Article",
       "description": "An editorial article",
       "declares": "core/article",
@@ -443,7 +487,8 @@
         {
           "declares": {"type":"core/factbox"},
           "attributes": {
-            "title": {"allowEmpty":true}
+            "title": {"allowEmpty":true},
+            "uuid": {"allowEmpty":true}
           },
           "data": {
             "byline": {"allowEmpty":true}
