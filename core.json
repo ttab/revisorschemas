@@ -272,6 +272,9 @@
       "name": "Factbox",
       "description": "A factbox that can be used in articles",
       "declares": "core/factbox",
+      "attributes": {
+        "title": {}
+      },
       "content": [
         {
           "declares": {"type":"core/paragraph"},

@@ -1,0 +1,19 @@
+{
+  "uuid": "8cd588f5-5b25-4c1e-88b4-a4c44a79ef4a",
+  "type": "core/factbox",
+  "title": "Rökt vättersik",
+  "content": [
+    {
+      "type": "core/paragraph",
+      "data": {
+        "text": "Vättersik är en laxfisk som får en särskild karaktär av den näringsfattiga Vättern, som är en kallvattensjö. Fisken röks sedan i en rökugn eldad med alved. På så sätt får fisken en djup sälta, tydlig röksmak och en sötsyrlig ton av tjära."
+      }
+    },
+    {
+      "type": "core/paragraph",
+      "data": {
+        "text": "Källa: Naturvårdsverket"
+      }
+    }
+  ]
+}
