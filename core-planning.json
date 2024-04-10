@@ -69,6 +69,21 @@
             },
             "priority": {
               "description": "The urgency of this planning item on a scale of 1 to 5 with 1 being the highest.",
+              "format": "int",
+              "optional": true,
+              "deprecated": {
+                "label": "planning-item-priority",
+                "doc": "use the newsvalue block instead"
+              }
+            }
+          }
+        },
+        {
+          "declares": {"type":"core/newsvalue"},
+          "maxCount": 1,
+          "attributes": {
+            "value": {
+              "description": "The assigned newsvalue, optional if score is used. Will become mandatory.",
               "format": "int"
             }
           }
