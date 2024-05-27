@@ -162,10 +162,20 @@
       ],
       "content": [
         {
-          "name": "Dateline",
-          "description": "TODO: there MUST be a better name for this!",
-          "declares": {"type":"tt/dateline"},
+          "name": "Vignette",
+          "description": "A short text describing the subject or location",
+          "declares": {"type":"tt/vignette"},
           "data": {"text":{"allowEmpty":true}}
+        },
+        {
+          "name": "Dateline",
+          "description": "Deprecated in favour of vignette",
+          "declares": {"type":"tt/dateline"},
+          "data": {"text":{"allowEmpty":true}},
+          "deprecated": {
+            "label": "dateline",
+            "doc": "Use tt/vignette instead"
+          }
         },
         {
           "name": "Question",
