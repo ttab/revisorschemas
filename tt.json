@@ -7,13 +7,7 @@
       "values": {
         "heading-3": {"forbidden":true},
         "heading-4": {"forbidden":true},
-        "vignette": {},
-        "dateline": {
-          "deprecated": {
-            "label": "dateline",
-            "doc": "Use 'vignette' instead"
-          }
-        }
+        "vignette": {}
       }
     }
   ],
@@ -190,7 +184,7 @@
           "data": {"text":{"allowEmpty":true}},
           "deprecated": {
             "label": "dateline",
-            "doc": "Use tt/vignette instead"
+            "doc": "Use core/text vignette instead"
           }
         },
         {
