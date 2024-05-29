@@ -1,6 +1,22 @@
 {
   "version": 1,
   "name": "TT",
+  "enums": [
+    {
+      "match": "core/text-roles",
+      "values": {
+        "heading-3": {"forbidden":true},
+        "heading-4": {"forbidden":true},
+        "vignette": {},
+        "dateline": {
+          "deprecated": {
+            "label": "dateline",
+            "doc": "Use 'vignette' instead"
+          }
+        }
+      }
+    }
+  ],
   "documents": [
     {
       "declares": "tt/grattis",

@@ -1,6 +1,20 @@
 {
   "version": 1,
   "name": "core",
+  "enums": [
+    {
+      "declare": "core/text-roles",
+      "name": "Text block roles",
+      "values": {
+        "heading-1": {},
+        "heading-2": {},
+        "heading-3": {},
+        "heading-4": {},
+        "preamble": {},
+        "blockquote": {}
+      }
+    }
+  ],
   "meta": [
     {
       "declares": {"type":"core/note"},
@@ -321,12 +335,31 @@
       "declares": "core/article",
       "content": [
         {
+          "declares": {"type":"core/text"},
+          "attributes": {
+            "role": {
+              "optional":true,
+              "enumReference": "core/text-roles"
+            }
+          },
+          "data": {
+            "text":{
+              "allowEmpty":true,
+              "format": "html"
+            }
+          }
+        },
+        {
           "declares": {"type":"core/heading-1"},
           "data": {
             "text":{
               "allowEmpty":true,
               "format": "html"
             }
+          },
+          "deprecated": {
+            "label": "h1",
+            "doc": "Use core/text{role=heading-1} instead"
           }
         },
         {
@@ -336,6 +369,10 @@
               "allowEmpty":true,
               "format": "html"
             }
+          },
+          "deprecated": {
+            "label": "h2",
+            "doc": "Use core/text{role=heading-2} instead"
           }
         },
         {
@@ -345,6 +382,10 @@
               "allowEmpty":true,
               "format": "html"
             }
+          },
+          "deprecated": {
+            "label": "h3",
+            "doc": "Use core/text{role=heading-3} instead"
           }
         },
         {
@@ -354,6 +395,10 @@
               "allowEmpty":true,
               "format": "html"
             }
+          },
+          "deprecated": {
+            "label": "h4",
+            "doc": "Use core/text{role=heading-4} instead"
           }
         },
         {
@@ -363,6 +408,10 @@
               "allowEmpty":true,
               "format": "html"
             }
+          },
+          "deprecated": {
+            "label": "paragraph",
+            "doc": "Use core/text instead"
           }
         },
         {
@@ -372,6 +421,10 @@
               "allowEmpty":true,
               "format": "html"
             }
+          },
+          "deprecated": {
+            "label": "preamble",
+            "doc": "Use core/text{role=preamble} instead"
           }
         },
         {
@@ -448,6 +501,10 @@
               "allowEmpty":true,
               "format": "html"
             }
+          },
+          "deprecated": {
+            "label": "blockquote",
+            "doc": "Use core/text{role=blockquote} instead"
           }
         },
         {
@@ -463,12 +520,25 @@
           "declares": {"type":"core/unordered-list"},
           "content": [
             {
+              "declares": {"type":"core/text"},
+              "data": {
+                "text":{
+                  "allowEmpty":true,
+                  "format": "html"
+                }
+              }
+            },
+            {
               "declares": {"type":"core/paragraph"},
               "data": {
                 "text":{
                   "allowEmpty":true,
                   "format": "html"
                 }
+              },
+              "deprecated": {
+                "label": "ul-paragraph",
+                "doc": "Use core/text instead"
               }
             }
           ]
@@ -477,12 +547,25 @@
           "declares": {"type":"core/ordered-list"},
           "content": [
             {
+              "declares": {"type":"core/text"},
+              "data": {
+                "text":{
+                  "allowEmpty":true,
+                  "format": "html"
+                }
+              }
+            },
+            {
               "declares": {"type":"core/paragraph"},
               "data": {
                 "text":{
                   "allowEmpty":true,
                   "format": "html"
                 }
+              },
+              "deprecated": {
+                "label": "ol-paragraph",
+                "doc": "Use core/text instead"
               }
             }
           ]
