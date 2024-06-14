@@ -34,7 +34,8 @@
     },
     {
       "id": "pagedateline-5b8149a71b05cef3c73af71ca95c555d",
-      "type": "tt/vignette",
+      "type": "core/text",
+      "role": "vignette",
       "data": {
         "text": "Fotboll"
       }

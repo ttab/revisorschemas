@@ -172,12 +172,6 @@
       ],
       "content": [
         {
-          "name": "Vignette",
-          "description": "A short text describing the subject or location",
-          "declares": {"type":"tt/vignette"},
-          "data": {"text":{"allowEmpty":true}}
-        },
-        {
           "name": "Dateline",
           "description": "Deprecated in favour of vignette",
           "declares": {"type":"tt/dateline"},
