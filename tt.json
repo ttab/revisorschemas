@@ -1,6 +1,16 @@
 {
   "version": 1,
   "name": "TT",
+  "enums": [
+    {
+      "match": "core/text-roles",
+      "values": {
+        "heading-3": {"forbidden":true},
+        "heading-4": {"forbidden":true},
+        "vignette": {}
+      }
+    }
+  ],
   "documents": [
     {
       "declares": "tt/grattis",
@@ -163,9 +173,13 @@
       "content": [
         {
           "name": "Dateline",
-          "description": "TODO: there MUST be a better name for this!",
+          "description": "Deprecated in favour of vignette",
           "declares": {"type":"tt/dateline"},
-          "data": {"text":{"allowEmpty":true}}
+          "data": {"text":{"allowEmpty":true}},
+          "deprecated": {
+            "label": "dateline",
+            "doc": "Use core/text vignette instead"
+          }
         },
         {
           "name": "Question",
