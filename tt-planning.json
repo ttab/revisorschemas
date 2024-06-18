@@ -33,8 +33,7 @@
               "maxCount": 1,
               "attributes": {
                 "value": {
-                  "labels": ["keyword"],
-                  "hints": {"alias": ["slug"]}
+                  "labels": ["keyword"]
                 }
               }
             }

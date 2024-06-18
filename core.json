@@ -229,10 +229,17 @@
             }
           },
           "data": {
-            "email": {"optional":true},
+            "email": {
+              "optional": true,
+              "labels": ["keyword"]
+            },
             "name": {"optional":true},
-            "mobile": {"optional":true},
-            "phone": {"optional":true},
+            "mobile": {"optional":true,
+              "labels": ["keyword"]
+            },
+            "phone": {"optional":true,
+              "labels": ["keyword"]
+            },
             "postalCode": {
               "description": "TODO: only in 83d072c8-fb07-47e2-9c5b-85f4453835f6?",
               "optional": true
