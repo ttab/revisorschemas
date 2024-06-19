@@ -55,6 +55,10 @@
             "value": {
               "labels": ["keyword"]
             }
+          },
+          "deprecated": {
+            "label": "planning_sector",
+            "doc": "Use core/section instead"
           }
         }
       ]

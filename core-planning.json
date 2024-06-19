@@ -20,6 +20,17 @@
           }
         },
         {
+          "name": "Section for the planning item",
+          "declares": {
+            "type": "core/section",
+            "rel": "section"
+          },
+          "attributes": {
+            "uuid": {},
+            "title": {}
+          }
+        },
+        {
           "name": "The category of the planning item",
           "declares": {
             "rel": "category",
@@ -172,6 +183,17 @@
             }
           ],
           "links": [
+            {
+              "name": "Section",
+              "declares": {
+                "type": "core/section",
+                "rel": "section"
+              },
+              "attributes": {
+                "uuid": {},
+                "title": {}
+              }
+            },
             {
               "name": "Assignee",
               "declares": {
