@@ -296,7 +296,26 @@
       "attributes": {
         "title": {}
       },
+      "links": [
+        {
+          "declares": {"rel":"source"},
+          "attributes": {
+            "title": {},
+            "uri": {"optional": true},
+            "url": {"optional": true}
+          }
+        }
+      ],
       "content": [
+        {
+          "declares": {"type":"core/text"},
+          "data": {
+            "text":{
+              "allowEmpty":true,
+              "format": "html"
+            }
+          }
+        },
         {
           "declares": {"type":"core/paragraph"},
           "data": {
@@ -304,6 +323,10 @@
               "allowEmpty":true,
               "format": "html"
             }
+          },
+          "deprecated": {
+            "label": "paragraph",
+            "doc": "Use core/text instead"
           }
         },
         {
@@ -316,6 +339,10 @@
                   "allowEmpty":true,
                   "format": "html"
                 }
+              },
+              "deprecated": {
+                "label": "paragraph",
+                "doc": "Use core/text instead"
               }
             }
           ]
@@ -330,6 +357,10 @@
                   "allowEmpty":true,
                   "format": "html"
                 }
+              },
+              "deprecated": {
+                "label": "paragraph",
+                "doc": "Use core/text instead"
               }
             }
           ]
@@ -700,7 +731,10 @@
             "title": {}
           },
           "data": {
-            "email": {"optional":true},
+            "email": {
+              "optional":true,
+              "labels": ["keyword"]
+            },
             "firstName": {"optional":true},
             "lastName": {"optional":true},
             "longDescription": {"optional":true},
@@ -752,7 +786,10 @@
             "title": {"allowEmpty":true}
           },
           "data": {
-            "email": {"optional":true},
+            "email": {
+              "optional":true,
+              "labels": ["keyword"]
+            },
             "firstName": {"optional":true},
             "lastName": {"optional":true},
             "phone": {"optional":true}
@@ -829,7 +866,10 @@
             "role": {"enum":["home", "office"]}
           },
           "data": {
-            "email": {"optional":true},
+            "email": {
+              "optional":true,
+              "labels": ["keyword"]
+            },
             "name": {"optional":true},
             "address": {"optional":true},
             "locality": {"optional":true},
@@ -899,7 +939,10 @@
             "title": {}
           },
           "data": {
-            "email": {"optional":true},
+            "email": {
+              "optional":true,
+              "labels": ["keyword"]
+            },
             "shortDescription": {"optional":true},
             "firstName": {"optional":true},
             "lastName": {"optional":true}
@@ -1066,7 +1109,10 @@
           "data": {
             "city": {"optional":true},
             "country": {"optional":true},
-            "email": {"optional":true},
+            "email": {
+              "optional":true,
+              "labels": ["keyword"]
+            },
             "phone": {"optional":true},
             "streetAddress": {"optional":true}
           }
