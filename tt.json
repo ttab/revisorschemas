@@ -212,7 +212,14 @@
                 "credit": {"allowEmpty":true},
                 "height": {"format":"int"},
                 "width": {"format":"int"},
-                "hiresScale": {"format":"float"}
+                "hiresScale": {
+                  "format": "float",
+                  "optional": true,
+                  "deprecated": {
+                    "label": "hires-scale",
+                    "doc": "Not supported anymore"
+                  }
+                }
               }
             }
           ]
