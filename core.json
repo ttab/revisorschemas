@@ -752,6 +752,18 @@
               "allowEmpty": true,
               "labels": ["keyword"]
             }
+          },
+          "deprecated": {
+            "label": "subject-section",
+            "doc": "Use rel=section instead"
+          }
+        },
+        {
+          "name": "Section",
+          "declares": {"rel":"section", "type": "core/section"},
+          "attributes": {
+            "uuid": {},
+            "title": {"allowEmpty":true}
           }
         },
         {

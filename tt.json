@@ -150,6 +150,13 @@
           }
         },
         {
+          "name": "Subtype",
+          "declares": {"rel":"subtype"},
+          "attributes": {
+            "uri": {"glob": ["tt://subtype/*"]}
+          }
+        },
+        {
           "name": "Content size",
           "description": "Specifies the content sizes we can use",
           "match": {
