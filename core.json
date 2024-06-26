@@ -120,8 +120,14 @@
           "declares": {"type":"core/person"},
           "count": 1,
           "data": {
-            "firstName": {"optional":true},
-            "lastName": {"optional":true},
+            "firstName": {
+              "optional":true,
+              "labels": ["sortable"]
+            },
+            "lastName": {
+              "optional":true,
+              "labels": ["sortable"]
+            },
             "employer": {"optional":true},
             "title": {"optional":true}
           }
@@ -217,8 +223,12 @@
           "declares": {"type":"core/author"},
           "data": {
             "initials": {"optional":true},
-            "firstName": {},
-            "lastName": {}
+            "firstName": {
+              "labels": ["sortable"]
+            },
+            "lastName": {
+              "labels": ["sortable"]
+            }
           }
         },
         {
