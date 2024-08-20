@@ -1155,6 +1155,13 @@
           "attributes": {
             "url": {}
           }
+        },
+        {
+          "name": "Twitter account for the organisation",
+          "declares": {"rel":"see-also", "type": "core/social+twitter"},
+          "data": {
+            "handle": {}
+          }
         }
       ]
     },
