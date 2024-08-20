@@ -1136,7 +1136,8 @@
               "labels": ["keyword"]
             },
             "phone": {"optional":true},
-            "streetAddress": {"optional":true}
+            "streetAddress": {"optional":true},
+            "postalCode": {"optional":true}
           }
         }
       ],
