@@ -662,7 +662,10 @@
               "declares": {"type":"core/tweet", "rel":"self"},
               "attributes": {
                 "uri": {"glob":["core://tweet/*"]},
-                "url": {"glob":["https://twitter.com/**"]}
+                "url": {"glob":[
+                  "https://twitter.com/**",
+                  "https://x.com/**"
+                ]}
               }
             },
             {
