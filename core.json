@@ -1044,10 +1044,22 @@
         },
         {
           "name": "Organiser",
+          "declares": {"rel":"organiser", "type":"core/organiser"},
+          "attributes": {
+            "uuid": {},
+            "title": {"allowEmpty":true}
+          }
+        },
+        {
+          "name": "Organiser (old links)",
           "declares": {"rel":"organiser", "type":"core/organisation"},
           "attributes": {
             "uuid": {},
             "title": {"allowEmpty":true}
+          },
+          "deprecated": {
+            "label": "organiser-org",
+            "doc": "Use core/organiser instead"
           }
         },
         {
@@ -1120,12 +1132,12 @@
       ]
     },
     {
-      "name": "Organisation",
+      "name": "Organiser",
       "description": "A document describing an organisation",
-      "declares": "core/organisation",
+      "declares": "core/organiser",
       "meta": [
         {
-          "name": "Organisation contact information",
+          "name": "Organiser contact information",
           "declares": {"type":"core/contact-info"},
           "count": 1,
           "data": {
@@ -1143,22 +1155,22 @@
       ],
       "links": [
         {
-          "name": "Browseable link for the organisation",
-          "description": "Usually the homepage or other resources that describe the organisation",
+          "name": "Browseable link for the organiser",
+          "description": "Usually the homepage or other resources that describes the organiser",
           "declares": {"rel":"see-also", "type": "text/html"},
           "attributes": {
             "url": {}
           }
         },
         {
-          "name": "Facebook page for the organisation",
+          "name": "Facebook page for the organiser",
           "declares": {"rel":"see-also", "type": "core/social+facebook"},
           "attributes": {
             "url": {}
           }
         },
         {
-          "name": "Twitter account for the organisation",
+          "name": "Twitter account for the organiser",
           "declares": {"rel":"see-also", "type": "core/social+twitter"},
           "data": {
             "handle": {}
