@@ -111,34 +111,6 @@
       "declares": "core/story"
     },
     {
-      "name": "Person",
-      "description": "Used to describe people",
-      "declares": "core/person",
-      "meta": [
-        {
-          "name": "Main metadata block",
-          "declares": {"type":"core/person"},
-          "count": 1,
-          "data": {
-            "firstName": {
-              "optional":true,
-              "labels": ["sortable"]
-            },
-            "lastName": {
-              "optional":true,
-              "labels": ["sortable"]
-            },
-            "employer": {"optional":true},
-            "title": {"optional":true}
-          }
-        },
-        {
-          "declares": {"type":"core/contact-info"},
-          "data": {}
-        }
-      ]
-    },
-    {
       "declares": "core/image",
       "attributes": {
         "uri": {
@@ -1136,7 +1108,7 @@
     },
     {
       "name": "Organiser",
-      "description": "A document describing an organisation",
+      "description": "A document describing an organiser",
       "declares": "core/organiser",
       "meta": [
         {
@@ -1158,6 +1130,11 @@
       ],
       "links": [
         {
+          "name": "Organisation",
+          "description": "A link to the actual organisation",
+          "declares": {"rel":"organisation", "type": "core/organisation"}
+        },
+        {
           "name": "Browseable link for the organiser",
           "description": "Usually the homepage or other resources that describes the organiser",
           "declares": {"rel":"see-also", "type": "text/html"},
@@ -1177,6 +1154,60 @@
           "declares": {"rel":"see-also", "type": "core/social+twitter"},
           "data": {
             "handle": {}
+          }
+        }
+      ]
+    },
+    {
+      "name": "Organisation",
+      "description": "A document describing an organisation",
+      "declares": "core/organisation",
+      "attributes": {
+        "title": {}
+      }
+      "meta": [
+        {
+          "name": "Alias for the organisation",
+          "declares": {"type":"core/alias"}
+          "attributes": {
+            "title": {}
+          }
+        }
+      ],
+      "links": [
+        {
+          "declares": {"rel": "evidence", "type": "core/wikidata"},
+          "attributes": {
+            "uri": {
+              "glob": ["https://www.wikidata.org/wiki/Q*"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Person",
+      "description": "A document describing a person",
+      "declares": "core/person",
+      "attributes": {
+        "title": {}
+      }
+      "meta": [
+        {
+          "name": "Alias for the person",
+          "declares": {"type":"core/alias"}
+          "attributes": {
+            "title": {}
+          }
+        }
+      ],
+      "links": [
+        {
+          "declares": {"rel": "evidence", "type": "core/wikidata"},
+          "attributes": {
+            "uri": {
+              "glob": ["https://www.wikidata.org/wiki/Q*"]
+            }
           }
         }
       ]
