@@ -1164,11 +1164,11 @@
       "declares": "core/organisation",
       "attributes": {
         "title": {}
-      }
+      },
       "meta": [
         {
           "name": "Alias for the organisation",
-          "declares": {"type":"core/alias"}
+          "declares": {"type":"core/alias"},
           "attributes": {
             "title": {}
           }
@@ -1191,11 +1191,11 @@
       "declares": "core/person",
       "attributes": {
         "title": {}
-      }
+      },
       "meta": [
         {
           "name": "Alias for the person",
-          "declares": {"type":"core/alias"}
+          "declares": {"type":"core/alias"},
           "attributes": {
             "title": {}
           }
