@@ -1176,11 +1176,19 @@
       ],
       "links": [
         {
+          "name": "Wikidata reference",
           "declares": {"rel": "evidence", "type": "core/wikidata"},
           "attributes": {
             "uri": {
               "glob": ["https://www.wikidata.org/wiki/Q*"]
             }
+          }
+        },
+        {
+          "name": "Web page with supporting evidence",
+          "declares": {"rel": "evidence", "type": "text/html"},
+          "attributes": {
+            "url": {}
           }
         }
       ]
@@ -1203,11 +1211,19 @@
       ],
       "links": [
         {
+          "name": "Wikidata reference",
           "declares": {"rel": "evidence", "type": "core/wikidata"},
           "attributes": {
             "uri": {
               "glob": ["https://www.wikidata.org/wiki/Q*"]
             }
+          }
+        },
+        {
+          "name": "Web page with supporting evidence",
+          "declares": {"rel": "evidence", "type": "text/html"},
+          "attributes": {
+            "url": {}
           }
         }
       ]
