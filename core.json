@@ -1040,8 +1040,21 @@
           "name": "Section",
           "declares": {"type": "core/section", "rel":"section"},
           "attributes": {
-            "uri": {},
-            "value": {},
+            "uuid": {
+              "optional": true
+            },
+            "uri": {
+              "deprecated": {
+                "label": "section-uri",
+                "doc": "Only use UUID"
+              }
+            },
+            "value": {
+              "deprecated": {
+                "label": "section-value",
+                "doc": "Use UUIDs instead of value"
+              }
+            },
             "title": {"allowEmpty":true}
           }
         },
