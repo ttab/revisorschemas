@@ -306,13 +306,11 @@
       "attributes": {
         "title": {}
       },
-      "links": [
+      "meta": [
         {
-          "declares": {"rel":"source"},
-          "attributes": {
-            "title": {},
-            "uri": {"optional": true},
-            "url": {"optional": true}
+          "declares": {"type":"core/factbox"},
+          "data": {
+            "byline": {"optional":true}
           }
         }
       ],
@@ -327,32 +325,15 @@
           }
         },
         {
-          "declares": {"type":"core/paragraph"},
-          "data": {
-            "text":{
-              "allowEmpty":true,
-              "format": "html"
-            }
-          },
-          "deprecated": {
-            "label": "paragraph",
-            "doc": "Use core/text instead"
-          }
-        },
-        {
           "declares": {"type":"core/unordered-list"},
           "content": [
             {
-              "declares": {"type":"core/paragraph"},
+              "declares": {"type":"core/text"},
               "data": {
                 "text":{
                   "allowEmpty":true,
                   "format": "html"
                 }
-              },
-              "deprecated": {
-                "label": "paragraph",
-                "doc": "Use core/text instead"
               }
             }
           ]
@@ -361,16 +342,12 @@
           "declares": {"type":"core/ordered-list"},
           "content": [
             {
-              "declares": {"type":"core/paragraph"},
+              "declares": {"type":"core/text"},
               "data": {
                 "text":{
                   "allowEmpty":true,
                   "format": "html"
                 }
-              },
-              "deprecated": {
-                "label": "paragraph",
-                "doc": "Use core/text instead"
               }
             }
           ]
@@ -621,14 +598,54 @@
         {
           "declares": {"type":"core/factbox"},
           "attributes": {
-            "title": {"allowEmpty":true},
+            "title": {},
             "uuid": {"allowEmpty":true}
           },
           "data": {
-            "byline": {"allowEmpty":true}
+            "byline": {"optional":true},
+            "locally_changed": {
+              "format": "RFC3339",
+              "optional": true
+            }
           },
-          "blocksFrom":[
-            {"docType":"core/article", "kind": "content", "global":true}
+          "content": [
+            {
+              "declares": {"type":"core/text"},
+              "data": {
+                "text":{
+                  "allowEmpty": true,
+                  "format": "html"
+                }
+              }
+            },
+            {
+              "declares": {"type":"core/unordered-list"},
+              "content": [
+                {
+                  "declares": {"type":"core/text"},
+                  "data": {
+                    "text":{
+                      "allowEmpty": true,
+                      "format": "html"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "declares": {"type":"core/ordered-list"},
+              "content": [
+                {
+                  "declares": {"type":"core/text"},
+                  "data": {
+                    "text":{
+                      "allowEmpty": true,
+                      "format": "html"
+                    }
+                  }
+                }
+              ]
+            }
           ]
         },
         {
