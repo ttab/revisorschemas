@@ -24,7 +24,8 @@
 	"city": {},
 	"state": {},
 	"poi": {},
-	"region": {}
+	"region": {},
+        "province": {}
       }
     },
     {
@@ -36,6 +37,7 @@
 	"municipality": {},
 	"state": {},
 	"region": {},
+	"province": {},
         "capital-of": {}
       }
     }
