@@ -127,6 +127,12 @@
               "enumReference": "core/place-types"
             }
           }
+        },
+        {
+          "declares": {"type":"core/alias"},
+          "attributes": {
+            "title": {}
+          }
         }
       ],
       "links": [
