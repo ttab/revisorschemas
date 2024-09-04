@@ -113,8 +113,8 @@
       "meta": [
         {
           "declares": {"type":"core/position"},
-          "data": {
-            "geometry": {
+          "attributes": {
+            "value": {
               "format": "wkt",
               "geometry": "point"
             }
