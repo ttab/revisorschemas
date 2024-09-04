@@ -13,6 +13,31 @@
         "preamble": {},
         "blockquote": {}
       }
+    },
+    {
+      "declare": "core/place-types",
+      "name": "Place types",
+      "values": {
+        "country": {},
+	"county": {},
+	"municipality": {},
+	"city": {},
+	"state": {},
+	"poi": {},
+	"region": {}
+      }
+    },
+    {
+      "declare": "core/place-relationships",
+      "name": "Place relationships",
+      "values": {
+        "country": {},
+	"county": {},
+	"municipality": {},
+	"state": {},
+	"region": {},
+        "capital-of": {}
+      }
     }
   ],
   "meta": [
@@ -91,6 +116,26 @@
               "format": "wkt",
               "geometry": "point"
             }
+          }
+        },
+        {
+          "declares": {"type":"core/place-type"},
+          "attributes": {
+            "value": {
+              "enumReference": "core/place-types"
+            }
+          }
+        }
+      ],
+      "links": [
+        {
+          "declares": {"type":"core/place"},
+          "attributes": {
+            "rel": {
+              "enumReference": "core/place-relationships"
+            },
+            "title": {},
+            "uuid": {}
           }
         }
       ]
