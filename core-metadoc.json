@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "name": "core-metadoc",
+  "documents": [
+    {
+      "name": "Article meta document",
+      "description": "Document used to store background information on an article",
+      "declares": "core/article+meta",
+      "links": [
+        {
+          "name": "Linked subject",
+          "description": "A subject for the article, this is primarily something that will be added by automated systems, but can be manipulated by end users as well.",
+          "declares": {"rel":"subject"},
+          "attributes": {
+            "uuid": {"optional":true},
+            "title": {},
+            "type": {}
+          },
+          "data": {
+            "confidence": {
+              "format":"float"
+            },
+            "status": {
+              "enum": ["automatic", "rejected", "accepted"]
+            },
+            "manually-added": {
+              "format": "RFC3339",
+              "optional": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
