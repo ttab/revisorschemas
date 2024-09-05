@@ -21,9 +21,11 @@
               "format":"float"
             },
             "status": {
+              "description": "Lifecycle stage of the link, rejected/accepted can be used to provide training feedback to automated systems."
               "enum": ["automatic", "rejected", "accepted"]
             },
             "manually-added": {
+              "description": "Should be used when a user manually adds something that the automatic systems missed.",
               "format": "RFC3339",
               "optional": true
             }
