@@ -18,10 +18,11 @@
           },
           "data": {
             "confidence": {
-              "format":"float"
+              "description": "the confidence the automated system had in tagging this entity",
+              "format": "float"
             },
             "status": {
-              "description": "Lifecycle stage of the link, rejected/accepted can be used to provide training feedback to automated systems."
+              "description": "Lifecycle stage of the link, rejected/accepted can be used to provide training feedback to automated systems.",
               "enum": ["automatic", "rejected", "accepted"]
             },
             "manually-added": {
