@@ -80,7 +80,8 @@
             },
             "firstCreated": {
               "name": "First created timestamp for the content",
-              "format": "RFC3339"
+              "format": "RFC3339",
+              "optional": true
             },
             "version": {
               "name": "Opaque version identifier from the source"
