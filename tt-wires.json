@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "name": "tt-wires",
+  "documents": [
+    {
+      "name": "Wire",
+      "description": "A newsitem from a wire service",
+      "declares": "tt/wire",
+      "links": [
+        {
+          "name": "Source",
+          "description": "A reference to the source source of the content",
+          "declares": {
+            "rel": "source"
+          },
+          "count": 1,
+          "attributes": {
+            "type": {
+              "const": "tt/wire-source"
+            },
+            "uri": {
+              "glob": [
+                "wires://source/**"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Provider",
+          "description": "The party that has provided the information",
+          "declares": {
+            "rel": "provider"
+          },
+          "attributes": {
+            "title": {},
+            "url": {
+              "labels": [
+                "keyword"
+              ],
+              "allowEmpty": true
+            }
+          }
+        },
+        {
+          "name": "Topics",
+          "description": "Links to IPTC media topics",
+          "declares": {
+            "rel": "subject",
+            "type": "core/category"
+          },
+          "attributes": {
+            "title": {},
+            "uuid": {},
+            "uri": {}
+          }
+        },
+        {
+          "name": "Section",
+          "declares": {
+            "rel": "section",
+            "type": "core/section"
+          },
+          "count": 1,
+          "attributes": {
+            "uuid": {},
+            "title": {}
+          }
+        }
+      ],
+      "meta": [
+        {
+          "name": "Wire metadata",
+          "declares": {
+            "type": "tt/wire"
+          },
+          "data": {
+            "issued": {
+              "name": "Issued timestamp for the content",
+              "format": "RFC3339"
+            },
+            "firstCreated": {
+              "name": "First created timestamp for the content",
+              "format": "RFC3339"
+            },
+            "version": {
+              "name": "Opaque version identifier from the source"
+            },
+            "copyright": {}
+          }
+        },
+        {
+          "name": "Slug",
+          "declares": {
+            "type": "tt/slugline"
+          },
+          "attributes": {
+            "value": {}
+          }
+        },
+        {
+          "name": "Newsvalue",
+          "declares": {
+            "type": "core/newsvalue"
+          },
+          "attributes": {
+            "value": {
+              "format": "int"
+            }
+          }
+        },
+        {
+          "declares": {
+            "type": "core/note"
+          },
+          "attributes": {
+            "role": {
+              "enum": [
+                "public",
+                "internal"
+              ]
+            }
+          },
+          "data": {
+            "text": {
+              "allowEmpty": true
+            }
+          }
+        }
+      ],
+      "content": [
+        {
+          "name": "Text block",
+          "declares": {
+            "type": "core/text"
+          },
+          "attributes": {
+            "role": {
+              "enum": [
+                "heading-1",
+                "heading-2",
+                "preamble"
+              ],
+              "optional": true
+            }
+          },
+          "data": {
+            "text": {
+              "allowEmpty": true
+            }
+          }
+        },
+        {
+          "name": "Table",
+          "declares": {
+            "type": "core/table"
+          },
+          "data": {
+            "caption": {
+              "allowEmpty": true,
+              "optional": true
+            },
+            "thead": {
+              "format": "html",
+              "htmlPolicy": "table",
+              "optional": true
+            },
+            "tbody": {
+              "format": "html",
+              "htmlPolicy": "table"
+            },
+            "tfoot": {
+              "format": "html",
+              "htmlPolicy": "table",
+              "optional": true
+            }
+          }
+        },
+        {
+          "declares": {
+            "type": "core/ordered-list"
+          },
+          "content": [
+            {
+              "declares": {
+                "type": "core/text"
+              },
+              "data": {
+                "text": {
+                  "allowEmpty": true,
+                  "format": "html"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "declares": {
+            "type": "core/unordered-list"
+          },
+          "content": [
+            {
+              "declares": {
+                "type": "core/text"
+              },
+              "data": {
+                "text": {
+                  "allowEmpty": true,
+                  "format": "html"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
