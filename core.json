@@ -151,7 +151,22 @@
     {
       "name": "Section",
       "description": "A section for content",
-      "declares": "core/section"
+      "declares": "core/section",
+      "meta": [
+        {
+          "declares": {"type": "core/section"},
+          "count": 1,
+          "data": {
+            "code": {
+              "description": "Machine readable code for the section"
+            },
+            "colour": {
+              "description": "Section profile colour",
+              "format": "colour"
+            }
+          }
+        }
+      ]
     },
     {
       "name": "Topic",
