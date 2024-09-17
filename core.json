@@ -47,7 +47,31 @@
     {
       "name": "Section",
       "description": "A section for content",
-      "declares": "core/section"
+      "declares": "core/section",
+      "meta": [
+        {
+          "declares": {"type": "core/section"},
+          "count": 1,
+          "data": {
+            "code": {
+              "description": "Machine readable code for the section"
+            }
+          }
+        },
+        {
+          "declares": {"type":"core/colour"},
+          "attributes": {
+            "role": {
+              "description": "What role this colour fills, f.ex. 'dark-mode' or 'light-mode'.",
+              "optional": true
+            },
+            "value": {
+              "format": "colour",
+              "colourFormats": ["rgb"]
+            }
+          }
+        }
+      ]
     },
     {
       "name": "Topic",
