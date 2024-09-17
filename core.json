@@ -170,7 +170,8 @@
               "optional": true
             },
             "value": {
-              "format": "colour"
+              "format": "colour",
+              "colourFormats": ["rgb"]
             }
           }
         }

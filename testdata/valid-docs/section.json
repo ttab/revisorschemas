@@ -14,12 +14,12 @@
     {
       "type": "core/colour",
       "role": "light-mode",
-      "value": "2e3b8c"
+      "value": "rgb(100,100,100)"
     },
     {
       "type": "core/colour",
       "role": "dark-mode",
-      "value": "ffffff"
+      "value": "rgb(200,200,200)"
     }
   ]
 }
