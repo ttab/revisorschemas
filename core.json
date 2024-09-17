@@ -529,15 +529,37 @@
             "dateGranularity": {"enum":["date", "datetime"]},
             "registration": {"allowEmpty":true},
             "start": {"format":"RFC3339"},
-            "end": {"format":"RFC3339"}
+            "end": {"format":"RFC3339"},
+            "cancelled": {
+              "format": "bool",
+              "optional": true
+            }
           }
         },
         {
           "ref":"core://newsvalue",
           "count": 1
+        },
+        {
+          "name": "Old time",
+          "description": "A block for storing the old start time when an event has been rescheduled",
+          "declares": {"type": "core/event-old-start"},
+          "data": {
+            "dateGranularity": {"enum":["date", "datetime"]},
+            "start": {"format":"RFC3339"},
+            "updated": {"format":"RFC3339"}
+          }
         }
       ],
       "links": [
+        {
+          "name": "Replaced by",
+          "description": "The event has been moved to another day, and has been replaced by another event document.",
+          "declares": {"type": "core/event", "rel": "replaced-by"},
+          "attributes": {
+            "uuid": {}
+          }
+        },
         {
           "name": "Section",
           "declares": {"type": "core/section", "rel":"section"},
