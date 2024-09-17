@@ -343,19 +343,19 @@
       "attributes": {
         "title": {}
       },
-      "meta": [
+      "links": [
         {
           "name": "Section",
+          "maxCount": 1,
           "declares": {"rel":"section", "type": "core/section"},
           "attributes": {
             "uuid": {},
             "title": {}
           }
-        }
-      ],
-      "links": [
+        },
         {
           "name": "Assignment",
+          "count": 1,
           "description": "A link to the assignment that the flash belongs to",
           "declares": {"type": "core/assignment", "rel":"assignment"},
           "attributes": {
