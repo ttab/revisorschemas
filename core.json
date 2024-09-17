@@ -531,7 +531,7 @@
         {
           "name": "Replaced by",
           "description": "The event has been moved to another day, and has been replaced by another event document.",
-          "declares": {"type": "core/event", "rel": "moved_to"},
+          "declares": {"type": "core/event", "rel": "replaced-by"},
           "attributes": {
             "uuid": {}
           }
