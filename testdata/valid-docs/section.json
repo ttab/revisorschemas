@@ -1,0 +1,25 @@
+{
+  "uuid": "0730efa9-43f2-468d-979a-aaffc74d7582",
+  "type": "core/section",
+  "uri": "core://section/0730efa9-43f2-468d-979a-aaffc74d7582",
+  "title": "Sport",
+  "language": "sv-se",
+  "meta": [
+    {
+      "type": "core/section",
+      "data": {
+        "code": "spt"
+      }
+    },
+    {
+      "type": "core/colour",
+      "role": "light-mode",
+      "value": "rgb(100,100,100)"
+    },
+    {
+      "type": "core/colour",
+      "role": "dark-mode",
+      "value": "rgb(200,200,200)"
+    }
+  ]
+}
