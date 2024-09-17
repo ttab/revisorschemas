@@ -1,0 +1,51 @@
+{
+  "uuid": "99a4a74b-9cb0-4c22-8203-7b61cc1e02f2",
+  "type": "core/flash",
+  "title": "Flash about thing",
+  "links": [
+    {
+      "rel": "section",
+      "type": "core/section",
+      "uuid": "111932dc-99f3-4ba4-acf2-ed9d9f2f1c7c",
+      "title": "Utrikes"
+    },
+    {
+      "rel": "assignment",
+      "type": "core/assignment",
+      "uuid": "69357d71-c1b7-4865-8946-e83a989509bb"
+    },
+    {
+      "rel": "author",
+      "type": "core/author",
+      "uuid": "b634338f-3854-487d-ad9d-42ca00623acc",
+      "title": "Some Person/TT"
+    },
+    {
+      "rel": "author",
+      "type": "core/author",
+      "uuid": "7a8f1c70-f01e-423e-84d2-1ae8c758fca7",
+      "title": "Another Person/TT"
+    }
+  ],
+  "content": [
+    {
+      "type": "core/text",
+      "role": "heading-1",
+      "data": {
+        "text": "Thing has happened"
+      }
+    },
+    {
+      "type": "core/text",
+      "data": {
+        "text": "One paragraph describing the thing."
+      }
+    },
+    {
+      "type": "core/text",
+      "data": {
+        "text": "Another paragraph describing the thing."
+      }
+    }
+  ]
+}

@@ -164,7 +164,9 @@
               },
               "minCount": 1,
               "attributes": {
-                "value": {}
+                "value": {
+                  "enumReference": "core://assignment-types"
+                }
               }
             },
             {
@@ -241,6 +243,17 @@
           ]
         }
       ]
+    }
+  ],
+  "enums": [
+    {
+      "declare": "core://assignment-types",
+      "values": {
+        "text": {},
+        "picture": {},
+        "video": {},
+        "graphics": {}
+      }
     }
   ]
 }
