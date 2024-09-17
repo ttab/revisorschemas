@@ -4,7 +4,7 @@ go 1.23.1
 
 require (
 	github.com/ttab/newsdoc v0.5.0
-	github.com/ttab/revisor v0.8.3-0.20240916141707-8022d13a10a5
+	github.com/ttab/revisor v0.9.0
 )
 
 require (
