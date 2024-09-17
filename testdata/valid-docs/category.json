@@ -1,0 +1,26 @@
+{
+  "uuid": "083aab8a-b62f-5e91-9a03-c68e95ff00c5",
+  "type": "core/category",
+  "uri": "iptc://mediatopic/20000563",
+  "title": "Resor",
+  "meta": [
+    {
+      "type": "core/definition",
+      "data": {
+        "text": "Resor för nöjes skull, turistresor."
+      },
+      "role": "long"
+    }
+  ],
+  "links": [
+    {
+      "uri": "iptc://mediatopic/20000563",
+      "type": "iptc/mediatopic",
+      "data": {
+        "id": "20000563"
+      },
+      "rel": "same-as"
+    }
+  ],
+  "language": "sv-se"
+}
