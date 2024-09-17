@@ -1,13 +1,11 @@
 module github.com/ttab/revisorschemas
 
-go 1.22.3
+go 1.23.1
 
 require (
 	github.com/ttab/newsdoc v0.5.0
-	github.com/ttab/revisor v0.8.1
+	github.com/ttab/revisor v0.8.3-0.20240916141707-8022d13a10a5
 )
-
-replace github.com/ttab/revisor => ../revisor
 
 require (
 	github.com/IvanZagoskin/wkt v0.0.1 // indirect
