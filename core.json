@@ -344,9 +344,10 @@
         "title": {}
       },
       "links": [
+        {"ref": "core://byline"},
         {
           "name": "Section",
-          "maxCount": 1,
+          "count": 1,
           "declares": {"rel":"section", "type": "core/section"},
           "attributes": {
             "uuid": {},

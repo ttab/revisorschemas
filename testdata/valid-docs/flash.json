@@ -13,6 +13,18 @@
       "rel": "assignment",
       "type": "core/assignment",
       "uuid": "69357d71-c1b7-4865-8946-e83a989509bb"
+    },
+    {
+      "rel": "author",
+      "type": "core/author",
+      "uuid": "b634338f-3854-487d-ad9d-42ca00623acc",
+      "title": "Some Person/TT"
+    },
+    {
+      "rel": "author",
+      "type": "core/author",
+      "uuid": "7a8f1c70-f01e-423e-84d2-1ae8c758fca7",
+      "title": "Another Person/TT"
     }
   ],
   "content": [
