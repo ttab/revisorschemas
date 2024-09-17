@@ -1,0 +1,23 @@
+{
+  "uuid": "d18288d8-2582-4c6d-83ed-7403c61259cd",
+  "type": "core/story",
+  "uri": "core://story/d18288d8-2582-4c6d-83ed-7403c61259cd",
+  "title": "Presidentvalet i USA",
+  "meta": [
+    {
+      "type": "core/definition",
+      "data": {
+        "text": "Presidentvalet i USA"
+      },
+      "role": "short"
+    },
+    {
+      "type": "core/definition",
+      "data": {
+        "text": "Rapportering från TT om såväl primärvalrörelsen som presidentvalrörelsen i USA under 2024."
+      },
+      "role": "long"
+    }
+  ],
+  "language": "sv-se"
+}

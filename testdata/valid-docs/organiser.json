@@ -1,0 +1,27 @@
+{
+  "uuid": "613bafe6-27cd-48de-8add-e27e4e681973",
+  "type": "core/organiser",
+  "uri": "core://organiser/613bafe6-27cd-48de-8add-e27e4e681973",
+  "title": "Folkhälsomyndigheten",
+  "meta": [
+    {
+      "id": "2pGrYW69CaIf",
+      "type": "core/contact-info",
+      "data": {
+        "city": "Stockholm",
+        "country": "Sverige",
+        "email": "info@folkhalsomyndigheten.se",
+        "phone": "010-205 20 00",
+        "streetAddress": "Nobels väg 18, Solna"
+      }
+    }
+  ],
+  "links": [
+    {
+      "url": "http://www.folkhalsomyndigheten.se",
+      "type": "text/html",
+      "rel": "see-also"
+    }
+  ],
+  "language": "sv-se"
+}

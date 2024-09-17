@@ -1,10 +1,10 @@
 module github.com/ttab/revisorschemas
 
-go 1.22.3
+go 1.23.1
 
 require (
 	github.com/ttab/newsdoc v0.5.0
-	github.com/ttab/revisor v0.8.3-0.20240917075729-37a365156300
+	github.com/ttab/revisor v0.9.0
 )
 
 require (
