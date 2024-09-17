@@ -8,9 +8,18 @@
     {
       "type": "core/section",
       "data": {
-        "code": "spt",
-        "colour": "2e3b8c"
+        "code": "spt"
       }
+    },
+    {
+      "type": "core/colour",
+      "role": "light-mode",
+      "value": "2e3b8c"
+    },
+    {
+      "type": "core/colour",
+      "role": "dark-mode",
+      "value": "ffffff"
     }
   ]
 }

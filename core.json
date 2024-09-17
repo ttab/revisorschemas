@@ -159,9 +159,17 @@
           "data": {
             "code": {
               "description": "Machine readable code for the section"
+            }
+          }
+        },
+        {
+          "declares": {"type":"core/colour"},
+          "attributes": {
+            "role": {
+              "description": "What role this colour fills, f.ex. 'dark-mode' or 'light-mode'.",
+              "optional": true
             },
-            "colour": {
-              "description": "Section profile colour",
+            "value": {
               "format": "colour"
             }
           }
