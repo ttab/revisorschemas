@@ -7,6 +7,8 @@ require (
 	github.com/ttab/revisor v0.8.1
 )
 
+replace github.com/ttab/revisor => ../revisor
+
 require (
 	github.com/IvanZagoskin/wkt v0.0.1 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
