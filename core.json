@@ -20,7 +20,7 @@
           "declares": {"type":"core/place-type"},
           "attributes": {
             "value": {
-              "enumReference": "core/place-types"
+              "enumReference": "core://place-types"
             }
           }
         },
@@ -36,7 +36,7 @@
           "declares": {"type":"core/place"},
           "attributes": {
             "rel": {
-              "enumReference": "core/place-relationships"
+              "enumReference": "core://place-relationships"
             },
             "title": {},
             "uuid": {}
@@ -337,6 +337,52 @@
       ]
     },
     {
+      "name": "Flash",
+      "description": "Flash news is used for quick breaking news items",
+      "declares": "core/flash",
+      "attributes": {
+        "title": {}
+      },
+      "meta": [
+        {
+          "name": "Section",
+          "declares": {"rel":"section", "type": "core/section"},
+          "attributes": {
+            "uuid": {},
+            "title": {}
+          }
+        }
+      ],
+      "links": [
+        {
+          "name": "Assignment",
+          "description": "A link to the assignment that the flash belongs to",
+          "declares": {"type": "core/assignment", "rel":"assignment"},
+          "attributes": {
+            "uuid": {}
+          }
+        }
+      ],
+      "content": [
+        {
+          "description": "A flash text block",
+          "declares": {"type":"core/text"},
+          "attributes": {
+            "role": {
+              "optional": true,
+              "enumReference": "core://flash-text-roles"
+            }
+          },
+          "data": {
+            "text":{
+              "allowEmpty":true,
+              "format": "html"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "Article",
       "description": "An editorial article",
       "declares": "core/article",
@@ -451,7 +497,7 @@
           "attributes": {
             "uuid": {}
           }
-        }        
+        }
       ]
     },
     {
@@ -695,7 +741,7 @@
   ],
   "enums": [
     {
-      "declare": "core/text-roles",
+      "declare": "core://text-roles",
       "name": "Text block roles",
       "values": {
         "heading-1": {},
@@ -707,7 +753,14 @@
       }
     },
     {
-      "declare": "core/place-types",
+      "declare": "core://flash-text-roles",
+      "name": "Text block roles for flashes",
+      "values": {
+        "heading-1": {}
+      }
+    },
+    {
+      "declare": "core://place-types",
       "name": "Place types",
       "values": {
         "country": {},
@@ -721,7 +774,7 @@
       }
     },
     {
-      "declare": "core/place-relationships",
+      "declare": "core://place-relationships",
       "name": "Place relationships",
       "values": {
         "country": {},
@@ -843,7 +896,7 @@
         "attributes": {
           "role": {
             "optional":true,
-            "enumReference": "core/text-roles"
+            "enumReference": "core://text-roles"
           }
         },
         "data": {

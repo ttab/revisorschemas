@@ -3,7 +3,7 @@
   "name": "tt",
   "enums": [
     {
-      "match": "core/text-roles",
+      "match": "core://text-roles",
       "values": {
         "heading-3": {"forbidden":true},
         "heading-4": {"forbidden":true},
