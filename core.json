@@ -198,6 +198,7 @@
       "declares": "core/author",
       "meta": [
         {"ref": "core://note"},
+        {"ref": "core://definition"},
         {
           "declares": {"type":"core/author"},
           "data": {
@@ -589,6 +590,9 @@
           "count": 1
         },
         {
+          "ref": "core://definition"
+        },
+        {
           "ref": "core://description"
         },
         {
@@ -716,6 +720,12 @@
             "streetAddress": {"optional":true},
             "postalCode": {"optional":true}
           }
+        },
+        {
+          "ref": "core://definition"
+        },
+        {
+          "ref": "core://note"
         }
       ],
       "links": [

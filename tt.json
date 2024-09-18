@@ -24,6 +24,7 @@
         }
       ],
       "meta": [
+        {"ref": "core://definition"},
         {
           "name": "Contact information",
           "declares": {"type":"core/contact"},
