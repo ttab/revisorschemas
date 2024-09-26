@@ -91,6 +91,7 @@
       "description": "Used to describe people",
       "declares": "core/person",
       "meta": [
+        {"ref":"core://definition"},
         {
           "name": "Main metadata block",
           "declares": {"type":"core/person"},
@@ -109,8 +110,21 @@
           }
         },
         {
-          "declares": {"type":"core/contact-info"},
-          "data": {}
+          "name": "Alias",
+          "declares": {"type":"core/alias"},
+          "attributes": {"title":{}}
+        }
+      ],
+      "links": [
+        {
+          "name": "Wikidata",
+          "declares": {"rel":"evidence", "type":"core/wikidata"},
+          "attributes": {"url":{}}
+        },
+        {
+          "name": "Webpage",
+          "declares": {"rel":"evidence", "type":"text/html"},
+          "attributes": {"url":{}}
         }
       ]
     },
@@ -697,6 +711,32 @@
           "attributes": {
             "title": {}
           }
+        }
+      ]
+    },
+    {
+      "name": "Organisation",
+      "declares": "core/organisation",
+      "meta": [
+        {
+          "ref": "core://definition"
+        },
+        {
+          "name": "Alias",
+          "declares": {"type":"core/alias"},
+          "attributes": {"title":{}}
+        }
+      ],
+      "links": [
+        {
+          "name": "Wikidata",
+          "declares": {"rel":"evidence", "type":"core/wikidata"},
+          "attributes": {"url":{}}
+        },
+        {
+          "name": "Webpage",
+          "declares": {"rel":"evidence", "type":"text/html"},
+          "attributes": {"url":{}}
         }
       ]
     },
