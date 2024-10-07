@@ -33,11 +33,10 @@
           },
           "attributes": {
             "title": {},
-            "url": {
-              "labels": [
-                "keyword"
-              ],
-              "allowEmpty": true
+            "uri": {
+              "glob": [
+                "wires://provider/**"
+              ]
             }
           }
         },
