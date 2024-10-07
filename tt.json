@@ -239,7 +239,7 @@
           "maxCount": 1,
           "attributes": {
             "value": {
-              "labels": ["keyword"],
+              "labels": ["keyword", "prefix"],
               "hints": {"alias": ["slug"]}
             }
           }
