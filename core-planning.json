@@ -38,7 +38,7 @@
           },
           "attributes": {
             "uuid": {},
-            "uri": {"optional":true},
+            "uri": { "optional": true },
             "title": {}
           }
         },
@@ -105,7 +105,7 @@
               "description": "A unique identifier for the assignment",
               "format": "uuid"
             },
-            "title": {"allowEmpty":true}
+            "title": { "allowEmpty": true }
           },
           "data": {
             "full_day": {
@@ -149,11 +149,7 @@
             },
             "status": {
               "optional": true,
-              "enum": [
-                "todo",
-                "started",
-                "done"
-              ]
+              "enum": ["todo", "started", "done"]
             }
           },
           "meta": [
@@ -206,10 +202,7 @@
                 },
                 "role": {
                   "description": "The role the assignee has in fulfilling the assignment.",
-                  "enum": [
-                    "primary",
-                    "standby"
-                  ]
+                  "enum": ["primary", "standby"]
                 }
               }
             },
@@ -223,10 +216,10 @@
                 "title": {}
               },
               "data": {
-                "country": {"optional":true},
-                "locality": {"optional":true},
-                "name": {"optional":true},
-                "extraInfo": {"optional":true},
+                "country": { "optional": true },
+                "locality": { "optional": true },
+                "name": { "optional": true },
+                "extraInfo": { "optional": true },
                 "geometry": {}
               }
             },
@@ -252,7 +245,8 @@
         "text": {},
         "picture": {},
         "video": {},
-        "graphic": {}
+        "graphic": {},
+        "flash": {}
       }
     }
   ]
