@@ -139,7 +139,8 @@
               "enum": [
                 "heading-1",
                 "heading-2",
-                "preamble"
+                "preamble",
+                "vignette"
               ],
               "optional": true
             }
