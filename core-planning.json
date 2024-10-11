@@ -198,7 +198,15 @@
               "attributes": {
                 "uuid": {},
                 "name": {
-                  "optional": true
+                  "optional": true,
+                  "deprecated": {
+                    "label": "assignee-name",
+                    "doc": "Use title instead"
+                  }
+                },
+                "title": {
+                  "optional": true,
+                  "description": "Name of the assignee"
                 },
                 "role": {
                   "description": "The role the assignee has in fulfilling the assignment.",
