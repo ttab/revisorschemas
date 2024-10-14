@@ -1094,6 +1094,14 @@
           "locally_changed": {
             "format": "RFC3339",
             "optional": true
+          },
+          "original_updated": {
+            "format": "RFC3339",
+            "optional": true
+          },
+          "original_version": {
+            "format": "int",
+            "optional": true
           }
         },
         "content": [
