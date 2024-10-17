@@ -3,6 +3,19 @@
   "name": "tt-wires",
   "documents": [
     {
+      "name": "Wire Source",
+      "description": "A source of the content from a wire service",
+      "declares": "tt/wire-source",
+      "attributes": {
+        "title": {},
+        "uri": {
+          "glob": [
+            "wires://source/**"
+          ]
+        }
+      }
+    },
+    {
       "name": "Wire",
       "description": "A newsitem from a wire service",
       "declares": "tt/wire",
