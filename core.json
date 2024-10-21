@@ -518,6 +518,38 @@
       ]
     },
     {
+      "name": "Editorial information",
+      "description": "Information for editorial staff",
+      "declares": "core/editorial-info",
+      "content": [
+        {"ref": "core://text"},
+        {"ref": "core://image"},
+        {"ref": "core://unordered-list"},
+        {"ref": "core://ordered-list"}
+      ],
+      "meta": [
+        {"ref": "core://note"}
+      ],
+      "links": [
+        {
+          "name": "Section",
+          "declares": {"rel":"section", "type": "core/section"},
+          "attributes": {
+            "uuid": {},
+            "title": {"allowEmpty":true}
+          }
+        },
+        {
+          "name": "Assignment",
+          "description": "A link to the assignment that the article was produced for",
+          "declares": {"type": "core/assignment", "rel":"assignment"},
+          "attributes": {
+            "uuid": {}
+          }
+        }
+      ]
+    },
+    {
       "name": "Contacts group",
       "description": "A group used to categorise contacts",
       "declares": "core/group"
