@@ -22,7 +22,7 @@
       "links": [
         {
           "name": "Source",
-          "description": "A reference to the source source of the content",
+          "description": "A reference to the source of the content",
           "declares": {
             "rel": "source"
           },
