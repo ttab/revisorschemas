@@ -534,6 +534,7 @@
         {"ref": "core://note"}
       ],
       "links": [
+        {"ref": "core://byline"},
         {
           "name": "Section",
           "declares": {"rel":"section", "type": "core/section"},
