@@ -31,11 +31,13 @@
             "type": {
               "const": "tt/wire-source"
             },
+            "uuid": {},
             "uri": {
               "glob": [
                 "wires://source/**"
               ]
-            }
+            },
+            "title": {}
           }
         },
         {
