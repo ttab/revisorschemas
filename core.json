@@ -567,6 +567,7 @@
       "declares": "core/contact",
       "meta": [
         {"ref":"core://definition"},
+        {"ref":"core://note"},
         {
           "name": "Main metadata block",
           "declares": {"type":"core/contact"},
