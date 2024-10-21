@@ -556,7 +556,10 @@
     {
       "name": "Contacts group",
       "description": "A group used to categorise contacts",
-      "declares": "core/group"
+      "declares": "core/group",
+      "meta": [
+        {"ref":"core://definition"}
+      ]
     },
     {
       "name": "Contact information",
