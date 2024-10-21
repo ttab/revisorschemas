@@ -52,6 +52,17 @@
             "uuid": {},
             "title": {}
           }
+        },
+        {
+          "name": "The associated place for the planning item",
+          "declares": {
+            "rel": "place",
+            "type": "core/place"
+          },
+          "attributes": {
+            "uuid": {},
+            "title": {}
+          }
         }
       ],
       "meta": [
