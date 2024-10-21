@@ -76,7 +76,10 @@
     {
       "name": "Topic",
       "description": "An topic for content",
-      "declares": "core/topic"
+      "declares": "core/topic",
+      "meta": [
+        {"ref":"core://definition"}
+      ]
     },
     {
       "name": "Story",
