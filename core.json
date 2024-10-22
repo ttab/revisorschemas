@@ -734,14 +734,14 @@
             "title": {}
           },
           "data": {
-            "country": {},
-            "extraInfo": {"allowEmpty": true},
+            "country": {"optional":true},
+            "extraInfo": {"optional": true},
             "geometry": {
               "format": "wkt",
               "geometry": "point"
             },
-            "locality": {},
-            "name": {}
+            "locality": {"optional":true},
+            "name": {"optional":true}
           }
         },
         {
