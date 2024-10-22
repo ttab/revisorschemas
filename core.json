@@ -1154,34 +1154,9 @@
               }
             }
           },
-          {
-            "declares": {"type":"core/unordered-list"},
-            "content": [
-              {
-                "declares": {"type":"core/text"},
-                "data": {
-                  "text":{
-                    "allowEmpty": true,
-                    "format": "html"
-                  }
-                }
-              }
-            ]
-          },
-          {
-            "declares": {"type":"core/ordered-list"},
-            "content": [
-              {
-                "declares": {"type":"core/text"},
-                "data": {
-                  "text":{
-                    "allowEmpty": true,
-                    "format": "html"
-                  }
-                }
-              }
-            ]
-          }
+          {"ref": "core://ordered-list"},
+          {"ref": "core://unordered-list"},
+          {"ref": "core://table"}
         ]
       }
     },
