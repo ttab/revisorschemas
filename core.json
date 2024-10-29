@@ -730,7 +730,11 @@
           "name": "Geo position",
           "declares": {"type":"core/geo-point", "rel": "location"},
           "attributes": {
-            "uri": {"glob":["geo://point/*"]},
+            "uri": {
+              "glob":["geo://point/*"],
+              "optional": true,
+              "description": "TODO: where did this URI format come from?"
+            },
             "title": {}
           },
           "data": {
