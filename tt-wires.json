@@ -87,6 +87,14 @@
           "declares": {
             "type": "tt/wire"
           },
+          "attributes": {
+            "role": {
+              "enum": [
+                "article",
+                "pressrelease"
+              ]
+            }
+          },
           "data": {
             "issued": {
               "name": "Issued timestamp for the content",
