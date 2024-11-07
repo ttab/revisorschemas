@@ -16,6 +16,19 @@
       }
     },
     {
+      "name": "Wire Provider",
+      "description": "A provider of the content from a wire service, specifying the creator of the wire. For example, AP is the wire source and the provider can be AP itself or Business Wire etc.",
+      "declares": "tt/wire-provider",
+      "attributes": {
+        "title": {},
+        "uri": {
+          "glob": [
+            "wires://provider/**"
+          ]
+        }
+      }
+    },
+    {
       "name": "Wire",
       "description": "A newsitem from a wire service",
       "declares": "tt/wire",
@@ -47,12 +60,13 @@
             "rel": "provider"
           },
           "attributes": {
-            "title": {},
+            "uuid": {},
             "uri": {
               "glob": [
                 "wires://provider/**"
               ]
-            }
+            },
+            "title": {}
           }
         },
         {
