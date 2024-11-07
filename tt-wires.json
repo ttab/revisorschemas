@@ -4,7 +4,7 @@
   "documents": [
     {
       "name": "Wire Source",
-      "description": "A source of the content from a wire service",
+      "description": "A source of the content from a wire service, specifying the source from which the wire is obtained e.g. AP, Ritzau, RSS feed, etc.",
       "declares": "tt/wire-source",
       "attributes": {
         "title": {},
@@ -41,9 +41,6 @@
           },
           "count": 1,
           "attributes": {
-            "type": {
-              "const": "tt/wire-source"
-            },
             "uuid": {},
             "uri": {
               "glob": [
