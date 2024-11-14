@@ -90,7 +90,12 @@
             },
             "public": {
               "description": "Whether (a scrubbed version of) this planning item can be made publicly available.",
-              "format": "bool"
+              "format": "bool",
+              "optional": true,
+              "deprecated": {
+                "label": "public-planning",
+                "doc": "use the status 'publish' instead"
+              }
             },
             "tentative": {
               "description": "Whether the planning item is tentative.",
