@@ -35,12 +35,12 @@
           }
         },
         {
-          "name": "Birthday date in UTC",
+          "name": "Birthday date",
           "declares": {"type":"tt/birthday"},
           "count": 1,
           "attributes": {
             "value": {
-              "format": "RFC3339",
+              "time": "2006-01-02",
               "optional": true
             }
           },
