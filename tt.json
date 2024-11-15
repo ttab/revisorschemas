@@ -39,7 +39,16 @@
           "declares": {"type":"tt/birthday"},
           "count": 1,
           "attributes": {
-            "value": {"format":"RFC3339"}
+            "value": {
+              "format": "RFC3339",
+              "optional": true
+            }
+          },
+          "data": {
+            "year": {
+              "format":"int",
+              "optional": true
+            }
           }
         }
       ]
