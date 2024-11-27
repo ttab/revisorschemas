@@ -94,7 +94,7 @@
               "optional": true,
               "deprecated": {
                 "label": "public-planning",
-                "doc": "use the status 'publish' instead"
+                "doc": "use the status 'usable' instead"
               }
             },
             "tentative": {
