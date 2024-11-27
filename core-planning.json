@@ -52,6 +52,17 @@
             "uuid": {},
             "title": {}
           }
+        },
+        {
+          "name": "The associated place for the planning item",
+          "declares": {
+            "rel": "place",
+            "type": "core/place"
+          },
+          "attributes": {
+            "uuid": {},
+            "title": {}
+          }
         }
       ],
       "meta": [
@@ -79,7 +90,12 @@
             },
             "public": {
               "description": "Whether (a scrubbed version of) this planning item can be made publicly available.",
-              "format": "bool"
+              "format": "bool",
+              "optional": true,
+              "deprecated": {
+                "label": "public-planning",
+                "doc": "use the status 'usable' instead"
+              }
             },
             "tentative": {
               "description": "Whether the planning item is tentative.",
