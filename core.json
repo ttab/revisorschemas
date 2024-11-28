@@ -1081,8 +1081,23 @@
         "declares": {"type":"core/factbox"},
         "attributes": {
           "title": {},
-          "uuid": {"allowEmpty":true}
+          "uuid": {
+            "allowEmpty":true,
+            "deprecated": {
+              "label": "factbox_source_uuid",
+              "doc": "Use source link instead"
+            }
+          }
         },
+        "links": [
+          {
+            "declares": {"rel":"source"},
+            "maxCount": 1,
+            "attributes": {
+              "uuid": {}
+            }
+          }
+        ],
         "data": {
           "byline": {"optional":true},
           "locally_changed": {
