@@ -126,7 +126,8 @@
     {
       "uri": "tt://content-source/tt",
       "type": "core/content-source",
-      "rel": "source"
+      "rel": "source",
+      "title": "TT"
     }
   ],
   "language": "sv"
