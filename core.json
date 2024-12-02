@@ -470,7 +470,8 @@
           "description": "The organisation that is the source of the content",
           "declares": {"type": "core/content-source", "rel":"source"},
           "attributes": {
-            "uri": {}
+            "uri": {},
+            "title": {}
           }
         },
         {
