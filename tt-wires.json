@@ -180,7 +180,8 @@
           },
           "data": {
             "text": {
-              "allowEmpty": true
+              "allowEmpty": true,
+              "format": "html"
             }
           }
         },
