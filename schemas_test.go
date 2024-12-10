@@ -24,7 +24,7 @@ func TestFS_ValidSchemas(t *testing.T) {
 
 	// Sanity check so that we don't sail through on any issues that cause
 	// embedding to fail.
-	expectSchemas := 5
+	expectSchemas := 6
 
 	if len(files) != expectSchemas {
 		t.Fatalf("expected there to be %d schema files, got %d",
