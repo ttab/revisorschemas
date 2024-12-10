@@ -13,7 +13,10 @@
             "wires://source/**"
           ]
         }
-      }
+      },
+      "links": [
+        {"ref":"core://content-source/use"}
+      ]
     },
     {
       "name": "Wire Provider",
@@ -26,7 +29,10 @@
             "wires://provider/**"
           ]
         }
-      }
+      },
+      "links": [
+        {"ref":"core://content-source/use"}
+      ]
     },
     {
       "name": "Wire",

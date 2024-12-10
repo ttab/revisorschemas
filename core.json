@@ -413,6 +413,8 @@
         {"ref": "core://story"},
         {"ref": "core://section"},
         {"ref": "core://assignment"},
+        {"ref": "core://content-source"},
+        {"ref": "core://content-source/document"},
         {
           "name": "Publishing channel",
           "declares": {"rel":"channel", "type": "core/channel"},
@@ -463,15 +465,6 @@
           "attributes": {
             "uri": {},
             "title": {"allowEmpty":true}
-          }
-        },
-        {
-          "name": "Content source",
-          "description": "The organisation that is the source of the content",
-          "declares": {"type": "core/content-source", "rel":"source"},
-          "attributes": {
-            "uri": {},
-            "title": {}
           }
         },
         {
@@ -1260,6 +1253,56 @@
         "declares": {"type": "core/assignment", "rel":"assignment"},
         "attributes": {
           "uuid": {}
+        }
+      }
+    },
+    {
+      "id": "core://content-source",
+      "block": {
+        "name": "Content source",
+        "description": "The entity that is the source of the content, e.g. the organisation that produced it.",
+        "declares": {"type": "core/content-source", "rel":"source"},
+        "attributes": {
+          "uri": {},
+          "title": {}
+        }
+      }
+    },
+    {
+      "id": "core://content-source/document",
+      "block": {
+        "name": "Source document",
+        "description": "A document that has been used as a source",
+        "declares": {"rel":"source-document"},
+        "attributes": {
+          "uuid": {},
+          "type": {},
+          "uri": {
+            "optional": true
+          },
+          "title": {}
+        },
+        "data": {
+          "version": {
+            "name": "The version of the document that was used.",
+            "format": "int",
+            "optional": true
+          }
+        }
+      }
+    },
+    {
+      "id": "core://content-source/use",
+      "block": {
+        "name": "Content source",
+        "description": "Content source that should be referenced when using content from this source or provider.",
+        "declares": {
+          "type": "core/content-source",
+          "rel": "use-source"
+        },
+        "attributes": {
+          "uri": {},
+          "title": {}
         }
       }
     }
