@@ -15,6 +15,9 @@
       "values": {
         "tt/keycloak": {
           "description": "A keycloak user sub"
+        },
+        "x-imid/user": {
+          "description": "Legacy Naviga user account"
         }
       }
     }
@@ -89,7 +92,6 @@
       "links": [
         {
           "name": "Linked keycloak account",
-          "description": "",
           "match": {
             "rel": {"const": "same-as"},
             "type": {"const": "tt/keycloak"}
@@ -97,6 +99,17 @@
           "attributes": {
             "uri": {"glob":["core://user/sub/*"]},
             "role": {"enum": ["stage", "prod"]}
+          }
+        },
+        {
+          "name": "Linked NavigaID account",
+          "match": {
+            "rel": {"const": "same-as"},
+            "type": {"const": "x-imid/user"}
+          },
+          "attributes": {
+            "uri": {"glob":["imid://user/sub/*"]},
+            "role": {"const": "prod"}
           }
         }
       ]
