@@ -267,13 +267,7 @@
         }
       ],
       "links": [
-        {
-          "name": "Association with NavigaID user account",
-          "declares": {"type":"x-imid/user", "rel":"same-as"},
-          "attributes": {
-            "uri": {"glob":["imid://user/sub/*"]}
-          }
-        }
+        {"ref": "core://author-identity"}
       ]
     },
     {
@@ -784,6 +778,11 @@
   ],
   "enums": [
     {
+      "declare": "core://account-types",
+      "name": "Account types for authors",
+      "values": {}
+    },
+    {
       "declare": "core://text-roles",
       "name": "Text block roles",
       "values": {
@@ -1220,6 +1219,22 @@
           "longDescription": {"optional":true},
           "shortDescription": {"optional":true},
           "phone": {"optional":true}
+        }
+      }
+    },
+    {
+      "id": "core://author-identity",
+      "block": {
+        "name": "Association with an account, ties a author document to a login.",
+        "declares": {"rel":"same-as"},
+        "attributes": {
+          "type": {"enumReference": "core://account-types"},
+          "uri": {
+            "description": "URI identifying the account."
+          },
+          "role": {
+            "description": "Use role to describe what context the account is valid in."
+          }
         }
       }
     },
