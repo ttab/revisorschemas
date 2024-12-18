@@ -9,6 +9,14 @@
         "heading-4": {"forbidden":true},
         "vignette": {}
       }
+    },
+    {
+      "match": "core://account-types",
+      "values": {
+        "tt/keycloak": {
+          "description": "A keycloak user sub"
+        }
+      }
     }
   ],
   "documents": [
@@ -80,12 +88,15 @@
       ],
       "links": [
         {
-          "name": "Same as TT Author",
-          "description": "Marks the author as a special TT author",
-          "declares": {"rel":"same-as", "type":"tt/author"},
+          "name": "Linked keycloak account",
+          "description": "",
+          "match": {
+            "rel": {"const": "same-as"},
+            "type": {"const": "tt/keycloak"}
+          },
           "attributes": {
-            "uri": {"glob":["tt://author/*"]},
-            "title": {}
+            "uri": {"glob":["core://user/sub/*"]},
+            "role": {"enum": ["stage", "prod"]}
           }
         }
       ]

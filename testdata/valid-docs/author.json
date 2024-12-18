@@ -1,0 +1,41 @@
+{
+  "uuid": "938c6675-bdfb-4661-a635-04e41486212b",
+  "type": "core/author",
+  "uri": "core://author/938c6675-bdfb-4661-a635-04e41486212b",
+  "title": "Hugo Wetterberg/TT",
+  "links": [
+    {
+      "rel": "same-as",
+      "type": "tt/keycloak",
+      "uri": "core://user/sub/6693426e-0f76-43a8-94e0-b1d8c0eb0951",
+      "role": "stage"
+    }
+  ],
+  "meta": [
+    {
+      "type": "core/contact-info",
+      "data": {
+        "email": "hugo@tt.se",
+        "mobile": "0702123123",
+        "phone": "0702123123"
+      },
+      "role": "office"
+    },
+    {
+      "type": "core/definition",
+      "data": {
+        "text": "Not a journalist, just a dev."
+      },
+      "role": "long"
+    },
+    {
+      "type": "core/author",
+      "data": {
+        "firstName": "Hugo",
+        "initials": "huw",
+        "lastName": "Wetterberg"
+      }
+    }
+  ],
+  "language": "sv-se"
+}
