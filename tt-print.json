@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "name": "tt-print",
+  "documents": [
+    {
+      "name": "Print layout",
+      "declares": "tt/print-layout",
+      "links": [
+        {
+          "name": "Scribus document that describes the layout",
+          "declares": {"rel":"scribus-document"},
+          "count": 1,
+          "attributes": {
+            "uri": {
+              "glob": ["baboon://layout/*"]
+            }
+          }
+        }
+      ],
+      "meta": [
+        {"ref": "tt://print-constant"},
+        {"ref": "tt://print-charstyle"},
+        {"ref": "tt://print-content-format"}
+      ],
+      "content": [
+        {
+          "name": "Print slot",
+          "description": "A slot for rendering an article/print content",
+          "declares": {"type": "tt/print-slot"},
+          "attributes": {
+            "name": {}
+          },
+          "content": [
+            {"ref": "tt://print-frame"}
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": [
+    {
+      "id": "tt://print-constant",
+      "block": {
+        "name": "Constant",
+        "description": "A value to use when rendering the content",
+        "declares": {"type":"tt/print-constant"},
+        "attributes": {
+          "name": {},
+          "value": {}
+        }
+      }
+    },
+    {
+      "id": "tt://print-charstyle",
+      "block": {
+        "name": "Character style",
+        "description": "Character style to map inline elements to",
+        "declares": {"type":"tt/print-charstyle"},
+        "attributes": {
+          "name": {},
+          "value": {}
+        }
+      }
+    },
+    {
+      "id": "tt://print-content-format",
+      "block": {
+        "name": "Content format",
+        "description": "Format rules to use for paragraph and character styles.",
+        "declares": {"type":"tt/print-content-format"},
+        "attributes": {
+          "name": {
+            "description": "Name of the format"
+          }
+        },
+        "content": [
+          {
+            "name": "Paragraph style",
+            "declares": {"type":"tt/paragraph"},
+            "attributes": {
+              "role": {
+                "description": "Core text block role to match against",
+                "optional": true
+              }
+            },
+            "data": {
+              "style": {
+                "name": "Style name"
+              },
+              "rule": {
+                "description": "Rule that must evaluate to true for the style to be applied",
+                "optional": true
+              },
+              "inline": {
+                "description": "Selector for another block to inline into this one",
+                "optional": true
+              },
+              "inline_style": {
+                "description": "Character style to use for the inlined content",
+                "optional": true
+              },
+              "inline_template": {
+                "description": "Template to use for the inlined content",
+                "optional": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "content": [
+    {
+      "id": "tt://print-frame",
+      "block": {
+        "description": "Configuration for a print frame",
+        "declares": {"type":"tt/print-frame"},
+        "attributes": {
+          "role": {
+            "enum": [
+              "image",
+              "image-caption",
+              "headline",
+              "body",
+              "factbox",
+              "factbox-headline"
+            ],
+            "optional": true
+          },
+          "name": {
+            "name": "Scribus frame name"
+          }
+        },
+        "links": [
+          {
+            "name": "Content allocation",
+            "description": "Allows different frames to refer to the same piece of content.",
+            "declares": {"rel":"allocation"},
+            "attributes": {
+              "name": {
+                "description": "Logical name for the content"
+              }
+            }
+          },
+          {
+            "name": "Content format",
+            "description": "Format rules to use for paragraph and character styles",
+            "declares": {"rel": "content-format"},
+            "attributes": {
+              "name": {}
+            }
+          },
+          {
+            "name": "Follow rule",
+            "description": "Allows a frame to be repositioned or resized based on another frame.",
+            "declares": {"type": "tt/follow-rule"},
+            "attributes": {
+              "name": {
+                "name": "Name of frame to follow"
+              },
+              "rel": {
+                "name": "Follow method",
+                "enum": [
+                  "anchor-to-top",
+                  "yield-height",
+                  "bounds"
+                ]
+              }
+            }
+          }
+        ],
+        "meta": [
+          {
+            "name": "Grow rule",
+            "description": "Allows a text frame to grow (or shrink) based on its contents.",
+            "declares": {"type":"tt/grow-height"},
+            "data": {
+              "increment": {
+                "description": "Increments in which to grow or shrink, usually the line height, f.ex. '11pt'.",
+                "optional": true
+              },
+              "max_steps": {
+                "description": "Max steps to grow",
+                "format": "int",
+                "optional": true
+              },
+              "direction": {
+                "description": "Direction to grow, defaults to 'down'",
+                "enum": ["up", "down"],
+                "optional": true
+              },
+              "shrink": {
+                "description": "Whether the frame is allowed to shrink, defaults to false.",
+                "format": "bool",
+                "optional": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
