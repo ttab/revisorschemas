@@ -588,6 +588,9 @@
           "ref": "core://description"
         },
         {
+          "ref": "core://copy-group"
+        },
+        {
           "name": "Old time",
           "description": "A block for storing the old start time when an event has been rescheduled",
           "declares": {"type": "core/event-old-start"},
@@ -925,6 +928,18 @@
             "format":"RFC3339",
             "optional":true
           }
+        }
+      }
+    },
+    {
+      "id": "core://copy-group",
+      "block": {
+        "name": "Copy group",
+        "description": "Used to group documents that are created through copying",
+        "declares": {"type":"core/copy-group"},
+        "maxCount": 1,
+        "attributes": {
+          "uuid": {}
         }
       }
     }

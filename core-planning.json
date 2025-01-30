@@ -74,6 +74,9 @@
           "count": 1
         },
         {
+          "ref": "core://copy-group"
+        },
+        {
           "name": "Main metadata block",
           "declares": {
             "type": "core/planning-item"
