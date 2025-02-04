@@ -1374,6 +1374,10 @@
             "colspan": {
               "format": "int",
               "optional":true
+            },
+            "rowspan": {
+              "format": "int",
+              "optional":true
             }
           }
         },
@@ -1381,6 +1385,10 @@
           "attributes": {
             "id": {"optional":true},
             "colspan": {
+              "format": "int",
+              "optional":true
+            },
+            "rowspan": {
               "format": "int",
               "optional":true
             }
