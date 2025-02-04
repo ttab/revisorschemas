@@ -171,7 +171,7 @@
         ],
         "meta": [
           {
-            "name": "Grow rule",
+            "name": "Vertical grow rule",
             "description": "Allows a text frame to grow (or shrink) based on its contents.",
             "declares": {"type":"tt/grow-height"},
             "data": {
@@ -187,6 +187,28 @@
               "direction": {
                 "description": "Direction to grow, defaults to 'down'",
                 "enum": ["up", "down"],
+                "optional": true
+              },
+              "shrink": {
+                "description": "Whether the frame is allowed to shrink, defaults to false.",
+                "format": "bool",
+                "optional": true
+              }
+            }
+          },
+          {
+            "name": "Horizontal grow rule",
+            "description": "Allows a text frame to grow (or shrink) based on its contents.",
+            "declares": {"type":"tt/grow-width"},
+            "data": {
+              "max_width": {
+                "description": "Max width to grow to",
+                "format": "int",
+                "optional": true
+              },
+              "direction": {
+                "description": "Direction to grow, defaults to 'right'",
+                "enum": ["right", "left"],
                 "optional": true
               },
               "shrink": {
