@@ -14,6 +14,10 @@
       }
     },
     {
+      "type": "core/copy-group",
+      "uuid": "e7a79452-f983-45db-9b39-64c87012c063"
+    },
+    {
       "type": "core/description",
       "data": {
         "text": "PARASPORT: Den svenska truppen till Paralympics firas vid hemkomst (13.30, Arlanda)."
