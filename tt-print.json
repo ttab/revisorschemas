@@ -171,6 +171,33 @@
         ],
         "meta": [
           {
+            "name": "Kerning options",
+            "description": "Control automatic kerning, scaling and word spacing",
+            "declares": {"type":"tt/kerning"},
+            "data": {
+              "disabled": {
+                "description": "Disable automatic kerning, defaults to false."
+                "format": "bool",
+                "optional": true
+              },
+              "max": {
+                "description": "Max increase in percent, precision up to 0.01, defaults to 5",
+                "format": "float",
+                "optional": true
+              },
+              "min": {
+                "description": "Max decrease in percent, precision up to 0.01, defaults to 5",
+                "format": "float",
+                "optional": true
+              },
+              "increment": {
+                "description": "Change increment in percent, precision up to 0.01, defaults to 0.25",
+                "format": "float",
+                "optional": true
+              }
+            }
+          },
+          {
             "name": "Vertical grow rule",
             "description": "Allows a text frame to grow (or shrink) based on its contents.",
             "declares": {"type":"tt/grow-height"},
@@ -202,8 +229,7 @@
             "declares": {"type":"tt/grow-width"},
             "data": {
               "max_width": {
-                "description": "Max width to grow to",
-                "format": "int",
+                "description": "Max width to grow to, f.ex. '10pt' or '15mm'",
                 "optional": true
               },
               "direction": {
