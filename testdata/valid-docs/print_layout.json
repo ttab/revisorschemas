@@ -109,6 +109,9 @@
           "name": "A1_Rubrik",
           "links": [
             {"rel":"anchor-to-top", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ],
+          "meta": [
+            {"type": "tt/kerning", "data": {"max":"0", "min": "4.5"}}
           ]
         },
         {
