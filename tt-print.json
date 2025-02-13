@@ -57,8 +57,12 @@
         "description": "Character style to map inline elements to",
         "declares": {"type":"tt/print-charstyle"},
         "attributes": {
-          "name": {},
-          "value": {}
+          "name": {
+            "name": "Tag"
+          },
+          "value": {
+            "name": "Style"
+          }
         }
       }
     },
