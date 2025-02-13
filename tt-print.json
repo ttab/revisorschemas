@@ -167,7 +167,8 @@
                 "enum": [
                   "anchor-to-top",
                   "yield-height",
-                  "bounds"
+                  "bounds",
+                  "anchor-height-to-top"
                 ]
               }
             }
