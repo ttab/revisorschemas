@@ -49,6 +49,14 @@
           "type": "core/assignment-type",
           "value": "text"
         }
+      ],
+      "links": [
+        {
+          "rel": "source-document",
+          "type": "tt/wire",
+          "title": "A newswire",
+          "uuid": "1aedf55d-789a-4905-afe2-12d26a5c83c1"
+        }
       ]
     }
   ],

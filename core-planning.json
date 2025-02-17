@@ -63,8 +63,7 @@
             "uuid": {},
             "title": {}
           }
-        },
-        {"ref": "core://content-source/document"}
+        }
       ],
       "meta": [
         {
@@ -198,6 +197,7 @@
             }
           ],
           "links": [
+            {"ref": "core://content-source/document"},
             {
               "name": "Section",
               "declares": {
