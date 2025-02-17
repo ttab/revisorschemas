@@ -63,7 +63,8 @@
             "uuid": {},
             "title": {}
           }
-        }
+        },
+        {"ref": "core://content-source/document"}
       ],
       "meta": [
         {
