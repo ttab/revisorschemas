@@ -181,7 +181,7 @@
             "declares": {"type":"tt/kerning"},
             "data": {
               "disabled": {
-                "description": "Disable automatic kerning, defaults to false."
+                "description": "Disable automatic kerning, defaults to false.",
                 "format": "bool",
                 "optional": true
               },
