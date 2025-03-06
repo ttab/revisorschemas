@@ -3,6 +3,29 @@
   "name": "tt-print",
   "documents": [
     {
+      "name": "Print article",
+      "description": "Print content",
+      "declares": "tt/print-article",
+      "content": [
+        {"ref": "tt://print-text"},
+        {"ref": "tt://tv-listing"},
+        {"ref": "tt://visual"},
+        {"ref": "core://text"},
+        {"ref": "core://image"},
+        {"ref": "core://unordered-list"},
+        {"ref": "core://ordered-list"},
+        {"ref": "core://factbox"}
+      ],
+      "meta": [
+        {"ref": "core://note"}
+      ],
+      "links": [
+        {"ref": "core://article-source"},
+        {"ref": "core://byline"},
+        {"ref": "core://section"}
+      ]
+    },
+    {
       "name": "Print layout",
       "declares": "tt/print-layout",
       "links": [
@@ -114,6 +137,47 @@
     }
   ],
   "content": [
+    {
+      "id": "tt://print-text",
+      "block": {
+        "description": "A print text block",
+        "declares": {"type":"tt/print-text"},
+        "attributes": {
+          "role": {
+            "optional":true
+          }
+        },
+        "data": {
+          "text":{
+            "allowEmpty":true,
+            "format": "html"
+          }
+        }
+      }
+    },
+    {
+      "id": "tt://tv-listing",
+      "block": {
+        "description": "Block that describes the details for a TV listing",
+        "declares": {"type":"tt/tv-listing"},
+        "data": {
+          "channel":{"optional": true},
+          "day":{"optional": true},
+          "time":{"optional": true},
+          "title":{"optional": true},
+          "end_time":{"optional": true}
+        },
+        "links": [
+          {
+            "declares": {"rel":"self"},
+            "maxCount": 1,
+            "attributes": {
+              "uri": {}
+            }
+          }
+        ]
+      }
+    },
     {
       "id": "tt://print-frame",
       "block": {

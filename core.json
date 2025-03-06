@@ -408,6 +408,7 @@
         {"ref": "core://story"},
         {"ref": "core://section"},
         {"ref": "core://assignment"},
+        {"ref": "core://article-source"},
         {"ref": "core://content-source"},
         {"ref": "core://content-source/document"},
         {
@@ -460,14 +461,6 @@
           "attributes": {
             "uri": {},
             "title": {"allowEmpty":true}
-          }
-        },
-        {
-          "name": "Article source",
-          "description": "Points to the original article if this one is a copy",
-          "declares": {"type": "core/article", "rel":"source"},
-          "attributes": {
-            "uuid": {}
           }
         }
       ]
@@ -1282,6 +1275,17 @@
         "name": "Assignment",
         "description": "A link to the assignment that the document was produced for",
         "declares": {"type": "core/assignment", "rel":"assignment"},
+        "attributes": {
+          "uuid": {}
+        }
+      }
+    },
+    {
+      "id": "core://article-source",
+      "block": {
+        "name": "Article source",
+        "description": "Points to the original article if this one is a copy",
+        "declares": {"type": "core/article", "rel":"source"},
         "attributes": {
           "uuid": {}
         }
