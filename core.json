@@ -358,6 +358,7 @@
       "links": [
         {"ref": "core://byline"},
         {"ref": "core://section"},
+        {"ref": "core://story"},
         {"ref": "core://assignment"}
       ],
       "content": [
