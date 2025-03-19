@@ -90,6 +90,78 @@
       }
     },
     {
+      "id": "tt:/print-flow/layouts",
+      "block": {
+        "name": "Print flow layouts",
+        "description": "The customer layouts that are part of the print flow",
+        "declares": {"type": "tt/print-layouts"},
+        "links": [
+          {
+            "name": "Layout",
+            "declares": {"rel": "layout"},
+            "attributes": {
+              "name": {},
+              "uuid": {},
+              "uri": {}
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "tt:/print-flow/content",
+      "block": {
+        "name": "Print flow content",
+        "description": "Definition for a piece of content that is part of a print flow",
+        "declares": {"type": "tt/print-content"},
+        "attributes": {
+          "name": {},
+          "title": {}
+        },
+        "content": [
+          {"ref": "tt:/print-flow/content-layout"}
+        ]
+      }
+    },
+    {
+      "id": "tt://print-flow/content-layout",
+      "block": {
+        "name": "Content layout",
+        "description": "The specific article layout and settings that should be used",
+        "declares": {"type": "tt/content-layout"},
+        "data": {
+          "layout": {},
+          "article_layout": {},
+          "position": {
+            "optional": true,
+            "format": "int"
+          }
+        },
+        "meta": [
+          {"ref": "tt://print-flow/features"}
+        ]
+      }
+    },
+    {
+      "id": "tt://print-flow/features",
+      "block": {
+        "name": "Print features",
+        "declares": {"type": "tt/print-features"},
+        "content": [
+          {
+            "name": "Print feature",
+            "declares": {"type": "tt/print-feature"},
+            "attributes": {
+              "name": {},
+              "value": {
+                "format": "bool"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "tt://print-content-format",
       "block": {
         "name": "Content format",
