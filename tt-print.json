@@ -58,6 +58,16 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Print flow",
+      "declares": "tt/print-flow",
+      "meta": [
+        {"ref": "tt:/print-flow/layouts"}
+      ],
+      "content": [
+        {"ref": "tt:/print-flow/content"}
+      ]
     }
   ],
   "meta": [
@@ -105,40 +115,6 @@
               "uri": {}
             }
           }
-        ]
-      }
-    },
-    {
-      "id": "tt:/print-flow/content",
-      "block": {
-        "name": "Print flow content",
-        "description": "Definition for a piece of content that is part of a print flow",
-        "declares": {"type": "tt/print-content"},
-        "attributes": {
-          "name": {},
-          "title": {}
-        },
-        "content": [
-          {"ref": "tt:/print-flow/content-layout"}
-        ]
-      }
-    },
-    {
-      "id": "tt://print-flow/content-layout",
-      "block": {
-        "name": "Content layout",
-        "description": "The specific article layout and settings that should be used",
-        "declares": {"type": "tt/content-layout"},
-        "data": {
-          "layout": {},
-          "article_layout": {},
-          "position": {
-            "optional": true,
-            "format": "int"
-          }
-        },
-        "meta": [
-          {"ref": "tt://print-flow/features"}
         ]
       }
     },
@@ -209,6 +185,40 @@
     }
   ],
   "content": [
+    {
+      "id": "tt:/print-flow/content",
+      "block": {
+        "name": "Print flow content",
+        "description": "Definition for a piece of content that is part of a print flow",
+        "declares": {"type": "tt/print-content"},
+        "attributes": {
+          "name": {},
+          "title": {}
+        },
+        "content": [
+          {"ref": "tt://print-flow/content-layout"}
+        ]
+      }
+    },
+    {
+      "id": "tt://print-flow/content-layout",
+      "block": {
+        "name": "Content layout",
+        "description": "The specific article layout and settings that should be used",
+        "declares": {"type": "tt/content-layout"},
+        "data": {
+          "layout": {},
+          "article_layout": {},
+          "position": {
+            "optional": true,
+            "format": "int"
+          }
+        },
+        "meta": [
+          {"ref": "tt://print-flow/features"}
+        ]
+      }
+    },
     {
       "id": "tt://print-text",
       "block": {
