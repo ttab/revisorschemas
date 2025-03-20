@@ -170,6 +170,12 @@
       ]
     },
     {
+      "match": {"type": {"const":"core/editorial-info"}},
+      "meta": [
+        {"ref": "tt://slugline"}
+      ]
+    },
+    {
       "match": {"type": {"const":"core/article"}},
       "links": [
         {
@@ -235,16 +241,7 @@
         {"ref": "tt://visual"}
       ],
       "meta": [
-        {
-          "declares": {"type":"tt/slugline"},
-          "maxCount": 1,
-          "attributes": {
-            "value": {
-              "labels": ["keyword", "prefix"],
-              "hints": {"alias": ["slug"]}
-            }
-          }
-        },
+        {"ref": "tt://slugline"},
         {
           "name": "Sector",
           "declares": {"type":"tt/sector"},
@@ -260,6 +257,21 @@
           }
         }
       ]
+    }
+  ],
+  "meta": [
+    {
+      "id": "tt://slugline",
+      "block": {
+        "declares": {"type":"tt/slugline"},
+        "maxCount": 1,
+        "attributes": {
+          "value": {
+            "labels": ["keyword", "prefix"],
+            "hints": {"alias": ["slug"]}
+          }
+        }
+      }
     }
   ],
   "content": [
