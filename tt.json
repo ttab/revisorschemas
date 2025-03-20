@@ -170,6 +170,12 @@
       ]
     },
     {
+      "match": {"type": {"const":"core/editorial-info"}},
+      "meta": [
+        {"ref": "tt://slugline"}
+      ]
+    },
+    {
       "match": {"type": {"const":"core/article"}},
       "links": [
         {
@@ -232,51 +238,10 @@
             }
           }
         },
-        {
-          "name": "TT visual element",
-          "description": "This can be either a picture or a graphic",
-          "declares": {"type":"tt/visual"},
-          "data": {
-            "caption": {"allowEmpty":true}
-          },
-          "links": [
-            {
-              "declares": {"rel":"self"},
-              "attributes": {
-                "uri": {},
-                "url": {},
-                "type": {
-                  "enum": ["tt/picture", "tt/graphic"]
-                }
-              },
-              "data": {
-                "credit": {"allowEmpty":true},
-                "height": {"format":"int"},
-                "width": {"format":"int"},
-                "hiresScale": {
-                  "format": "float",
-                  "optional": true,
-                  "deprecated": {
-                    "label": "hires-scale",
-                    "doc": "Not supported anymore"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        {"ref": "tt://visual"}
       ],
       "meta": [
-        {
-          "declares": {"type":"tt/slugline"},
-          "maxCount": 1,
-          "attributes": {
-            "value": {
-              "labels": ["keyword", "prefix"],
-              "hints": {"alias": ["slug"]}
-            }
-          }
-        },
+        {"ref": "tt://slugline"},
         {
           "name": "Sector",
           "declares": {"type":"tt/sector"},
@@ -292,6 +257,59 @@
           }
         }
       ]
+    }
+  ],
+  "meta": [
+    {
+      "id": "tt://slugline",
+      "block": {
+        "declares": {"type":"tt/slugline"},
+        "maxCount": 1,
+        "attributes": {
+          "value": {
+            "labels": ["keyword", "prefix"],
+            "hints": {"alias": ["slug"]}
+          }
+        }
+      }
+    }
+  ],
+  "content": [
+    {
+      "id": "tt://visual",
+      "block": {
+        "name": "TT visual element",
+        "description": "This can be either a picture or a graphic",
+        "declares": {"type":"tt/visual"},
+        "data": {
+          "caption": {"allowEmpty":true}
+        },
+        "links": [
+          {
+            "declares": {"rel":"self"},
+            "attributes": {
+              "uri": {},
+              "url": {},
+              "type": {
+                "enum": ["tt/picture", "tt/graphic"]
+              }
+            },
+            "data": {
+              "credit": {"allowEmpty":true},
+              "height": {"format":"int"},
+              "width": {"format":"int"},
+              "hiresScale": {
+                "format": "float",
+                "optional": true,
+                "deprecated": {
+                  "label": "hires-scale",
+                  "doc": "Not supported anymore"
+                }
+              }
+            }
+          }
+        ]
+      }
     }
   ]
 }

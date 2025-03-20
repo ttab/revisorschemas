@@ -1,0 +1,314 @@
+{
+  "uuid": "5dfe67f7-f65b-5586-bd23-8885383e1a1f",
+  "uri": "tt://print/layout/ntm-nyheter",
+  "type": "tt/print-layout",
+  "title": "NTM Nyheter",
+  "meta": [
+    {
+      "type": "tt/print-content-format",
+      "name": "article",
+      "content": [
+        {
+          "type": "tt/paragraph",
+          "role": "vignette",
+          "data": {
+            "style": "A Vinjett"
+          }
+        },
+        {
+          "type": "tt/paragraph",
+          "role": "preamble",
+          "data": {
+            "rule": "Used == 0",
+            "style": "A Ingress utan indrag"
+          }
+        },
+        {
+          "type": "tt/paragraph",
+          "role": "preamble",
+          "data": {
+            "style": "A Ingress med indrag"
+          }
+        },
+        {
+          "type": "tt/paragraph",
+          "data": {
+            "rule": "Used == 0",
+            "style": "A Bröd utan indrag"
+          }
+        },
+        {
+          "type": "tt/paragraph",
+          "data": {
+            "style": "A Bröd med indrag"
+          }
+        }
+      ]
+    },
+    {
+      "type": "tt/print-content-format",
+      "name": "factbox",
+      "content": [
+        {
+          "type": "tt/paragraph",
+          "data": {
+            "rule": "Used == 0",
+            "style": "F Bröd utan indrag"
+          }
+        },
+        {
+          "type": "tt/paragraph",
+          "data": {
+            "style": "F Bröd med indrag"
+          }
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "rel":"scribus-document",
+      "uri":"baboon://layout/ntm-nyheter"
+    }
+  ],
+  "content": [
+    {
+      "type": "tt/print-slot",
+      "name": "A1",
+      "content": [
+        {
+          "type": "tt/print-frame",
+          "role": "image",
+          "name": "A1_Bild1",
+          "links": [
+            {"rel":"allocation", "name": "primary"},
+            {"rel":"yield-height", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "image-caption",
+          "name": "A1_Bildtext1",
+          "meta": [
+            {
+              "type": "tt/grow-height",
+              "data": {
+                "increment": "10.5pt",
+                "max_steps": "1"
+              }
+            }
+          ],
+          "links": [
+            {"rel":"allocation", "name": "primary"},
+            {"rel":"anchor-to-top", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "headline",
+          "name": "A1_Rubrik",
+          "links": [
+            {"rel":"anchor-to-top", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ],
+          "meta": [
+            {"type": "tt/kerning", "data": {"max":"0", "min": "4.5"}}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "body",
+          "name": "A1_Bröd",
+          "meta": [
+            {
+              "type": "tt/grow-height",
+              "data": {
+                "increment": "10.5pt",
+                "max_steps": "4",
+                "direction": "up"
+              }
+            }
+          ],
+          "links": [
+            {"rel": "content-format", "name": "article"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "factbox",
+          "name": "A1_Faktatext",
+          "meta": [
+            {
+              "type": "tt/grow-height",
+              "data": {
+                "increment": "10.5pt",
+                "max_steps": "4",
+                "direction": "up",
+                "shrink": "true"
+              }
+            }
+          ],
+          "links": [
+            {"rel": "allocation", "name": "primary"},
+            {"rel": "content-format", "name": "factbox"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "factbox-headline",
+          "name": "A1_Faktarubrik",
+          "meta": [
+            {
+              "type": "tt/grow-height",
+              "data": {
+                "increment": "11pt",
+                "max_steps": "1",
+                "direction": "up",
+                "shrink": "true"
+              }
+            }
+          ],
+          "links": [
+            {"rel": "allocation", "name": "primary"},
+            {"rel":"anchor-to-top", "name": "A1_Faktatext", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "name": "A1_Faktatextplatta",
+          "links": [
+            {"rel":"bounds", "name": "A1_Faktatext", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "name": "A1_Faktarubrikplatta",
+          "links": [
+            {"rel":"bounds", "name": "A1_Faktarubrik", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "image",
+          "name": "A1_Bild2",
+          "links": [
+            {"rel":"allocation", "name": "p1"},
+            {"rel":"anchor-to-top", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "image-caption",
+          "name": "A1_Bildtext2",
+          "meta": [
+            {
+              "type": "tt/grow-height",
+              "data": {
+                "increment": "10.5pt",
+                "max_steps": "2"
+              }
+            }
+          ],
+          "links": [
+            {"rel":"allocation", "name": "p1"},
+            {"rel":"anchor-to-top", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "name": "A1_P1Box",
+          "links": [
+            {"rel":"bounds", "name": "A1_Bildtext2", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "image",
+          "name": "A1_Bild3",
+          "links": [
+            {"rel":"allocation", "name": "p3"},
+            {"rel":"anchor-to-top", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "image-caption",
+          "name": "A1_Bildtext3",
+          "meta": [
+            {
+              "type": "tt/grow-height",
+              "data": {
+                "increment": "10.5pt",
+                "max_steps": "2"
+              }
+            }
+          ],
+          "links": [
+            {"rel":"allocation", "name": "p3"},
+            {"rel":"anchor-to-top", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "name": "A1_P2Box",
+          "links": [
+            {"rel":"bounds", "name": "A1_Bildtext3", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "image",
+          "name": "A1_Bild4",
+          "links": [
+            {"rel":"allocation", "name": "secondary"},
+            {"rel":"anchor-to-top", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "image-caption",
+          "name": "A1_Bildtext4",
+          "meta": [
+            {
+              "type": "tt/grow-height",
+              "data": {
+                "increment": "10.5pt",
+                "max_steps": "2"
+              }
+            }
+          ],
+          "links": [
+            {"rel":"allocation", "name": "secondary"},
+            {"rel":"anchor-to-top", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "image",
+          "name": "A1_Bild5",
+          "links": [
+            {"rel":"allocation", "name": "secondary"},
+            {"rel":"anchor-to-top", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ]
+        },
+        {
+          "type": "tt/print-frame",
+          "role": "image-caption",
+          "name": "A1_Bildtext5",
+          "meta": [
+            {
+              "type": "tt/grow-height",
+              "data": {
+                "increment": "10.5pt",
+                "max_steps": "2"
+              }
+            }
+          ],
+          "links": [
+            {"rel":"allocation", "name": "secondary"},
+            {"rel":"anchor-to-top", "name": "A1_Bröd", "type": "tt/follow-rule"}
+          ]
+        }
+      ]
+    }
+  ]
+}
