@@ -215,6 +215,10 @@
           "position": {
             "optional": true,
             "format": "int"
+          },
+          "text_export": {
+            "optional": true,
+            "format": "bool"
           }
         },
         "meta": [

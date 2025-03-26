@@ -2,6 +2,7 @@
   "uuid": "db555045-4d22-4208-b0be-5d8551fd410b",
   "uri": "tt://print-flow/db555045-4d22-4208-b0be-5d8551fd410b",
   "type": "tt/print-flow",
+  "title": "TV-texter måndag",
   "meta": [
     {
       "type": "tt/print-layouts",
@@ -23,6 +24,12 @@
           "name": "expressen",
           "uuid": "c574a72b-9ac8-4c5c-9cac-cbf58d35bfd8",
           "uri": "tt://print/layout/expressen"
+        },
+        {
+          "rel": "layout",
+          "name": "dagen",
+          "uuid": "2da69702-09ba-4541-89e5-4506c56e2798",
+          "uri": "tt://print/layout/dagen"
         }
       ]
     }
@@ -32,12 +39,43 @@
       "type": "tt/print-content",
       "name": "t1",
       "title": "T1",
+      "meta": [
+        {
+          "type": "tt/print-features",
+          "content": [
+            {
+              "type": "tt/print-feature",
+              "name": "1-spaltsbild",
+              "value": "false"
+            },
+            {
+              "type": "tt/print-feature",
+              "name": "2-spaltsbild",
+              "value": "true"
+            },
+            {
+              "type": "tt/print-feature",
+              "name": "Faktaruta",
+              "value": "true"
+            }
+          ]
+        }
+      ],
       "content": [
         {
           "type": "tt/content-layout",
           "data": {
             "layout": "tt",
             "article_layout": "A(Bildtopp)"
+          }
+        },
+        {
+          "type": "tt/content-layout",
+          "data": {
+            "layout": "ntm",
+            "article_layout": "A(Texttopp)",
+            "position": "1",
+            "text_export": "true"
           },
           "meta": [
             {
@@ -45,18 +83,8 @@
               "content": [
                 {
                   "type": "tt/print-feature",
-                  "name": "1-spaltsbild",
-                  "value": "false"
-                },
-                {
-                  "type": "tt/print-feature",
                   "name": "2-spaltsbild",
-                  "value": "true"
-                },
-                {
-                  "type": "tt/print-feature",
-                  "name": "Faktaruta",
-                  "value": "true"
+                  "value": "false"
                 }
               ]
             }
@@ -65,32 +93,11 @@
         {
           "type": "tt/content-layout",
           "data": {
-            "layout": "ntm",
+            "layout": "dagen",
             "article_layout": "A(Texttopp)",
-            "position": "1"
-          },
-          "meta": [
-            {
-              "type": "tt/print-features",
-              "content": [
-                {
-                  "type": "tt/print-feature",
-                  "name": "1-spaltsbild",
-                  "value": "true"
-                },
-                {
-                  "type": "tt/print-feature",
-                  "name": "2-spaltsbild",
-                  "value": "false"
-                },
-                {
-                  "type": "tt/print-feature",
-                  "name": "Faktaruta",
-                  "value": "true"
-                }
-              ]
-            }
-          ]
+            "position": "1",
+            "text_export": "true"
+          }
         }
       ]
     }
