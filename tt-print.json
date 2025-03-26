@@ -195,6 +195,9 @@
           "name": {},
           "title": {}
         },
+        "meta": [
+          {"ref": "tt://print-flow/features"}
+        ],
         "content": [
           {"ref": "tt://print-flow/content-layout"}
         ]
