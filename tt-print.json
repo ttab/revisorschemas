@@ -28,18 +28,6 @@
     {
       "name": "Print layout",
       "declares": "tt/print-layout",
-      "links": [
-        {
-          "name": "Scribus document that describes the layout",
-          "declares": {"rel":"scribus-document"},
-          "count": 1,
-          "attributes": {
-            "uri": {
-              "glob": ["baboon://layout/*"]
-            }
-          }
-        }
-      ],
       "meta": [
         {"ref": "tt://print-constant"},
         {"ref": "tt://print-charstyle"},
