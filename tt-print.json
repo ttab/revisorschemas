@@ -318,12 +318,7 @@
               },
               "rel": {
                 "name": "Follow method",
-                "enum": [
-                  "anchor-to-top",
-                  "yield-height",
-                  "bounds",
-                  "anchor-height-to-top"
-                ]
+                "enumReference": "tt://print/follow-rels"
               }
             }
           },
@@ -422,7 +417,7 @@
   "enums": [
     {
       "declare": "tt://print-frame/roles",
-      "name": "Allowed print frame roles",
+      "name": "Print frame roles",
       "values": {
         "image": {},
         "image-caption": {},
@@ -437,6 +432,20 @@
         },
         "factbox-body": {},
         "factbox-headline": {}
+      }
+    },
+    {
+      "declare": "tt://print/follow-rels",
+      "name": "Follow relationships",
+      "values": {
+        "anchor-bottom-to-top": {},
+        "anchor-height-to-bottom": {},
+        "anchor-height-to-top": {},
+        "anchor-to-bottom": {},
+        "anchor-to-top": {},
+        "bounds": {},
+        "yield-height": {},
+        "yield-width": {}
       }
     }
   ]
