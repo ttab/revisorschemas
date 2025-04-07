@@ -169,6 +169,10 @@
               "inline_template": {
                 "description": "Template to use for the inlined content",
                 "optional": true
+              },
+              "template": {
+                "description": "Template to use when rendering paragraph content",
+                "optional": true
               }
             }
           }
