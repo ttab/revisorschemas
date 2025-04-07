@@ -426,6 +426,7 @@
       "values": {
         "image": {},
         "image-caption": {},
+        "image-credit": {},
         "headline": {},
         "body": {},
         "factbox": {
