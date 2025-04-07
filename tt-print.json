@@ -277,18 +277,16 @@
         "declares": {"type":"tt/print-frame"},
         "attributes": {
           "role": {
-            "enum": [
-              "image",
-              "image-caption",
-              "headline",
-              "body",
-              "factbox",
-              "factbox-headline"
-            ],
+            "enumReference": "tt://print-frame/roles",
             "optional": true
           },
           "name": {
             "name": "Scribus frame name"
+          }
+        },
+        "data": {
+          "template": {
+            "optional": true
           }
         },
         "links": [
@@ -327,6 +325,18 @@
                   "anchor-height-to-top"
                 ]
               }
+            }
+          },
+          {
+            "name": "Image allocation",
+            "description": "Allows different image frames to refer to the same content image.",
+            "declares": {"rel":"image"},
+            "deprecated": {
+              "label": "image_allocation",
+              "doc": "Use rel=allocation instead"
+            },
+            "attributes": {
+              "name": {}
             }
           }
         ],
@@ -406,6 +416,26 @@
             }
           }
         ]
+      }
+    }
+  ],
+  "enums": [
+    {
+      "declare": "tt://print-frame/roles",
+      "name": "Allowed print frame roles",
+      "values": {
+        "image": {},
+        "image-caption": {},
+        "headline": {},
+        "body": {},
+        "factbox": {
+          "deprecated": {
+            "label": "print_frame_factbox",
+            "doc": "Use 'factbox-body' instead"
+          }
+        },
+        "factbox-body": {},
+        "factbox-headline": {}
       }
     }
   ]
