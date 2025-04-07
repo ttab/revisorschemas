@@ -62,6 +62,10 @@
     {
       "name": "Print flow",
       "declares": "tt/print-flow",
+      "attributes": {
+        "title": {},
+        "uri": {"glob":["tt://print-flow/*"]}
+      },
       "meta": [
         {"ref": "tt:/print-flow/layouts"}
       ],
