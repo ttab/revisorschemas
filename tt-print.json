@@ -213,8 +213,7 @@
           "layout": {},
           "article_layout": {},
           "position": {
-            "optional": true,
-            "format": "int"
+            "optional": true
           },
           "text_export": {
             "optional": true,
