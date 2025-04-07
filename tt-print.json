@@ -320,6 +320,13 @@
                 "name": "Follow method",
                 "enumReference": "tt://print/follow-rels"
               }
+            },
+            "data": {
+              "snap": {
+                "name": "Snap to baseline",
+                "optional": true,
+                "enum": ["nearest", "up", "down"]
+              }
             }
           },
           {
