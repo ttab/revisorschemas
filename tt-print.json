@@ -58,10 +58,16 @@
         "uri": {"glob":["tt://print-flow/*"]}
       },
       "meta": [
-        {"ref": "tt:/print-flow/layouts"}
+        {
+          "ref": "tt:/print-flow/layouts",
+          "count": 1
+        }
       ],
       "content": [
-        {"ref": "tt:/print-flow/content"}
+        {
+          "ref": "tt:/print-flow/content",
+          "minCount": 1
+        }
       ]
     }
   ],
@@ -94,8 +100,41 @@
             "description": "The flow article that this print article is based on"
           }
         },
-        "content": [
-          {"ref": "tt://print-flow/content-layout"}
+        "meta": [
+          {"ref": "tt://print-content/article-layout"}
+        ]
+      }
+    },
+    {
+      "id": "tt://print-content/article-layout",
+      "block": {
+        "name": "Article layout",
+        "description": "The specific article layout and settings that should be used",
+        "declares": {"type": "tt/article-layout"},
+        "data": {
+          "article_layout": {},
+          "position": {
+            "optional": true
+          },
+          "text_export": {
+            "optional": true,
+            "format": "bool"
+          }
+        },
+        "meta": [
+          {"ref": "tt://print-flow/features"}
+        ],
+        "links": [
+          {
+            "name": "Layout",
+            "declares": {"rel": "layout"},
+            "maxCount": 1,
+            "attributes": {
+              "name": {},
+              "uuid": {},
+              "uri": {}
+            }
+          }
         ]
       }
     },
@@ -137,6 +176,7 @@
           {
             "name": "Layout",
             "declares": {"rel": "layout"},
+            "minCount": 1,
             "attributes": {
               "name": {},
               "uuid": {},
@@ -254,6 +294,18 @@
         },
         "meta": [
           {"ref": "tt://print-flow/features"}
+        ],
+        "links": [
+          {
+            "name": "Layout",
+            "declares": {"rel": "layout"},
+            "maxCount": 1,
+            "attributes": {
+              "name": {},
+              "uuid": {},
+              "uri": {}
+            }
+          }
         ]
       }
     },
