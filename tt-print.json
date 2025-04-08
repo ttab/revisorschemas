@@ -91,13 +91,18 @@
         "name": "Print article meta",
         "description": "Metadata for print articles",
         "declares": {"type":"tt/print-article"},
+        "attributes": {
+          "title": {
+            "description": "The title of the flow article, modified for variants"
+          },
+          "name": {
+            "description": "The flow article that this print article is based on"
+          }
+        },
         "data": {
           "date": {
             "time": "2006-01-02",
             "description": "The date the article has been instantiated on"
-          },
-          "content_name": {
-            "description": "The flow article that this print article is based on"
           }
         },
         "meta": [
