@@ -1,0 +1,193 @@
+{
+  "uuid": "9b5a081b-430f-4e99-8c97-a2c89793dcff",
+  "type": "tt/print-article",
+  "uri": "tt://print-article/9b5a081b-430f-4e99-8c97-a2c89793dcff",
+  "title": "Vänstertopp",
+  "meta": [
+    {
+      "type": "tt/print-article",
+      "name": "Vänstertopp",
+      "title": "Vänstertopp",
+      "data": {
+        "date": "2025-04-08"
+      },
+      "meta": [
+        {
+          "type": "tt/article-layout",
+          "name": "A(Utopp)",
+          "data": {
+            "position": "v1"
+          },
+          "links": [
+            {
+              "rel": "layout",
+              "name": "NTM_Gotland",
+              "uuid": "5dfe67f7-f65b-5586-bd23-8885383e1a1f",
+              "uri": "tt://print/layout/ntm"
+            }
+          ],
+          "meta": [
+            {
+              "type": "tt/print-features",
+              "content": [
+                {
+                  "type": "tt/print-feature",
+                  "name": "1-spaltsbild",
+                  "value": "false"
+                },
+                {
+                  "type": "tt/print-feature",
+                  "name": "2-spaltsbild",
+                  "value": "false"
+                },
+                {
+                  "type": "tt/print-feature",
+                  "name": "Faktaruta",
+                  "value": "true"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tt/article-layout",
+          "name": "A(Utopp)",
+          "data": {
+            "position": "v1"
+          },
+          "links": [
+            {
+              "rel": "layout",
+              "name": "NTM_uppslag",
+              "uuid": "5dfe67f7-f65b-5586-bd23-8885383e1a1f",
+              "uri": "tt://print/layout/ntm"
+            }
+          ],
+          "meta": [
+            {
+              "type": "tt/print-features",
+              "content": [
+                {
+                  "type": "tt/print-feature",
+                  "name": "1-spaltsbild",
+                  "value": "false"
+                },
+                {
+                  "type": "tt/print-feature",
+                  "name": "2-spaltsbild",
+                  "value": "false"
+                },
+                {
+                  "type": "tt/print-feature",
+                  "name": "Faktaruta",
+                  "value": "true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "type": "core/text",
+      "role": "heading-1",
+      "data": {
+        "text": "Pånyttfödd stjärna vill skjuta Inter till final"
+      }
+    },
+    {
+      "type": "tt/visual",
+      "data": {
+        "caption": "Inters Romelu Lukaku firar ett av sina två mål i helgens ligamatch (4–2) mot Sassuolo."
+      },
+      "links": [
+        {
+          "uri": "http://tt.se/media/image/sdlAh_UuIyXsC0",
+          "url": "https://tt.se/media/image/sdlAh_UuIyXsC0_NormalPreview.jpg",
+          "type": "tt/picture",
+          "data": {
+            "credit": "Spada/AP/TT",
+            "height": "683",
+            "hiresScale": "2.9052734375",
+            "width": "1024"
+          },
+          "rel": "self"
+        }
+      ]
+    },
+    {
+      "type": "core/text",
+      "role": "vignette",
+      "data": {
+        "text": "Fotboll"
+      }
+    },
+    {
+      "type": "tt/print-text",
+      "role": "pullquote",
+      "data": {
+        "text": "Skador och ett VM-fiasko såg länge ut att prägla Romelu Lukakus säsong."
+      }
+    },
+    {
+      "type": "core/text",
+      "role": "preamble",
+      "data": {
+        "text": "Men den belgiske anfallsstjärnan har återuppstått."
+      }
+    },
+    {
+      "type": "core/text",
+      "role": "preamble",
+      "data": {
+        "text": "Nu vill han skjuta sitt Inter till Champions League-final."
+      }
+    },
+    {
+      "type": "core/text",
+      "data": {
+        "text": "Det var nog inte många som trodde på en framgångsrik Champions League-säsong för Inter, eller ens avancemang till slutspel, efter den första matchen i september. 0–2 hemma mot Bayern München var precis den start man inte önskade i grupp C, som också innehöll ett stjärnspäckat Barcelona."
+      }
+    },
+    {
+      "type": "core/text",
+      "role": "heading-2",
+      "data": {
+        "text": "Lukaku i målform"
+      }
+    },
+    {
+      "type": "core/text",
+      "data": {
+        "text": "En 1–0-seger hemma mot Barcelona och 3–3 på bortaplan mot samma lag lade sedan grunden till avancemanget. I slutspelet har dubbla portugisiska hinder passerats – Porto i åttondel, Benfica i kvartsfinal – innan man nu skaffat sig ett ypperligt utgångsläge inför tisdagens semifinalretur mot Milan."
+      }
+    }
+  ],
+  "links": [
+    {
+      "rel": "flow",
+      "type": "tt/print-flow",
+      "uuid": "903d82ce-7a17-58d1-9035-ff64ae814969",
+      "title": "Nyheter Torsdag"
+    },
+    {
+      "uuid": "9187712c-a795-4cdc-bd4e-560e4f93dc4e",
+      "type": "core/author",
+      "title": "Lasse Mannheimer",
+      "data": {
+        "email": "the-email-address@tt.se",
+        "shortDescription": "lma"
+      },
+      "rel": "author"
+    },
+    {
+      "uuid": "0730efa9-43f2-468d-979a-aaffc74d7582",
+      "type": "core/section",
+      "title": "Sport",
+      "rel": "section"
+    }
+  ],
+  "language": "sv"
+}

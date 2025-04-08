@@ -93,7 +93,7 @@
         "declares": {"type":"tt/print-article"},
         "attributes": {
           "title": {
-            "description": "The title of the flow article, modified for variants"
+            "description": "The title of the print article, modified for variants"
           },
           "name": {
             "description": "The flow article that this print article is based on"
@@ -116,8 +116,10 @@
         "name": "Article layout",
         "description": "The specific article layout and settings that should be used",
         "declares": {"type": "tt/article-layout"},
+        "attributes": {
+          "name": {}
+        },
         "data": {
-          "article_layout": {},
           "position": {
             "optional": true
           },
