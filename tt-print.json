@@ -17,12 +17,15 @@
         {"ref": "core://factbox"}
       ],
       "meta": [
+        {"ref": "tt://print-article"},
         {"ref": "core://note"}
       ],
       "links": [
         {"ref": "core://article-source"},
         {"ref": "core://byline"},
-        {"ref": "core://section"}
+        {"ref": "core://section"},
+        {"ref": "core://assignment"},
+        {"ref": "tt://print-article/flow"}
       ]
     },
     {
@@ -62,7 +65,40 @@
       ]
     }
   ],
+  "links": [
+    {
+      "id": "tt://print-article/flow",
+      "block": {
+        "name": "Article flow",
+        "declares": {"rel": "flow", "type": "tt/print-flow"},
+        "attributes": {
+          "uuid": {},
+          "title": {}
+        }
+      }
+    }
+  ],
   "meta": [
+    {
+      "id": "tt://print-article",
+      "block": {
+        "name": "Print article meta",
+        "description": "Metadata for print articles",
+        "declares": {"type":"tt/print-article"},
+        "data": {
+          "date": {
+            "time": "2006-01-02",
+            "description": "The date the article has been instantiated on"
+          },
+          "content_name": {
+            "description": "The flow article that this print article is based on"
+          }
+        },
+        "content": [
+          {"ref": "tt://print-flow/content-layout"}
+        ]
+      }
+    },
     {
       "id": "tt://print-constant",
       "block": {
