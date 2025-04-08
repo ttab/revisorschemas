@@ -79,7 +79,9 @@
         "declares": {"rel": "flow", "type": "tt/print-flow"},
         "attributes": {
           "uuid": {},
-          "title": {}
+          "title": {
+            "labels": ["sortable"]
+          }
         }
       }
     }
