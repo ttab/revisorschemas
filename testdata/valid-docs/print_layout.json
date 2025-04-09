@@ -65,12 +65,6 @@
       ]
     }
   ],
-  "links": [
-    {
-      "rel":"scribus-document",
-      "uri":"baboon://layout/ntm-nyheter"
-    }
-  ],
   "content": [
     {
       "type": "tt/print-slot",

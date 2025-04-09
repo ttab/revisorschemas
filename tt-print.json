@@ -17,29 +17,20 @@
         {"ref": "core://factbox"}
       ],
       "meta": [
+        {"ref": "tt://print-article"},
         {"ref": "core://note"}
       ],
       "links": [
         {"ref": "core://article-source"},
         {"ref": "core://byline"},
-        {"ref": "core://section"}
+        {"ref": "core://section"},
+        {"ref": "core://assignment"},
+        {"ref": "tt://print-article/flow"}
       ]
     },
     {
       "name": "Print layout",
       "declares": "tt/print-layout",
-      "links": [
-        {
-          "name": "Scribus document that describes the layout",
-          "declares": {"rel":"scribus-document"},
-          "count": 1,
-          "attributes": {
-            "uri": {
-              "glob": ["baboon://layout/*"]
-            }
-          }
-        }
-      ],
       "meta": [
         {"ref": "tt://print-constant"},
         {"ref": "tt://print-charstyle"},
@@ -62,15 +53,100 @@
     {
       "name": "Print flow",
       "declares": "tt/print-flow",
+      "attributes": {
+        "title": {},
+        "uri": {"glob":["tt://print-flow/*"]}
+      },
       "meta": [
-        {"ref": "tt:/print-flow/layouts"}
+        {
+          "ref": "tt:/print-flow/layouts",
+          "count": 1
+        }
       ],
       "content": [
-        {"ref": "tt:/print-flow/content"}
+        {
+          "ref": "tt:/print-flow/content",
+          "minCount": 1
+        }
       ]
     }
   ],
+  "links": [
+    {
+      "id": "tt://print-article/flow",
+      "block": {
+        "name": "Article flow",
+        "declares": {"rel": "flow", "type": "tt/print-flow"},
+        "attributes": {
+          "uuid": {},
+          "title": {
+            "labels": ["sortable"]
+          }
+        }
+      }
+    }
+  ],
   "meta": [
+    {
+      "id": "tt://print-article",
+      "block": {
+        "name": "Print article meta",
+        "description": "Metadata for print articles",
+        "declares": {"type":"tt/print-article"},
+        "attributes": {
+          "title": {
+            "description": "The title of the print article, modified for variants"
+          },
+          "name": {
+            "description": "The flow article that this print article is based on"
+          }
+        },
+        "data": {
+          "date": {
+            "time": "2006-01-02",
+            "description": "The date the article has been instantiated on"
+          }
+        },
+        "meta": [
+          {"ref": "tt://print-content/article-layout"}
+        ]
+      }
+    },
+    {
+      "id": "tt://print-content/article-layout",
+      "block": {
+        "name": "Article layout",
+        "description": "The specific article layout and settings that should be used",
+        "declares": {"type": "tt/article-layout"},
+        "attributes": {
+          "name": {}
+        },
+        "data": {
+          "position": {
+            "optional": true
+          },
+          "text_export": {
+            "optional": true,
+            "format": "bool"
+          }
+        },
+        "meta": [
+          {"ref": "tt://print-flow/features"}
+        ],
+        "links": [
+          {
+            "name": "Layout",
+            "declares": {"rel": "layout"},
+            "maxCount": 1,
+            "attributes": {
+              "name": {},
+              "uuid": {},
+              "uri": {}
+            }
+          }
+        ]
+      }
+    },
     {
       "id": "tt://print-constant",
       "block": {
@@ -109,6 +185,7 @@
           {
             "name": "Layout",
             "declares": {"rel": "layout"},
+            "minCount": 1,
             "attributes": {
               "name": {},
               "uuid": {},
@@ -177,6 +254,10 @@
               "inline_template": {
                 "description": "Template to use for the inlined content",
                 "optional": true
+              },
+              "template": {
+                "description": "Template to use when rendering paragraph content",
+                "optional": true
               }
             }
           }
@@ -222,6 +303,18 @@
         },
         "meta": [
           {"ref": "tt://print-flow/features"}
+        ],
+        "links": [
+          {
+            "name": "Layout",
+            "declares": {"rel": "layout"},
+            "maxCount": 1,
+            "attributes": {
+              "name": {},
+              "uuid": {},
+              "uri": {}
+            }
+          }
         ]
       }
     },
@@ -273,18 +366,16 @@
         "declares": {"type":"tt/print-frame"},
         "attributes": {
           "role": {
-            "enum": [
-              "image",
-              "image-caption",
-              "headline",
-              "body",
-              "factbox",
-              "factbox-headline"
-            ],
+            "enumReference": "tt://print-frame/roles",
             "optional": true
           },
           "name": {
             "name": "Scribus frame name"
+          }
+        },
+        "data": {
+          "template": {
+            "optional": true
           }
         },
         "links": [
@@ -316,13 +407,27 @@
               },
               "rel": {
                 "name": "Follow method",
-                "enum": [
-                  "anchor-to-top",
-                  "yield-height",
-                  "bounds",
-                  "anchor-height-to-top"
-                ]
+                "enumReference": "tt://print/follow-rels"
               }
+            },
+            "data": {
+              "snap": {
+                "name": "Snap to baseline",
+                "optional": true,
+                "enum": ["nearest", "up", "down"]
+              }
+            }
+          },
+          {
+            "name": "Image allocation",
+            "description": "Allows different image frames to refer to the same content image.",
+            "declares": {"rel":"image"},
+            "deprecated": {
+              "label": "image_allocation",
+              "doc": "Use rel=allocation instead"
+            },
+            "attributes": {
+              "name": {}
             }
           }
         ],
@@ -402,6 +507,43 @@
             }
           }
         ]
+      }
+    }
+  ],
+  "enums": [
+    {
+      "declare": "tt://print-frame/roles",
+      "name": "Print frame roles",
+      "values": {
+        "image": {},
+        "image-caption": {},
+        "image-credit": {},
+        "headline": {},
+        "body": {},
+        "factbox": {
+          "deprecated": {
+            "label": "print_frame_factbox",
+            "doc": "Use 'factbox-body' instead"
+          }
+        },
+        "factbox-body": {},
+        "factbox-headline": {},
+        "tv-listing": {},
+        "vignette": {}
+      }
+    },
+    {
+      "declare": "tt://print/follow-rels",
+      "name": "Follow relationships",
+      "values": {
+        "anchor-bottom-to-top": {},
+        "anchor-height-to-bottom": {},
+        "anchor-height-to-top": {},
+        "anchor-to-bottom": {},
+        "anchor-to-top": {},
+        "bounds": {},
+        "yield-height": {},
+        "yield-width": {}
       }
     }
   ]
