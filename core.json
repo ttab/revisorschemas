@@ -133,7 +133,7 @@
     },
     {
       "name": "Image",
-      "description": "Image metadata",
+      "description": "Image metadata document",
       "declares": "core/image",
       "attributes": {
         "uri": {
@@ -149,37 +149,17 @@
           },
           "count": 1,
           "data": {
-            "width": {
-              "format": "int"
-            },
-            "height": {
-              "format": "int"
-            },
-            "text": {
-              "optional": true
-            },
             "credit": {
               "optional": true
             },
-            "filename": {
-              "optional": true
-            },
             "instructions": {
-              "optional": true
-            },
-            "source": {
-              "optional": true
-            },
-            "photoDate": {
-              "format": "RFC3339",
-              "allowEmpty": true,
               "optional": true
             },
             "copyright": {
               "optional": true
             },
             "mimeType": {
-              "optional": true
+              "glob": ["image/*"]
             }
           }
         }
@@ -190,21 +170,6 @@
           "attributes": {
             "title": {},
             "uuid": {}
-          }
-        },
-        {
-          "declares": {
-            "rel": "source"
-          },
-          "description": "External source (if any)",
-          "maxCount": 1
-        },
-        {
-          "declares": {
-            "rel": "batch"
-          },
-          "attributes": {
-            "uri": {}
           }
         }
       ]
@@ -963,38 +928,35 @@
       "block": {
         "name": "Core image block",
         "declares": {"type":"core/image"},
-        "attributes": {
-          "uuid":{}
+        "data": {
+          "text": {
+            "allowEmpty": true
+          },
+          "alttext": {
+            "optional": true,
+            "allowEmpty": true
+          },
+          "credit": {
+            "allowEmpty": true
+          },
+          "height": {"format":"int"},
+          "width": {"format":"int"}
         },
         "links": [
           {
-            "declares": {"rel":"self", "type":"core/image"},
+            "declares": {"rel":"image", "type":"core/image"},
             "count": 1,
             "attributes": {
               "uuid": {},
               "uri": {"glob":["core://image/*"]}
-            },
-            "data": {
-              "height": {"format":"int"},
-              "width": {"format":"int"},
-              "alttext": {
-                "optional": true,
-                "allowEmpty": true
-              },
-              "text": {
-                "optional": true,
-                "allowEmpty": true
-              }
-            },
-            "links": [
-              {
-                "declares": {"rel":"author", "type":"core/author"},
-                "attributes": {
-                  "title": {},
-                  "uuid": {}
-                }
-              }
-            ]
+            }
+          },
+          {
+            "declares": {"rel":"author", "type":"core/author"},
+            "attributes": {
+              "title": {},
+              "uuid": {}
+            }
           }
         ]
       }
