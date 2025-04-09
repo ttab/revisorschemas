@@ -158,6 +158,9 @@
             "copyright": {
               "optional": true
             },
+            "filename": {
+              "optional": true
+            },
             "mimeType": {
               "glob": ["image/*"]
             }
