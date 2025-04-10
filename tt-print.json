@@ -34,7 +34,8 @@
       "meta": [
         {"ref": "tt://print-constant"},
         {"ref": "tt://print-charstyle"},
-        {"ref": "tt://print-content-format"}
+        {"ref": "tt://print-content-format"},
+        {"ref": "tt://print-text-block-renderer"}
       ],
       "content": [
         {
@@ -145,6 +146,19 @@
             }
           }
         ]
+      }
+    },
+    {
+      "id": "tt://print-text-block-renderer",
+      "block": {
+        "declares": {"type": "tt/text-block-renderer"},
+        "attributes": {
+          "name": {}
+        },
+        "data": {
+          "type": {},
+          "role": {}
+        }
       }
     },
     {
@@ -366,7 +380,6 @@
         "declares": {"type":"tt/print-frame"},
         "attributes": {
           "role": {
-            "enumReference": "tt://print-frame/roles",
             "optional": true
           },
           "name": {
@@ -511,27 +524,6 @@
     }
   ],
   "enums": [
-    {
-      "declare": "tt://print-frame/roles",
-      "name": "Print frame roles",
-      "values": {
-        "image": {},
-        "image-caption": {},
-        "image-credit": {},
-        "headline": {},
-        "body": {},
-        "factbox": {
-          "deprecated": {
-            "label": "print_frame_factbox",
-            "doc": "Use 'factbox-body' instead"
-          }
-        },
-        "factbox-body": {},
-        "factbox-headline": {},
-        "tv-listing": {},
-        "vignette": {}
-      }
-    },
     {
       "declare": "tt://print/follow-rels",
       "name": "Follow relationships",

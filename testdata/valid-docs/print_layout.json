@@ -5,6 +5,14 @@
   "title": "NTM Nyheter",
   "meta": [
     {
+      "type": "tt/text-block-renderer",
+      "name": "callout",
+      "data": {
+        "type": "core/text",
+        "role": "heading-2"
+      }
+    },
+    {
       "type": "tt/print-content-format",
       "name": "article",
       "content": [
