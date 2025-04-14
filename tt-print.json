@@ -120,7 +120,10 @@
         "description": "The specific article layout and settings that should be used",
         "declares": {"type": "tt/article-layout"},
         "attributes": {
-          "name": {}
+          "name": {},
+          "id": {
+            "description": "ID used to reference the layout, must be locally unique."
+          }
         },
         "data": {
           "position": {
