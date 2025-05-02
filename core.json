@@ -75,8 +75,19 @@
     },
     {
       "name": "Topic",
-      "description": "An topic for content",
+      "description": "A topic for content",
       "declares": "core/topic",
+      "meta": [
+        {"ref":"core://definition"}
+      ]
+    },
+    {
+      "name": "Content source",
+      "description": "A content source that can be credited",
+      "declares": "core/content-source",
+      "attributes": {
+        "title": {}
+      },
       "meta": [
         {"ref":"core://definition"}
       ]
@@ -1263,6 +1274,9 @@
         "description": "The entity that is the source of the content, e.g. the organisation that produced it.",
         "declares": {"type": "core/content-source", "rel":"source"},
         "attributes": {
+          "uuid": {
+            "optional": true
+          },
           "uri": {},
           "title": {}
         }
