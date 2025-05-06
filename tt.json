@@ -24,6 +24,26 @@
   ],
   "documents": [
     {
+      "name": "Editorial info type",
+      "declares": "tt/editorial-info-type",
+      "attributes": {
+        "title": {},
+        "uri": {"glob":["tt://editorial-info-type/*"]}
+      },
+      "meta": [
+        {
+          "name": "Ttninjs match object",
+          "declares": {"type":"tt/ttninjs-match-object"},
+          "data":{
+            "npdoc.printpm": {
+              "optional":true,
+              "description":"Key used for setting Print PM product codes."
+            }
+          }
+        }
+      ]
+    },
+    {
       "declares": "tt/grattis",
       "links": [
         {
@@ -175,6 +195,14 @@
         {"ref": "tt://slugline"}
       ],
       "links": [
+        {
+          "name": "Editorial-info type",
+          "description": "Specifies the editorial-info type",
+          "declares": {"type": "tt/editorial-info-type", "rel": "info-type"},
+          "attributes": {
+            "uuid": {}
+          }
+        },
         {
           "name": "Alternate ID",
           "description": "TODO: is this actually used for live data? See stage/df6ebaba-b3fc-40ff-9ad2-19f953eb0c6a",
