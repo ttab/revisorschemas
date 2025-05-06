@@ -173,6 +173,16 @@
       "match": {"type": {"const":"core/editorial-info"}},
       "meta": [
         {"ref": "tt://slugline"}
+      ],
+      "links": [
+        {
+          "name": "Alternate ID",
+          "description": "TODO: is this actually used for live data? See stage/df6ebaba-b3fc-40ff-9ad2-19f953eb0c6a",
+          "declares": {"type": "tt/alt-id", "rel": "alternate"},
+          "attributes": {
+            "uri": {}
+          }
+        }
       ]
     },
     {
