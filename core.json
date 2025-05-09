@@ -1264,6 +1264,13 @@
         "declares": {"type": "core/article", "rel":"source"},
         "attributes": {
           "uuid": {}
+        },
+        "data": {
+          "version": {
+            "format": "int",
+            "optional": true,
+            "description": "The version of the original article when it was copied"
+          }
         }
       }
     },

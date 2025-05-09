@@ -3,7 +3,7 @@ module github.com/ttab/revisorschemas
 go 1.23.2
 
 require (
-	github.com/ttab/newsdoc v0.7.0
+	github.com/ttab/newsdoc v0.7.3
 	github.com/ttab/revisor v0.9.3
 )
 
