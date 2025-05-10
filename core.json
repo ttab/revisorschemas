@@ -452,7 +452,8 @@
         {"ref": "core://text"},
         {"ref": "core://image"},
         {"ref": "core://unordered-list"},
-        {"ref": "core://ordered-list"}
+        {"ref": "core://ordered-list"},
+        {"ref": "core://factbox"}
       ],
       "meta": [
         {"ref": "core://note"}
