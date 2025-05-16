@@ -211,6 +211,9 @@
             "uri": {}
           }
         }
+      ],
+      "content": [
+        {"ref": "tt://visual"}
       ]
     },
     {
