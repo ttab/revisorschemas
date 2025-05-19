@@ -62,7 +62,8 @@
           "count": 1,
           "data": {
             "firstName": {"optional":true},
-            "lastName": {"optional":true}
+            "lastName": {"optional":true},
+            "title": {"optional":true}
           }
         },
         {
