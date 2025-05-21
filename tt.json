@@ -80,6 +80,14 @@
             "year": {
               "format":"int",
               "optional": true
+            },
+            "died": {
+              "time": "2006-01-02",
+              "optional": true
+            },
+            "died_year": {
+              "format":"int",
+              "optional": true
             }
           }
         }
