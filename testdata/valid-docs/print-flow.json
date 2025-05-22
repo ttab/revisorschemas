@@ -10,24 +10,28 @@
         {
           "rel": "layout",
           "name": "tt",
+          "title": "TT",
           "uuid": "5dfe67f7-f65b-5586-bd23-8885383e1a1f",
           "uri": "tt://print/layout/tt"
         },
         {
           "rel": "layout",
           "name": "ntm",
+          "title": "NTM",
           "uuid": "a3d0224c-ca86-4112-9ff3-0a27172f16c5",
           "uri": "tt://print/layout/ntm"
         },
         {
           "rel": "layout",
           "name": "expressen",
+          "title": "Expressen",
           "uuid": "c574a72b-9ac8-4c5c-9cac-cbf58d35bfd8",
           "uri": "tt://print/layout/expressen"
         },
         {
           "rel": "layout",
           "name": "dagen",
+          "title": "Dagen",
           "uuid": "2da69702-09ba-4541-89e5-4506c56e2798",
           "uri": "tt://print/layout/dagen"
         }
