@@ -210,9 +210,30 @@
             "minCount": 1,
             "attributes": {
               "name": {},
+              "title": {},
               "uuid": {},
               "uri": {}
-            }
+            },
+            "links": [
+              {
+                "declares": {"rel": "position"},
+                "attributes": {
+                  "name": {},
+                  "value": {}
+                },
+                "data": {
+                  "page": {
+                    "format": "int"
+                  },
+                  "x": {
+                    "format": "float"
+                  },
+                  "y": {
+                    "format": "float"
+                  }
+                }
+              }
+            ]
           }
         ]
       }
