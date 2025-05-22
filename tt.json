@@ -88,6 +88,9 @@
             "died_year": {
               "format":"int",
               "optional": true
+            },
+            "died_note": {
+              "optional": true
             }
           }
         }
