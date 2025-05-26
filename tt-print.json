@@ -150,7 +150,10 @@
             "attributes": {
               "name": {},
               "uuid": {},
-              "uri": {}
+              "uri": {},
+              "title": {
+                "optional": true
+              }
             }
           }
         ]
