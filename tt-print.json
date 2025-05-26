@@ -22,6 +22,7 @@
       ],
       "links": [
         {"ref": "core://article-source"},
+        {"ref": "core://print-article-source"},
         {"ref": "core://byline"},
         {"ref": "core://section"},
         {"ref": "core://assignment"},
@@ -82,6 +83,24 @@
           "uuid": {},
           "title": {
             "labels": ["sortable"]
+          }
+        }
+      }
+    },
+    {
+      "id": "tt://print-article-source",
+      "block": {
+        "name": "Print article source",
+        "description": "Points to the original print article if this one is a copy",
+        "declares": {"type": "tt/print-article", "rel":"source"},
+        "attributes": {
+          "uuid": {}
+        },
+        "data": {
+          "version": {
+            "format": "int",
+            "optional": true,
+            "description": "The version of the original article when it was copied"
           }
         }
       }
