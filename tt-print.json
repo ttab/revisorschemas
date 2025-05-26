@@ -22,7 +22,7 @@
       ],
       "links": [
         {"ref": "core://article-source"},
-        {"ref": "core://print-article-source"},
+        {"ref": "tt://print-article-source"},
         {"ref": "core://byline"},
         {"ref": "core://section"},
         {"ref": "core://assignment"},
