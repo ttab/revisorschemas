@@ -156,6 +156,10 @@
           "text_export": {
             "optional": true,
             "format": "bool"
+          },
+          "status": {
+            "description": "A status describing if the layout currently renders correctly.",
+            "optional": true
           }
         },
         "meta": [
