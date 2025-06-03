@@ -79,7 +79,7 @@
         "title": {
           "description": "Human readable channel name"
         },
-        "uri": {"glob":["tt://print-channel/*"]}
+        "uri": {"glob":["tt://tv-channel/*"]}
       },
       "meta": [
         {
