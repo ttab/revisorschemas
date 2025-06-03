@@ -71,6 +71,29 @@
           "minCount": 1
         }
       ]
+    },
+    {
+      "name": "TV channel",
+      "declares": "tt/tv-channel",
+      "attributes": {
+        "title": {},
+        "uri": {"glob":["tt://print-channel/*"]}
+      },
+      "meta": [
+        {
+          "name": "Channel metadata",
+          "description": "Metadata for TV channels",
+          "declares": {"type":"tt/tv-channel"},
+          "attributes": {
+            "title": {
+              "description": "Human readable channel name"
+            },
+            "name": {
+              "description": "Machine readable channel name"
+            }
+          }
+        }
+      ]
     }
   ],
   "links": [
