@@ -76,7 +76,9 @@
       "name": "TV channel",
       "declares": "tt/tv-channel",
       "attributes": {
-        "title": {},
+        "title": {
+          "description": "Human readable channel name"
+        },
         "uri": {"glob":["tt://print-channel/*"]}
       },
       "meta": [
@@ -85,9 +87,6 @@
           "description": "Metadata for TV channels",
           "declares": {"type":"tt/tv-channel"},
           "attributes": {
-            "title": {
-              "description": "Human readable channel name"
-            },
             "name": {
               "description": "Machine readable channel name"
             }
