@@ -335,7 +335,12 @@
         "description": "This can be either a picture or a graphic",
         "declares": {"type":"tt/visual"},
         "data": {
-          "caption": {"allowEmpty":true}
+          "caption": {"allowEmpty":true},
+          "focus": {
+            "optional": true,
+            "description": "Points that should be kept visible when cropping, as a sequence of coordinate pairs '0.0 0.0' separated by ', '",
+            "pattern": "^(\\d(\\.\\d+)? \\d(\\.\\d+)?, )*(\\d(\\.\\d+)? \\d(\\.\\d+)?)$"
+          }
         },
         "links": [
           {
