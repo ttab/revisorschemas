@@ -46,6 +46,9 @@
           "attributes": {
             "name": {}
           },
+          "meta": [
+            {"ref": "tt://print-flow/features"}
+          ],
           "content": [
             {"ref": "tt://print-frame"}
           ]
