@@ -551,6 +551,21 @@
             }
           },
           {
+            "name": "Content align",
+            "description": "Control content alignment in a frame, used for fitted images",
+            "declares": {"type":"tt/align"},
+            "data": {
+              "horizontal": {
+                "optional": true,
+                "enum": ["left", "center", "right"]
+              },
+              "vertical": {
+                "optional": true,
+                "enum": ["top", "middle", "bottom"]
+              }
+            }
+          },
+          {
             "name": "Vertical grow rule",
             "description": "Allows a text frame to grow (or shrink) based on its contents.",
             "declares": {"type":"tt/grow-height"},
