@@ -445,7 +445,7 @@
         },
         "links": [
           {
-            "declares": {"rel":"self"},
+            "declares": {"rel":"channel"},
             "maxCount": 1,
             "attributes": {
               "uri": {}
@@ -565,6 +565,11 @@
               "vertical": {
                 "optional": true,
                 "enum": ["top", "middle", "bottom"]
+              },
+              "fit_to_content": {
+                "description": "Resize and move the content to fit the content.",
+                "optional": true,
+                "format": "bool"
               }
             }
           },
