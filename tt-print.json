@@ -450,6 +450,17 @@
             "attributes": {
               "uri": {}
             }
+          },
+          {
+            "declares": {"rel":"self"},
+            "maxCount": 1,
+            "attributes": {
+              "uri": {}
+            },
+            "deprecated": {
+              "label": "listing-self",
+              "doc": "Do not use"
+            }
           }
         ]
       }
