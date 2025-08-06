@@ -836,8 +836,8 @@
           },
           "crop": {
             "optional": true,
-            "description": "Rect that sets the bounds for dynamic cropping, as relative 'x y, width height' coordinates in the format '0.2 0.2, 0.5 0.5' where 1 is the width or height of the image.",
-            "pattern": "^\\d(\\.\\d+)? \\d(\\.\\d+)?, \\d(\\.\\d+)? \\d(\\.\\d+)?$"
+            "description": "Rect that sets the bounds for dynamic cropping, as relative 'x y width height' coordinates in the format '0.2 0.2 0.5 0.5' where 1 is the width or height of the image.",
+            "pattern": "^\\d(\\.\\d+)? \\d(\\.\\d+)? \\d(\\.\\d+)? \\d(\\.\\d+)?$"
           }
         }
       }
