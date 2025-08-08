@@ -820,6 +820,29 @@
       }
     },
     {
+      "id": "core://softcrop",
+      "block": {
+        "declares": {"type":"core/softcrop"},
+        "attributes": {
+          "name": {
+            "optional": true
+          }
+        },
+        "data": {
+          "focus": {
+            "optional": true,
+            "description": "Point that should be kept visible when cropping, as relative 'x y' coordinates in the format '0.5 0.5' where 1 is the width or height of the image.",
+            "pattern": "^\\d(\\.\\d+)? \\d(\\.\\d+)?$"
+          },
+          "crop": {
+            "optional": true,
+            "description": "Rect that sets the bounds for dynamic cropping, as relative 'x y width height' coordinates in the format '0.2 0.2 0.5 0.5' where 1 is the width or height of the image.",
+            "pattern": "^\\d(\\.\\d+)? \\d(\\.\\d+)? \\d(\\.\\d+)? \\d(\\.\\d+)?$"
+          }
+        }
+      }
+    },
+    {
       "id": "core://teaser",
       "block": {
         "declares": {"type":"core/teaser"},
@@ -841,14 +864,8 @@
               "width": {"format":"int"},
               "imageInstructions": {"optional":true}
             },
-            "links": [
-              {
-                "declares": {"rel":"crop", "type": "x-im/crop"},
-                "attributes": {
-                  "title": {},
-                  "uri": {"glob":["im://crop/**"]}
-                }
-              }
+            "meta": [
+              {"ref": "core://softcrop"}
             ]
           }
         ]
@@ -955,13 +972,11 @@
             "allowEmpty": true
           },
           "height": {"format":"int"},
-          "width": {"format":"int"},
-          "focus": {
-            "optional": true,
-            "description": "Points that should be kept visible when cropping, as a sequence of coordinate pairs '0.0 0.0' separated by ', '",
-            "pattern": "^(\\d(\\.\\d+)? \\d(\\.\\d+)?, )*(\\d(\\.\\d+)? \\d(\\.\\d+)?)$"
-          }
+          "width": {"format":"int"}
         },
+        "meta": [
+          {"ref": "core://softcrop"}
+        ],
         "links": [
           {
             "declares": {"rel":"image", "type":"core/image"},
