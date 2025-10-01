@@ -637,6 +637,9 @@
           }
         },
         {
+          "ref": "core://content-source"
+        },
+        {
           "name": "Topic",
           "declares": {"type": "core/topic", "rel":"subject"},
           "attributes": {
