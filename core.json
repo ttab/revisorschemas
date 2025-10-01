@@ -565,9 +565,6 @@
           "ref": "core://copy-group"
         },
         {
-          "ref": "core://content-source"
-        },
-        {
           "name": "Old time",
           "description": "A block for storing the old start time when an event has been rescheduled",
           "declares": {"type": "core/event-old-start"},
