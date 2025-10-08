@@ -71,7 +71,7 @@
       "block": {
         "declares": {"type":"core/prompt-snippet"},
         "attributes": {
-          "name": {}
+          "uuid": {}
         }
       }
     }
