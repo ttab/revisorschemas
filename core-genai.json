@@ -12,7 +12,7 @@
           "count": 1
         }
       ],
-      "contents": [
+      "content": [
         {"ref":"core://genai/prompt-text"},
         {"ref":"core://genai/prompt-snippet"}
       ]
@@ -21,7 +21,7 @@
       "name": "Generative AI snippet",
       "description": "A document describing a prompt snippet",
       "declares": "core/prompt-snippet",
-      "contents": [
+      "content": [
         {"ref":"core://genai/prompt-text"}
       ]
     }
