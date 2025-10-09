@@ -8,7 +8,8 @@
       "declares": "core/prompt",
       "meta": [
         {
-          "ref": "core://genai/prompt"
+          "ref": "core://genai/prompt",
+          "count": 1
         }
       ],
       "links": [
@@ -49,12 +50,16 @@
         "declares": {"type":"core/prompt"},
         "attributes": {
           "role": {
-            "enum": ["document", "feedback"]
+            "enum": ["document", "feedback", "text"]
           }
         },
         "data": {
-          "generates": {
+          "doc_type": {
             "description": "The document type that the prompt generates, if any.",
+            "optional":true
+          },
+          "text_format": {
+            "enum": ["plain", "html", "markdown"],
             "optional":true
           }
         }
