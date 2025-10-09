@@ -6,6 +6,11 @@
       "name": "Generative AI prompt",
       "description": "A document describing a prompt",
       "declares": "core/prompt",
+      "meta": [
+        {
+          "ref": "core://genai/prompt"
+        }
+      ],
       "links": [
         {
           "ref":"core://genai/model",

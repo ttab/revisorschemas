@@ -3,6 +3,12 @@
   "uri": "core://prompt/tt-spraket",
   "type": "core/prompt",
   "title": "TT Språkkontroll",
+  "meta": [
+    {
+      "type": "core/prompt",
+      "role": "document"
+    }
+  ],
   "links": [
     {
       "rel": "model",
