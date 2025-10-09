@@ -1,0 +1,36 @@
+{
+  "uuid": "610b5b20-58fd-55f0-83ff-80feee80cfd8",
+  "uri": "core://prompt/tt-spraket",
+  "type": "core/prompt",
+  "title": "TT Språkkontroll",
+  "links": [
+    {
+      "rel": "model",
+      "uri": "google://gemini/2.5-pro"
+    }
+  ],
+  "content": [
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "Du ska svara i detta JSON-format, \"paragraph\" är det nollbaserade indexet för stycket, du räknar även rubriker och ingresser som stycken:"
+      }
+    },
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "```\n{\n  \"suggestions\": [\n    {\n      \"paragraph\": 2,\n      \"original\": \"23–26 meter per sekund\",\n      \"changed\": \"23–26 meter i sekunden\",\n      \"motivation\": \"TT rekommenderar \"i sekunden\" (eller \"per sekund\") i löpande text. Viktigast är att använda tankstreck (–) för intervall, inte bindestreck (-).\"\n    },\n    {\n      \"paragraph\": 4,\n      \"original\": \"från lördag morgon och fram till lördag eftermiddag\",\n      \"changed\": \"från lördag morgon till lördag eftermiddag\",\n      \"motivation\": \"Förenklar språket – \"och fram till\" är ofta onödigt.\"\n    }\n  ]\n}\n```\n"
+      }
+    },
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "Här följer våra riktlinjer, som kallas TT språket, använd dem när du rättar i texten:"
+      }
+    },
+    {
+      "type": "core/prompt-snippet",
+      "uuid": "a0b901c1-a3c6-41f2-8857-28ab58d507bd"
+    }
+  ]
+}

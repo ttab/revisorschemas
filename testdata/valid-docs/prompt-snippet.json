@@ -1,0 +1,20 @@
+{
+  "uuid": "a0b901c1-a3c6-41f2-8857-28ab58d507bd",
+  "uri": "core://prompt-text/a0b901c1-a3c6-41f2-8857-28ab58d507bd",
+  "type": "core/prompt-snippet",
+  "title": "TT Språket",
+  "content": [
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "# Stat och nationalitet"
+      }
+    },
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "Se även längre ned: Icke självständiga områden."
+      }
+    }
+  ]
+}
