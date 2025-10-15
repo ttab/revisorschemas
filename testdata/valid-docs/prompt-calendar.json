@@ -1,0 +1,86 @@
+{
+  "uuid": "90c093b9-ef10-51bb-87d2-5a00cf0612af",
+  "uri": "core://prompt/press-release-event",
+  "type": "core/prompt",
+  "title": "Pressmeddelande till Kalender",
+  "meta": [
+    {
+      "type": "core/prompt",
+      "role": "document",
+      "data": {
+        "doc_type": "core/calendar"
+      }
+    }
+  ],
+  "links": [
+    {
+      "rel": "model",
+      "uri": "google://gemini/2.5-pro"
+    }
+  ],
+  "content": [
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "I want to turn a press release to a structured JSON document that looks like this:"
+      }
+    },
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "```\n{\n  \"title\": \"Presslunch med Mikael Damberg (S) och S-studenter\",\n  \"meta\": [\n    {\n      \"type\": \"core/event\",\n      \"data\": {\n        \"dateGranularity\": \"datetime\",\n        \"end\": \"2025-10-01T11:00:00.000Z\",\n        \"registration\": \"OSA senast kl. 10.30 genom att mejla bella.nordin@s-studenter.se. Ange eventuella kostpreferenser.\",\n        \"start\": \"2025-10-01T10:00:00.000Z\"\n      }\n    },\n    {\n      \"type\": \"core/newsvalue\",\n      \"value\": \"3\"\n    },\n    {\n      \"type\": \"core/description\",\n      \"data\": {\n        \"text\": \"Presslunch med anledning av att S-studenter och Tankesmedjan Tiden överlämnar rapporten ”Ny kris i befolkningsfrågan” till Socialdemokraternas ekonomisk-politiske talesperson Mikael Damberg (S).\\n\\nRapporten presenteras under pressträffen. \"\n      },\n      \"role\": \"public\"\n    }\n  ],\n  \"links\": [\n    {\n      \"uuid\": \"956636ed-2687-4bc3-a45a-7e09d98c6eeb\",\n      \"type\": \"core/section\",\n      \"title\": \"Inrikes\",\n      \"rel\": \"section\"\n    },\n    {\n      \"uuid\": \"df76e035-7b92-5d1d-a3b0-77e2fb56b9df\",\n      \"type\": \"core/category\",\n      \"title\": \"Politik\",\n      \"rel\": \"category\"\n    }\n  ],\n  \"language\": \"sv-se\"\n}\n```"
+      }
+    },
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "Include all relevant information about the event in the description text, separate lines with \\n if necessary. Don't repeat information like time, date and registration requirements in the description."
+      }
+    },
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "Make sure that you extract relevant contact information and include it in the \"registration\" field if registration is needed."
+      }
+    },
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "Timestamps without timezones can be assumed to be in Europe/Stockholm. All timestamps should be in the RFC3339 format with timezone offset \"2025-10-01T10:00:00.000+02:00\" or zulu time \"\"2025-10-01T08:00:00.000Z\"."
+      }
+    },
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "If you think that the event looks important you can change the newsvalue to 4."
+      }
+    },
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "There can be up to tree category links, but only be one section link."
+      }
+    },
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "Section and category UUIDs must match exactly."
+      }
+    },
+    {
+      "type": "core/prompt-text",
+      "data": {
+        "text": "Sections cannot be used as categories, and categories cannot be used as sections.\n"
+      }
+    },
+    {
+      "type": "core/prompt-snippet",
+      "uuid": "1c14d88d-1629-4b05-ab92-d9aeb55118b9"
+    },
+    {
+      "type": "core/prompt-snippet",
+      "uuid": "0e7fd99f-c497-498b-9460-efc793e1deb7"
+    }
+  ],
+  "language": "en-GB"
+}
