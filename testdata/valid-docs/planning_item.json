@@ -10,7 +10,8 @@
         "end_date": "2024-09-09",
         "public": "false",
         "start_date": "2024-09-09",
-        "tentative": "false"
+        "tentative": "false",
+        "date_tz": "Europe/Stockholm"
       }
     },
     {
@@ -42,7 +43,8 @@
         "full_day": "false",
         "public": "true",
         "start": "2024-09-09T10:00:00Z",
-        "start_date": "2024-09-09"
+        "start_date": "2024-09-09",
+        "date_tz": "Europe/Stockholm"
       },
       "meta": [
         {
