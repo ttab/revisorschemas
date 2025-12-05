@@ -338,7 +338,9 @@
         {"ref": "core://byline"},
         {"ref": "core://section"},
         {"ref": "core://story"},
-        {"ref": "core://assignment"}
+        {"ref": "core://assignment"},
+        {"ref": "core://content-source"},
+        {"ref": "core://content-source/document"}
       ],
       "content": [
         {
