@@ -7,6 +7,7 @@ import (
 	"io/fs"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 
 	"github.com/ttab/newsdoc"
@@ -53,39 +54,7 @@ func TestFS_ValidSchemas(t *testing.T) {
 }
 
 func TestValidDocuments(t *testing.T) {
-	schemaFS := revisorschemas.Files()
-
-	files, err := schemaFS.ReadDir(".")
-	if err != nil {
-		t.Fatalf("failed to read directory")
-	}
-
-	var constraints []revisor.ConstraintSet
-
-	for _, f := range files {
-		data, err := schemaFS.ReadFile(f.Name())
-		if err != nil {
-			t.Fatalf("failed to read schema file: %v", err)
-		}
-
-		dec := json.NewDecoder(bytes.NewReader(data))
-
-		dec.DisallowUnknownFields()
-
-		var cs revisor.ConstraintSet
-
-		err = dec.Decode(&cs)
-		if err != nil {
-			t.Fatalf("failed to unmarshal schema file: %v", err)
-		}
-
-		constraints = append(constraints, cs)
-	}
-
-	validator, err := revisor.NewValidator(constraints...)
-	if err != nil {
-		t.Fatalf("failed to create validator with schemas: %v", err)
-	}
+	validator := createValidator(t)
 
 	dataDir := os.DirFS(filepath.Join("testdata", "valid-docs"))
 
@@ -123,4 +92,87 @@ func TestValidDocuments(t *testing.T) {
 			}
 		})
 	}
+}
+
+func TestInvalidDocuments(t *testing.T) {
+	regenerate := os.Getenv("REGENERATE") == "true"
+
+	validator := createValidator(t)
+
+	dataDir := filepath.Join("testdata", "invalid-docs")
+
+	validDocs, err := filepath.Glob(filepath.Join(dataDir, "*.newsdoc.json"))
+	if err != nil {
+		t.Fatalf("failed to glob for valid documents: %v", err)
+	}
+
+	for _, name := range validDocs {
+		t.Run(name, func(t *testing.T) {
+			data, err := os.ReadFile(name)
+			if err != nil {
+				t.Fatalf("failed to read document file: %v", err)
+			}
+
+			dec := json.NewDecoder(bytes.NewReader(data))
+
+			dec.DisallowUnknownFields()
+
+			var doc newsdoc.Document
+
+			err = dec.Decode(&doc)
+			if err != nil {
+				t.Fatalf("failed to unmarshal document file: %v", err)
+			}
+
+			validationErrors, err := validator.ValidateDocument(
+				context.Background(), &doc)
+			if err != nil {
+				t.Fatalf("validation failed: %v", err)
+			}
+
+			goldenFile := strings.TrimSuffix(name, ".newsdoc.json") + ".errors.json"
+
+			testAgainstGolden(t, regenerate, validationErrors, goldenFile)
+		})
+	}
+}
+
+func createValidator(t *testing.T) *revisor.Validator {
+	t.Helper()
+
+	schemaFS := revisorschemas.Files()
+
+	files, err := schemaFS.ReadDir(".")
+	if err != nil {
+		t.Fatalf("failed to read directory")
+	}
+
+	var constraints []revisor.ConstraintSet
+
+	for _, f := range files {
+		data, err := schemaFS.ReadFile(f.Name())
+		if err != nil {
+			t.Fatalf("failed to read schema file: %v", err)
+		}
+
+		dec := json.NewDecoder(bytes.NewReader(data))
+
+		dec.DisallowUnknownFields()
+
+		var cs revisor.ConstraintSet
+
+		err = dec.Decode(&cs)
+		if err != nil {
+			t.Fatalf("failed to unmarshal schema file: %v", err)
+		}
+
+		constraints = append(constraints, cs)
+	}
+
+	validator, err := revisor.NewValidator(constraints...)
+	if err != nil {
+		t.Fatalf("failed to create validator with schemas: %v", err)
+	}
+
+	return validator
 }

@@ -202,11 +202,30 @@
       ]
     },
     {
+      "match": {"type": {"const":"core/flash"}},
+      "links": [
+        {
+          "match": {
+            "rel": {"const":"section"},
+            "type": {"const":"core/section"}
+          },
+          "minCount": 1
+        }
+      ]
+    },
+    {
       "match": {"type": {"const":"core/editorial-info"}},
       "meta": [
         {"ref": "tt://slugline"}
       ],
       "links": [
+        {
+          "match": {
+            "rel": {"const":"section"},
+            "type": {"const":"core/section"}
+          },
+          "minCount": 1
+        },
         {
           "name": "Editorial-info type",
           "description": "Specifies the editorial-info type",
@@ -231,6 +250,13 @@
     {
       "match": {"type": {"const":"core/article"}},
       "links": [
+        {
+          "match": {
+            "rel": {"const":"section"},
+            "type": {"const":"core/section"}
+          },
+          "minCount": 1
+        },
         {
           "name": "Same as TT event",
           "description": "TODO: what is this? Maybe a one-off, was in 69da3ef5-f1b0-5caf-b846-ca5682b9adf9",
