@@ -1,9 +1,10 @@
 module github.com/ttab/revisorschemas
 
-go 1.23.2
+go 1.25.5
 
 require (
-	github.com/ttab/newsdoc v0.7.4
+	github.com/google/go-cmp v0.7.0
+	github.com/ttab/newsdoc v0.8.0
 	github.com/ttab/revisor v0.9.4
 )
 
