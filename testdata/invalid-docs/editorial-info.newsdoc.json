@@ -1,0 +1,72 @@
+{
+  "uuid": "8b16e142-a9ba-48d9-8e26-61d403ce9257",
+  "type": "core/editorial-info",
+  "uri": "core://editorial-info/8b16e142-a9ba-48d9-8e26-61d403ce9257",
+  "title": "Tillred: Nattens fem viktigaste nyheter",
+  "content": [
+    {
+      "id": "5ff2b7ea-5c41-42c4-9b6e-ef4669d00f77",
+      "type": "core/text",
+      "data": {
+        "text": "Tillred: Nattens fem viktigaste nyheter"
+      },
+      "role": "heading-1"
+    },
+    {
+      "id": "be103170-2f1a-4589-b2e9-0b9eb28d4463",
+      "type": "core/text",
+      "data": {
+        "text": "2025 på väg mot näst varmaste året – INRIKES"
+      }
+    },
+    {
+      "id": "887f688b-6070-47dc-a5e1-3718f697afaf",
+      "type": "core/text",
+      "data": {
+        "text": "Zelenskyj: Produktivt möte i Bryssel – UTRIKES"
+      }
+    },
+    {
+      "id": "229e7413-3c39-480f-85e8-a735c7ec79ec",
+      "type": "core/text",
+      "data": {
+        "text": "Tullverket: Företag kapas för knarksmuggling – INRIKES"
+      }
+    },
+    {
+      "id": "db5c466e-01b9-4e17-9b32-be4cd7d21909",
+      "type": "core/text",
+      "data": {
+        "text": "Trump hotar med höjda tullar mot Mexiko – EKONOMI"
+      }
+    },
+    {
+      "id": "37edc56a-d34f-43d0-bee3-cd897c957ecb",
+      "type": "core/text",
+      "data": {
+        "text": "Jimmy Kimmel får förlängt kontrakt – KULTUR \u0026amp; NÖJE"
+      }
+    },
+    {
+      "id": "3e4bd547-5485-4572-93b2-83e9cb94d756",
+      "type": "core/text",
+      "data": {
+        "text": "Mer info på TT:s morgon-pm klockan 07."
+      }
+    }
+  ],
+  "meta": [
+    {
+      "type": "core/note",
+      "data": {
+        "text": "Obs! Detta meddelande är inte avsett för publicering."
+      },
+      "role": "public"
+    },
+    {
+      "type": "tt/slugline",
+      "value": "tillred"
+    }
+  ],
+  "language": "sv-se"
+}
