@@ -967,8 +967,7 @@
         "declares": {"type":"core/image"},
         "data": {
           "text": {
-            "allowEmpty": true,
-            "format": "html"
+            "allowEmpty": true
           },
           "alttext": {
             "optional": true,
