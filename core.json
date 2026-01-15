@@ -971,7 +971,8 @@
           },
           "html_caption": {
             "format": "html",
-            "allowEmpty": true
+            "allowEmpty": true,
+            "optional": true
           },
           "alttext": {
             "optional": true,

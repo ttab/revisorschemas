@@ -364,7 +364,8 @@
           "caption": {"allowEmpty":true},
           "html_caption": {
             "format": "html",
-            "allowEmpty": true
+            "allowEmpty": true,
+            "optional": true
           }
         },
         "meta": [
