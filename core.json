@@ -969,6 +969,10 @@
           "text": {
             "allowEmpty": true
           },
+          "html_caption": {
+            "format": "html",
+            "allowEmpty": true
+          },
           "alttext": {
             "optional": true,
             "allowEmpty": true

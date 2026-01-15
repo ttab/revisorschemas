@@ -361,7 +361,11 @@
         "description": "This can be either a picture or a graphic",
         "declares": {"type":"tt/visual"},
         "data": {
-          "caption": {"allowEmpty":true}
+          "caption": {"allowEmpty":true},
+          "html_caption": {
+            "format": "html",
+            "allowEmpty": true
+          }
         },
         "meta": [
           {"ref": "core://softcrop"}
