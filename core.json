@@ -967,8 +967,12 @@
         "declares": {"type":"core/image"},
         "data": {
           "text": {
+            "allowEmpty": true
+          },
+          "html_caption": {
+            "format": "html",
             "allowEmpty": true,
-            "format": "html"
+            "optional": true
           },
           "alttext": {
             "optional": true,

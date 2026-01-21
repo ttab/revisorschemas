@@ -361,9 +361,11 @@
         "description": "This can be either a picture or a graphic",
         "declares": {"type":"tt/visual"},
         "data": {
-          "caption": {
-            "allowEmpty":true,
-            "format": "html"
+          "caption": {"allowEmpty":true},
+          "html_caption": {
+            "format": "html",
+            "allowEmpty": true,
+            "optional": true
           }
         },
         "meta": [
