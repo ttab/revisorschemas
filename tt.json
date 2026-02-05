@@ -129,7 +129,7 @@
             "type": {"const": "tt/keycloak"}
           },
           "attributes": {
-            "uri": {"glob":["core://user/*"]},
+            "uri": {"glob":["core://user/**"]},
             "role": {"enum": ["stage", "prod"]}
           }
         },
