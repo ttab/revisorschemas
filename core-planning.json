@@ -8,7 +8,8 @@
       "declares": "core/planning-item",
       "links": [
         {
-          "name": "The event that this planning item is coverage of, if any",
+          "name": "Event",
+          "description": "The event that this planning item is coverage of, if any",
           "declares": {
             "rel": "event",
             "type": "core/event"
@@ -20,7 +21,8 @@
           }
         },
         {
-          "name": "Section for the planning item",
+          "name": "Section",
+          "description": "Section for the planning item",
           "declares": {
             "type": "core/section",
             "rel": "section"
@@ -31,7 +33,8 @@
           }
         },
         {
-          "name": "The category of the planning item",
+          "name": "Category",
+          "description": "The category of the planning item",
           "declares": {
             "rel": "category",
             "type": "core/category"
@@ -43,7 +46,8 @@
           }
         },
         {
-          "name": "The associated story for the planning item",
+          "name": "Story",
+          "description": "The associated story for the planning item",
           "declares": {
             "rel": "story",
             "type": "core/story"
@@ -54,7 +58,8 @@
           }
         },
         {
-          "name": "The associated place for the planning item",
+          "name": "Place",
+          "description": "The associated place for the planning item",
           "declares": {
             "rel": "place",
             "type": "core/place"
@@ -74,10 +79,12 @@
           "count": 1
         },
         {
-          "ref": "core://copy-group"
+          "ref": "core://copy-group",
+          "maxCount": 1
         },
         {
-          "name": "Main metadata block",
+          "name": "Planning metadata",
+          "description": "Main metadata block for the planning item",
           "declares": {
             "type": "core/planning-item"
           },
@@ -120,6 +127,8 @@
           }
         },
         {
+          "name": "Assignment",
+          "description": "An assignment associated with the planning item",
           "declares": {
             "type": "core/assignment"
           },
@@ -181,7 +190,8 @@
           },
           "meta": [
             {
-              "name": "Block describing what kind of assignment this is",
+              "name": "Assignment type",
+              "description": "Describes what kind of assignment this is",
               "declares": {
                 "type": "core/assignment-type"
               },
@@ -193,7 +203,8 @@
               }
             },
             {
-              "name": "Internal assignment description",
+              "name": "Internal description",
+              "description": "Internal description text for the assignment",
               "declares": {
                 "type": "core/description",
                 "role": "internal"
@@ -208,6 +219,7 @@
             {"ref": "core://content-source/document"},
             {
               "name": "Section",
+              "description": "Section associated with the assignment",
               "declares": {
                 "type": "core/section",
                 "rel": "section"
@@ -219,6 +231,7 @@
             },
             {
               "name": "Assignee",
+              "description": "Person assigned to carry out the assignment",
               "declares": {
                 "type": "core/author",
                 "rel": "assignee"
@@ -244,6 +257,7 @@
             },
             {
               "name": "Location",
+              "description": "Geographic location for the assignment",
               "declares": {
                 "type": "core/geo-point",
                 "rel": "location"
@@ -260,7 +274,8 @@
               }
             },
             {
-              "name": "A deliverable of the planning item",
+              "name": "Deliverable",
+              "description": "A deliverable of the planning item",
               "declares": {
                 "rel": "deliverable"
               },

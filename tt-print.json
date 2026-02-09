@@ -31,6 +31,7 @@
     },
     {
       "name": "Print layout",
+      "description": "Layout definition for print pages.",
       "declares": "tt/print-layout",
       "meta": [
         {"ref": "tt://print-constant"},
@@ -57,6 +58,7 @@
     },
     {
       "name": "Print flow",
+      "description": "A flow of print content for production.",
       "declares": "tt/print-flow",
       "attributes": {
         "title": {},
@@ -77,6 +79,7 @@
     },
     {
       "name": "TV channel",
+      "description": "A TV channel used in TV listings.",
       "declares": "tt/tv-channel",
       "attributes": {
         "title": {
@@ -103,6 +106,7 @@
       "id": "tt://print-article/flow",
       "block": {
         "name": "Article flow",
+        "description": "Links a print article to its print flow.",
         "declares": {"rel": "flow", "type": "tt/print-flow"},
         "attributes": {
           "uuid": {},
@@ -194,6 +198,7 @@
         "links": [
           {
             "name": "Layout",
+            "description": "Reference to the layout used for the article.",
             "declares": {"rel": "layout"},
             "maxCount": 1,
             "attributes": {
@@ -211,6 +216,8 @@
     {
       "id": "tt://print-text-block-renderer",
       "block": {
+        "name": "Text block renderer",
+        "description": "Defines how a text block should be rendered in print.",
         "declares": {"type": "tt/text-block-renderer"},
         "attributes": {
           "name": {}
@@ -258,6 +265,7 @@
         "links": [
           {
             "name": "Layout",
+            "description": "A customer layout included in the print flow.",
             "declares": {"rel": "layout"},
             "minCount": 1,
             "attributes": {
@@ -268,6 +276,8 @@
             },
             "links": [
               {
+                "name": "Position",
+                "description": "Page position for a layout element.",
                 "declares": {"rel": "position"},
                 "attributes": {
                   "name": {},
@@ -294,10 +304,12 @@
       "id": "tt://print-flow/features",
       "block": {
         "name": "Print features",
+        "description": "Collection of feature flags for print content.",
         "declares": {"type": "tt/print-features"},
         "content": [
           {
             "name": "Print feature",
+            "description": "A single feature flag for print rendering.",
             "declares": {"type": "tt/print-feature"},
             "attributes": {
               "name": {},
@@ -323,6 +335,7 @@
         "content": [
           {
             "name": "Paragraph style",
+            "description": "Maps a text role to a paragraph style for rendering.",
             "declares": {"type":"tt/paragraph"},
             "attributes": {
               "role": {
@@ -402,6 +415,7 @@
         "links": [
           {
             "name": "Layout",
+            "description": "Reference to the layout used for content rendering.",
             "declares": {"rel": "layout"},
             "maxCount": 1,
             "attributes": {
@@ -416,6 +430,7 @@
     {
       "id": "tt://print-text",
       "block": {
+        "name": "Print text",
         "description": "A print text block",
         "declares": {"type":"tt/print-text"},
         "attributes": {
@@ -434,6 +449,7 @@
     {
       "id": "tt://tv-listing",
       "block": {
+        "name": "TV listing",
         "description": "Block that describes the details for a TV listing",
         "declares": {"type":"tt/tv-listing"},
         "data": {
@@ -445,6 +461,8 @@
         },
         "links": [
           {
+            "name": "Channel link",
+            "description": "Links a TV listing to its channel.",
             "declares": {"rel":"channel"},
             "maxCount": 1,
             "attributes": {
@@ -452,6 +470,8 @@
             }
           },
           {
+            "name": "Self link",
+            "description": "Deprecated self-reference for a TV listing.",
             "declares": {"rel":"self"},
             "maxCount": 1,
             "attributes": {
@@ -468,6 +488,7 @@
     {
       "id": "tt://print-frame",
       "block": {
+        "name": "Print frame",
         "description": "Configuration for a print frame",
         "declares": {"type":"tt/print-frame"},
         "attributes": {
