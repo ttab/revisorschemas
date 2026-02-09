@@ -84,6 +84,7 @@
         },
         {
           "name": "Section",
+          "description": "The editorial section the wire belongs to.",
           "declares": {
             "rel": "section",
             "type": "core/section"
@@ -98,6 +99,7 @@
       "meta": [
         {
           "name": "Wire metadata",
+          "description": "Core metadata properties for the wire article.",
           "declares": {
             "type": "tt/wire"
           },
@@ -127,6 +129,7 @@
         },
         {
           "name": "Slug",
+          "description": "A slugline used to identify the wire story.",
           "declares": {
             "type": "tt/slugline"
           },
@@ -136,6 +139,7 @@
         },
         {
           "name": "Newsvalue",
+          "description": "The editorial priority or news value rating.",
           "declares": {
             "type": "core/newsvalue"
           },
@@ -146,6 +150,8 @@
           }
         },
         {
+          "name": "Note",
+          "description": "A public or internal editorial note attached to the wire.",
           "declares": {
             "type": "core/note"
           },
@@ -167,6 +173,7 @@
       "content": [
         {
           "name": "Text block",
+          "description": "A block of text content such as a heading, preamble, or vignette.",
           "declares": {
             "type": "core/text"
           },
@@ -190,6 +197,7 @@
         },
         {
           "name": "Table",
+          "description": "A data table with optional caption, header, body, and footer.",
           "declares": {
             "type": "core/table"
           },
@@ -215,11 +223,15 @@
           }
         },
         {
+          "name": "Ordered list",
+          "description": "A numbered list of text items.",
           "declares": {
             "type": "core/ordered-list"
           },
           "content": [
             {
+              "name": "List text",
+              "description": "A text item within the ordered list.",
               "declares": {
                 "type": "core/text"
               },
@@ -233,11 +245,15 @@
           ]
         },
         {
+          "name": "Unordered list",
+          "description": "A bulleted list of text items.",
           "declares": {
             "type": "core/unordered-list"
           },
           "content": [
             {
+              "name": "List text",
+              "description": "A text item within the unordered list.",
               "declares": {
                 "type": "core/text"
               },
