@@ -171,20 +171,28 @@
       "links": [
         {
           "name": "TT Organiser",
-          "description": "TODO: is this good data, or just noise?",
+          "description": "Old data from OpenContent",
           "declares": {"rel":"organiser", "type":"tt/organiser"},
           "attributes": {
             "uri": {},
             "title": {}
+          },
+          "deprecated": {
+            "label": "tt_event_organiser",
+            "doc": "No longer used"
           }
         },
         {
           "name": "TT Participant",
-          "description": "TODO: is this good data, or just noise?",
+          "description": "Old data from OpenContent",
           "declares": {"rel":"participant", "type": "tt/participant"},
           "attributes": {
             "uri": {},
             "title": {}
+          },
+          "deprecated": {
+            "label": "tt_event_organiser",
+            "doc": "No longer used"
           }
         }
       ]
@@ -275,10 +283,14 @@
         },
         {
           "name": "Alternate ID",
-          "description": "TODO: is this actually used for live data? See stage/df6ebaba-b3fc-40ff-9ad2-19f953eb0c6a",
+          "description": "Old data from OpenContent",
           "declares": {"type": "tt/alt-id", "rel": "alternate"},
           "attributes": {
             "uri": {}
+          },
+          "deprecated": {
+            "label": "tt_article_altid",
+            "doc": "Remains of old data, just remove"
           }
         }
       ],
@@ -337,10 +349,14 @@
         },
         {
           "name": "Alternate ID",
-          "description": "TODO: is this actually used for live data? See stage/df6ebaba-b3fc-40ff-9ad2-19f953eb0c6a",
+          "description": "Old data from OpenContent",
           "declares": {"type": "tt/alt-id", "rel": "alternate"},
           "attributes": {
             "uri": {}
+          },
+          "deprecated": {
+            "label": "article_tt_altid",
+            "doc": "Not used anymore"
           }
         }
       ],
@@ -359,6 +375,10 @@
           "name": "Question",
           "description": "A question block with HTML-formatted text.",
           "declares": {"type":"tt/question"},
+          "deprecated": {
+            "label": "tt_question",
+            "doc": "The tt/question block should no longer be used"
+          },
           "data": {
             "text": {
               "allowEmpty":true,
