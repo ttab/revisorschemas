@@ -155,6 +155,10 @@
             "time": "2006-01-02",
             "description": "The date the article has been instantiated on"
           },
+          "date_tz": {
+            "description": "The timezone the date is in",
+            "optional": true
+          },
           "flow_position": {
             "format": "int",
             "optional": true,
