@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "name": "tt-eidos",
+  "links": [
+    {
+      "id": "tt-eidos://context",
+      "block": {
+        "name": "Eidos context",
+        "description": "Links to eidos context information. Links with the type tt/eidos-text does not link to real documents, but to eidos-internal assets.",
+        "declares": {"rel": "eidos-context"},
+        "attributes": {
+          "uuid": {},
+          "type": {}
+        },
+        "data": {
+          "version": {
+            "optional": true,
+            "format": "int"
+          }
+        }
+      }
+    }
+  ],
+  "documents": [
+    {
+      "match": {"type": {"const": "core/person"}},
+      "links": [
+        {"ref": "tt-eidos://context"}
+      ]
+    },
+    {
+      "match": {"type": {"const": "core/place"}},
+      "links": [
+        {"ref": "tt-eidos://context"}
+      ]
+    },
+    {
+      "match": {"type": {"const": "core/organisation"}},
+      "links": [
+        {"ref": "tt-eidos://context"}
+      ]
+    }
+  ]
+}
