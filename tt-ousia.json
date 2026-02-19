@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "name": "tt-ousia",
+  "links": [
+    {
+      "id": "tt-ousia://config",
+      "block": {
+        "name": "Ousia configuration",
+        "description": "Control ousia behaviour",
+        "declares": {"type": "tt://ousia/config"},
+        "data": {
+          "hide": {
+            "optional": true,
+            "format": "bool",
+            "description": "Hide this entity in the auto-tagging results"
+          }
+        }
+      }
+    }
+  ],
+  "documents": [
+    {
+      "match": {"type": {"const": "core/person"}},
+      "meta": [
+        {"ref": "tt-ousia://config"}
+      ]
+    },
+    {
+      "match": {"type": {"const": "core/place"}},
+      "meta": [
+        {"ref": "tt-ousia://config"}
+      ]
+    },
+    {
+      "match": {"type": {"const": "core/organisation"}},
+      "meta": [
+        {"ref": "tt-ousia://config"}
+      ]
+    }
+  ]
+}
