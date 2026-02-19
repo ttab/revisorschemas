@@ -7,7 +7,7 @@
       "meta": [
         {
           "ref": "tt://slugline",
-          "count": 1
+          "maxCount": 1
         },
         {
           "match": {
