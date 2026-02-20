@@ -10,10 +10,17 @@
         "declares": {"type": "tt/eidos-config"},
         "meta": [
           {
-            "declares": {"rel": "hide-in"},
+            "declares": {"rel": "eligible-for"},
             "attributes": {
               "value": {
                 "enum": ["text", "images"]
+              }
+            },
+            "data": {
+              "hide": {
+                "description": "Match against the entity, but hide in output",
+                "format": "bool",
+                "optional": true
               }
             }
           }

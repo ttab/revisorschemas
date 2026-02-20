@@ -17,7 +17,12 @@
     {
       "type": "tt/eidos-config",
       "meta": [
-        {"rel": "hide-in", "value": "text"}
+        {
+          "rel": "eligible-for", "value": "text",
+          "data": {
+            "hide": "true"
+          }
+        }
       ]
     }
   ],
