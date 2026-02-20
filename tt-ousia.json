@@ -10,15 +10,20 @@
         "declares": {"type": "tt/eidos-config"},
         "meta": [
           {
-            "declares": {"rel": "eligible-for"},
+            "declares": {"rel": "settings-for"},
             "attributes": {
               "value": {
                 "enum": ["text", "images"]
               }
             },
             "data": {
+              "eligible": {
+                "description": "Include entity when tagging this kind of content",
+                "format": "bool",
+                "optional": true
+              },
               "hide": {
-                "description": "Match against the entity, but hide in output",
+                "description": "Allow matching against the entity, but hide in final output",
                 "format": "bool",
                 "optional": true
               }

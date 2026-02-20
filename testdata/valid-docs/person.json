@@ -18,8 +18,9 @@
       "type": "tt/eidos-config",
       "meta": [
         {
-          "rel": "eligible-for", "value": "text",
+          "rel": "settings-for", "value": "text",
           "data": {
+            "eligible": "true",
             "hide": "true"
           }
         }
