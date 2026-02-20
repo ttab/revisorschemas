@@ -1,20 +1,23 @@
 {
   "version": 1,
-  "name": "tt-ousia",
-  "links": [
+  "name": "tt-eidos",
+  "meta": [
     {
-      "id": "tt-ousia://config",
+      "id": "tt://eidos/config",
       "block": {
-        "name": "Ousia configuration",
-        "description": "Control ousia behaviour",
-        "declares": {"type": "tt://ousia/config"},
-        "data": {
-          "hide": {
-            "optional": true,
-            "format": "bool",
-            "description": "Hide this entity in the auto-tagging results"
+        "name": "Eidos configuration",
+        "description": "Control eidos behaviour",
+        "declares": {"type": "tt/eidos-config"},
+        "meta": [
+          {
+            "declares": {"rel": "hide-in"},
+            "attributes": {
+              "value": {
+                "enum": ["text", "images"]
+              }
+            }
           }
-        }
+        ]
       }
     }
   ],
@@ -22,19 +25,19 @@
     {
       "match": {"type": {"const": "core/person"}},
       "meta": [
-        {"ref": "tt-ousia://config"}
+        {"ref": "tt://eidos/config"}
       ]
     },
     {
       "match": {"type": {"const": "core/place"}},
       "meta": [
-        {"ref": "tt-ousia://config"}
+        {"ref": "tt://eidos/config"}
       ]
     },
     {
       "match": {"type": {"const": "core/organisation"}},
       "meta": [
-        {"ref": "tt-ousia://config"}
+        {"ref": "tt://eidos/config"}
       ]
     }
   ]

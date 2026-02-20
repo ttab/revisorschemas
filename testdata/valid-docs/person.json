@@ -13,23 +13,12 @@
     },
     {
       "type": "core/person"
-    }
-  ],
-  "links": [
-    {
-      "url": "https://www.wikidata.org/wiki/Q4961095",
-      "type": "core/wikidata",
-      "rel": "evidence"
     },
     {
-      "uuid": "474f0362-0007-4964-b91c-cf9d16048bb3",
-      "type": "tt/eidos-text",
-      "rel": "eidos-context"
-    },
-    {
-      "rel": "eidos-context",
-      "uuid": "383837e6-f445-45b5-890a-6bafda15d654",
-      "type": "core/article"
+      "type": "tt/eidos-config",
+      "meta": [
+        {"rel": "hide-in", "value": "text"}
+      ]
     }
   ],
   "language": "sv-se"
