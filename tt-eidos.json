@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "name": "tt-eidos",
+  "meta": [
+    {
+      "id": "tt://eidos/entity",
+      "block": {
+        "name": "Eidos entity",
+        "description": "Control eidos entity behaviour",
+        "declares": {"type": "tt/eidos-entity"},
+        "meta": [
+          {
+            "declares": {"type": "tt/eidos-settings"},
+            "attributes": {
+              "contenttype": {
+                "enum": ["text", "images"]
+              }
+            },
+            "data": {
+              "eligible": {
+                "description": "Include entity when tagging this kind of content",
+                "format": "bool",
+                "optional": true
+              },
+              "hide": {
+                "description": "Allow matching against the entity, but hide in final output",
+                "format": "bool",
+                "optional": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "documents": [
+    {
+      "match": {"type": {"const": "core/person"}},
+      "meta": [
+        {"ref": "tt://eidos/entity"}
+      ]
+    },
+    {
+      "match": {"type": {"const": "core/place"}},
+      "meta": [
+        {"ref": "tt://eidos/entity"}
+      ]
+    },
+    {
+      "match": {"type": {"const": "core/organisation"}},
+      "meta": [
+        {"ref": "tt://eidos/entity"}
+      ]
+    }
+  ]
+}
