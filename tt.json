@@ -3,6 +3,8 @@
   "name": "tt",
   "enums": [
     {
+      "name": "Text roles",
+      "description": "Customises allowed text roles for TT content.",
       "match": "core://text-roles",
       "values": {
         "heading-3": {"forbidden":true},
@@ -11,6 +13,8 @@
       }
     },
     {
+      "name": "Account types",
+      "description": "Defines TT-specific account types.",
       "match": "core://account-types",
       "values": {
         "tt/keycloak": {
@@ -25,6 +29,7 @@
   "documents": [
     {
       "name": "Editorial info type",
+      "description": "Defines an editorial info type document.",
       "declares": "tt/editorial-info-type",
       "attributes": {
         "title": {},
@@ -33,6 +38,7 @@
       "meta": [
         {
           "name": "Ttninjs match object",
+          "description": "Declares a ttninjs match object for editorial info types.",
           "declares": {"type":"tt/ttninjs-match-object"},
           "data":{
             "npdoc.printpm": {
@@ -44,10 +50,13 @@
       ]
     },
     {
+      "name": "Grattis",
+      "description": "Birthday document type.",
       "declares": "tt/grattis",
       "links": [
         {
           "name": "Old DB reference",
+          "description": "Link to a legacy contact database entry.",
           "declares": {"rel":"alternate", "type":"tt/old-contact-db"},
           "attributes": {
             "uri": {"glob":["tt://kontid/*"]}
@@ -58,6 +67,7 @@
         {"ref": "core://definition"},
         {
           "name": "Contact information",
+          "description": "Contact details for the person.",
           "declares": {"type":"core/contact"},
           "count": 1,
           "data": {
@@ -68,6 +78,7 @@
         },
         {
           "name": "Birthday date",
+          "description": "Date of birth and optional death information.",
           "declares": {"type":"tt/birthday"},
           "count": 1,
           "attributes": {
@@ -97,10 +108,13 @@
       ]
     },
     {
+      "name": "Group",
+      "description": "Extensions for group documents.",
       "match": {"type": {"const":"core/group"}},
       "links": [
         {
           "name": "Old DB reference",
+          "description": "Link to a legacy contact database entry.",
           "declares": {"rel":"alternate", "type":"tt/old-contact-db"},
           "attributes": {
             "uri": {"glob":["tt://kontid/*"]}
@@ -109,6 +123,8 @@
       ]
     },
     {
+      "name": "Author",
+      "description": "Extensions for author documents.",
       "match": {"type": {"const":"core/author"}},
       "meta": [
         {
@@ -124,6 +140,7 @@
       "links": [
         {
           "name": "Linked keycloak account",
+          "description": "Links an author to their Keycloak identity.",
           "match": {
             "rel": {"const": "same-as"},
             "type": {"const": "tt/keycloak"}
@@ -135,6 +152,7 @@
         },
         {
           "name": "Linked NavigaID account",
+          "description": "Links an author to their legacy NavigaID identity.",
           "match": {
             "rel": {"const": "same-as"},
             "type": {"const": "x-imid/user"}
@@ -147,29 +165,41 @@
       ]
     },
     {
+      "name": "Event",
+      "description": "Extensions for event documents.",
       "match": {"type": {"const":"core/event"}},
       "links": [
         {
           "name": "TT Organiser",
-          "description": "TODO: is this good data, or just noise?",
+          "description": "Old data from OpenContent",
           "declares": {"rel":"organiser", "type":"tt/organiser"},
           "attributes": {
             "uri": {},
             "title": {}
+          },
+          "deprecated": {
+            "label": "tt_event_organiser",
+            "doc": "No longer used"
           }
         },
         {
           "name": "TT Participant",
-          "description": "TODO: is this good data, or just noise?",
+          "description": "Old data from OpenContent",
           "declares": {"rel":"participant", "type": "tt/participant"},
           "attributes": {
             "uri": {},
             "title": {}
+          },
+          "deprecated": {
+            "label": "tt_event_organiser",
+            "doc": "No longer used"
           }
         }
       ]
     },
     {
+      "name": "Category",
+      "description": "Extensions for category documents using IPTC mediatopics.",
       "match": {"type": {"const":"core/category"}},
       "attributes": {
         "uri": {
@@ -178,6 +208,8 @@
       },
       "links": [
         {
+          "name": "IPTC mediatopic",
+          "description": "Same-as link to the IPTC mediatopic identifier.",
           "declares": {"type":"iptc/mediatopic", "rel":"same-as"},
           "attributes": {
             "uri": {
@@ -191,9 +223,13 @@
       ]
     },
     {
+      "name": "Organisation",
+      "description": "Extensions for organisation documents.",
       "match": {"type": {"const":"core/organisation"}},
       "meta": [
         {
+          "name": "Organisation type",
+          "description": "Specifies the type of the organisation.",
           "declares": {"type":"tt/type"},
           "attributes": {
             "value": {}
@@ -202,9 +238,13 @@
       ]
     },
     {
+      "name": "Flash",
+      "description": "Extensions for flash news documents.",
       "match": {"type": {"const":"core/flash"}},
       "links": [
         {
+          "name": "Section",
+          "description": "Required section for flash documents.",
           "match": {
             "rel": {"const":"section"},
             "type": {"const":"core/section"}
@@ -214,12 +254,19 @@
       ]
     },
     {
+      "name": "Editorial info",
+      "description": "Extensions for editorial info documents.",
       "match": {"type": {"const":"core/editorial-info"}},
       "meta": [
-        {"ref": "tt://slugline"}
+        {
+          "ref": "tt://slugline",
+          "count": 1
+        }
       ],
       "links": [
         {
+          "name": "Section",
+          "description": "Required section for editorial info documents.",
           "match": {
             "rel": {"const":"section"},
             "type": {"const":"core/section"}
@@ -236,10 +283,14 @@
         },
         {
           "name": "Alternate ID",
-          "description": "TODO: is this actually used for live data? See stage/df6ebaba-b3fc-40ff-9ad2-19f953eb0c6a",
+          "description": "Old data from OpenContent",
           "declares": {"type": "tt/alt-id", "rel": "alternate"},
           "attributes": {
             "uri": {}
+          },
+          "deprecated": {
+            "label": "tt_article_altid",
+            "doc": "Remains of old data, just remove"
           }
         }
       ],
@@ -248,9 +299,13 @@
       ]
     },
     {
+      "name": "Article",
+      "description": "Extensions for article documents.",
       "match": {"type": {"const":"core/article"}},
       "links": [
         {
+          "name": "Section",
+          "description": "Required section for article documents.",
           "match": {
             "rel": {"const":"section"},
             "type": {"const":"core/section"}
@@ -259,17 +314,22 @@
         },
         {
           "name": "Same as TT event",
-          "description": "TODO: what is this? Maybe a one-off, was in 69da3ef5-f1b0-5caf-b846-ca5682b9adf9",
+          "description": "Old data from OpenContent",
           "declares": {"rel":"same-as", "type": "tt/event"},
           "attributes": {
             "uri": {"glob":["tt://event/*"]}
           },
           "data": {
             "id": {}
+          },
+          "deprecated": {
+            "label": "article-as-event",
+            "doc": "Strange data migrated from old CMS"
           }
         },
         {
           "name": "Subtype",
+          "description": "Specifies the article subtype.",
           "declares": {"rel":"subtype"},
           "attributes": {
             "uri": {"glob": ["tt://subtype/*"]}
@@ -289,10 +349,14 @@
         },
         {
           "name": "Alternate ID",
-          "description": "TODO: is this actually used for live data? See stage/df6ebaba-b3fc-40ff-9ad2-19f953eb0c6a",
+          "description": "Old data from OpenContent",
           "declares": {"type": "tt/alt-id", "rel": "alternate"},
           "attributes": {
             "uri": {}
+          },
+          "deprecated": {
+            "label": "article_tt_altid",
+            "doc": "Not used anymore"
           }
         }
       ],
@@ -309,7 +373,12 @@
         },
         {
           "name": "Question",
+          "description": "A question block with HTML-formatted text.",
           "declares": {"type":"tt/question"},
+          "deprecated": {
+            "label": "tt_question",
+            "doc": "The tt/question block should no longer be used"
+          },
           "data": {
             "text": {
               "allowEmpty":true,
@@ -320,7 +389,10 @@
         {"ref": "tt://visual"}
       ],
       "meta": [
-        {"ref": "tt://slugline"},
+        {
+          "ref": "tt://slugline",
+          "count": 1
+        },
         {
           "name": "Sector",
           "declares": {"type":"tt/sector"},
@@ -342,8 +414,9 @@
     {
       "id": "tt://slugline",
       "block": {
+        "name": "Slugline",
+        "description": "A short keyword label used for identifying the story.",
         "declares": {"type":"tt/slugline"},
-        "maxCount": 1,
         "attributes": {
           "value": {
             "labels": ["keyword", "prefix"],
@@ -373,6 +446,8 @@
         ],
         "links": [
           {
+            "name": "Self-link",
+            "description": "Self-link pointing to the picture or graphic resource.",
             "declares": {"rel":"self"},
             "attributes": {
               "uri": {},

@@ -6,18 +6,8 @@
       "match": {"type": {"const": "core/planning-item"}},
       "meta": [
         {
-          "name": "Slugline",
-          "description": "Slug to use as the root for article slugs",
-          "declares": {
-            "type": "tt/slugline"
-          },
-          "maxCount": 1,
-          "attributes": {
-            "value": {
-              "labels": ["keyword"],
-              "hints": {"alias": ["slug"]}
-            }
-          }
+          "ref": "tt://slugline",
+          "maxCount": 1
         },
         {
           "match": {
@@ -25,17 +15,8 @@
           },
           "meta": [
             {
-              "name": "Slugline",
-              "description": "Slug to use when publishing an article",
-              "declares": {
-                "type": "tt/slugline"
-              },
-              "maxCount": 1,
-              "attributes": {
-                "value": {
-                  "labels": ["keyword"]
-                }
-              }
+              "ref": "tt://slugline",
+              "maxCount": 1
             }
           ]
         }

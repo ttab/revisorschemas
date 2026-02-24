@@ -1,0 +1,31 @@
+{
+  "uuid": "355ae8be-49ad-4f2e-ab01-c08ad9817ba1",
+  "type": "core/person",
+  "uri": "eidos://person/355ae8be-49ad-4f2e-ab01-c08ad9817ba1",
+  "title": "Brendan Shinnimin",
+  "meta": [
+    {
+      "type": "core/definition",
+      "data": {
+        "text": "Brendan Shinnimin, född 7 januari 1991, är en kanadensisk ishockeyspelare."
+      },
+      "role": "long"
+    },
+    {
+      "type": "core/person"
+    },
+    {
+      "type": "tt/eidos-entity",
+      "meta": [
+        {
+          "type": "tt/eidos-settings", "contenttype": "text",
+          "data": {
+            "eligible": "true",
+            "hide": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "language": "sv-se"
+}

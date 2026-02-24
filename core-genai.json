@@ -36,6 +36,8 @@
     {
       "id": "core://genai/model",
       "block": {
+        "name": "Model link",
+        "description": "A link to a generative AI model.",
         "declares": {"rel":"model"},
         "attributes": {
           "uri": {}
@@ -47,6 +49,8 @@
     {
       "id": "core://genai/prompt",
       "block": {
+        "name": "Prompt metadata",
+        "description": "Metadata describing a generative AI prompt.",
         "declares": {"type":"core/prompt"},
         "attributes": {
           "role": {
@@ -70,6 +74,8 @@
     {
       "id": "core://genai/prompt-text",
       "block": {
+        "name": "Prompt text",
+        "description": "A block of text content for a prompt.",
         "declares": {"type":"core/prompt-text"},
         "data": {
           "text": {"allowEmpty":true}
@@ -79,6 +85,8 @@
     {
       "id": "core://genai/prompt-snippet",
       "block": {
+        "name": "Prompt snippet",
+        "description": "A reusable snippet reference within a prompt.",
         "declares": {"type":"core/prompt-snippet"},
         "attributes": {
           "uuid": {}
