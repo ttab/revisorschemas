@@ -142,7 +142,7 @@
           "declares": {"type":"tt/commission-code"},
           "attributes": {
             "value": {},
-            "role": {"enum": ["staff", "freelance"]}
+            "role": {"enum": ["staff", "assignment", "revenue"]}
           }
         }
       ],
