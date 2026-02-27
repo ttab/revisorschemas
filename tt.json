@@ -135,6 +135,15 @@
             "signature": {"optional":true},
             "initials": {"optional":true}
           }
+        },
+        {
+          "name": "Commission code",
+          "description": "A commission code associated with the author. Repeatable to allow an author to have multiple commission codes.",
+          "declares": {"type":"tt/commission-code"},
+          "attributes": {
+            "value": {},
+            "role": {"enum": ["staff", "freelance"]}
+          }
         }
       ],
       "links": [
