@@ -24,6 +24,16 @@
           "description": "Legacy Naviga user account"
         }
       }
+    },
+    {
+      "name": "Commission code roles",
+      "description": "Roles for author commission codes. A commission code indicates whether a photographer should receive a revenue share. Most photographers have two different commission codes: one for full copyright assignments (no revenue share) and one for revenue-share images. Some photographers may have several revenue-share codes with different revenue percentages.",
+      "declare": "tt://commission-code-roles",
+      "values": {
+        "staff": {"description": "Assignments from staff photographers."},
+        "assignment": {"description": "Full copyright assignments from non-staff photographers."},
+        "revenue": {"description": "All revenue-share assignments."}
+      }
     }
   ],
   "documents": [
@@ -142,7 +152,10 @@
           "declares": {"type":"tt/commission-code"},
           "attributes": {
             "value": {},
-            "role": {"enum": ["staff", "assignment", "revenue"]}
+            "role": {
+              "optional": true,
+              "enumReference": "tt://commission-code-roles"
+            }
           }
         }
       ],
