@@ -35,6 +35,16 @@
         "initials": "huw",
         "lastName": "Wetterberg"
       }
+    },
+    {
+      "type": "tt/commission-code",
+      "value": "01234",
+      "role": "staff"
+    },
+    {
+      "type": "tt/commission-code",
+      "value": "56789",
+      "role": "revenue"
     }
   ],
   "language": "sv-se"
