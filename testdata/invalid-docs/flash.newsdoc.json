@@ -24,7 +24,7 @@
   "content": [
     {
       "type": "core/text",
-      "role": "heading-1",
+      "role": "heading-2",
       "data": {
         "text": "Thing has happened"
       }

@@ -108,6 +108,10 @@
     {
       "type": "tt/slugline",
       "value": "champ-inter"
+    },
+    {
+      "type": "tt/slugline",
+      "value": "champ-inter-2"
     }
   ],
   "links": [

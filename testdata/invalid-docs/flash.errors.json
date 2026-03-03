@@ -1,5 +1,16 @@
 [
   {
-    "error": "there must be 1 or more links where rel is \"section\"; and type is \"core/section\""
+    "entity": [
+      {
+        "refType": "attribute",
+        "name": "role"
+      },
+      {
+        "refType": "block",
+        "kind": "content",
+        "type": "core/text"
+      }
+    ],
+    "error": "must be one of: \"heading-1\""
   }
 ]

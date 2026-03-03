@@ -260,41 +260,16 @@
       ]
     },
     {
-      "name": "Flash",
-      "description": "Extensions for flash news documents.",
-      "match": {"type": {"const":"core/flash"}},
-      "links": [
-        {
-          "name": "Section",
-          "description": "Required section for flash documents.",
-          "match": {
-            "rel": {"const":"section"},
-            "type": {"const":"core/section"}
-          },
-          "minCount": 1
-        }
-      ]
-    },
-    {
       "name": "Editorial info",
       "description": "Extensions for editorial info documents.",
       "match": {"type": {"const":"core/editorial-info"}},
       "meta": [
         {
           "ref": "tt://slugline",
-          "count": 1
+          "maxCount": 1
         }
       ],
       "links": [
-        {
-          "name": "Section",
-          "description": "Required section for editorial info documents.",
-          "match": {
-            "rel": {"const":"section"},
-            "type": {"const":"core/section"}
-          },
-          "minCount": 1
-        },
         {
           "name": "Editorial-info type",
           "description": "Specifies the editorial-info type",
@@ -325,15 +300,6 @@
       "description": "Extensions for article documents.",
       "match": {"type": {"const":"core/article"}},
       "links": [
-        {
-          "name": "Section",
-          "description": "Required section for article documents.",
-          "match": {
-            "rel": {"const":"section"},
-            "type": {"const":"core/section"}
-          },
-          "minCount": 1
-        },
         {
           "name": "Same as TT event",
           "description": "Old data from OpenContent",
@@ -413,7 +379,7 @@
       "meta": [
         {
           "ref": "tt://slugline",
-          "count": 1
+          "maxCount": 1
         },
         {
           "name": "Sector",

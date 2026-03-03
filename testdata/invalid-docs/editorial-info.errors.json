@@ -1,5 +1,5 @@
 [
   {
-    "error": "there must be 1 or more links where rel is \"section\"; and type is \"core/section\""
+    "error": "there must be 1 or less meta block where type is \"tt/slugline\""
   }
 ]
