@@ -43,6 +43,33 @@
       ]
     },
     {
+      "id": "MTQ1LDE5OSwyMzMsMjE3",
+      "type": "core/image",
+      "data": {
+        "html_caption": "Inters Romelu Lukaku firar ett av sina två mål i helgens ligamatch (4–2) mot Sassuolo.",
+        "credit": "Spada/AP/TT",
+        "height": "683",
+        "width": "1024"
+      },
+      "meta": [
+        {
+          "type": "core/softcrop",
+          "data": {
+            "focus": "0.7 0.2",
+            "crop": "0.1 0.0 0.8 1.0"
+          }
+        }
+      ],
+      "links": [
+        {
+          "rel": "image",
+          "uri": "http://tt.se/media/image/sdlAh_UuIyXsC0",
+          "url": "https://tt.se/media/image/sdlAh_UuIyXsC0_NormalPreview.jpg",
+          "type": "tt/picture"
+        }
+      ]
+    },
+    {
       "id": "pagedateline-5b8149a71b05cef3c73af71ca95c555d",
       "type": "core/text",
       "role": "vignette",
