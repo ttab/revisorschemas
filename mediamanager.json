@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "name": "mediamanager",
+  "enums": [
+    {
+      "name": "Image types",
+      "description": "Extend images for mediamanager.",
+      "match": "core://image-types",
+      "values": {
+        "mediamanager/image": {
+          "description": "Picture in the MediaManager archive"
+        }
+      }
+    }
+  ]
+}

@@ -142,6 +142,39 @@
       }
     },
     {
+      "id": "426c3392-82fe-4c39-b296-29fdaf3cbdc9",
+      "type": "core/image",
+      "data": {
+        "credit": "Yle",
+        "height": "600",
+        "text": "",
+        "width": "800"
+      },
+      "links": [
+        {
+          "uuid": "426c3392-82fe-4c39-b296-29fdaf3cbdc9",
+          "uri": "core://image/426c3392-82fe-4c39-b296-29fdaf3cbdc9",
+          "type": "core/image",
+          "rel": "image"
+        },
+        {
+          "uuid": "8c672448-a3e4-4bdb-b51f-71c51ed04321",
+          "type": "core/author",
+          "title": "Yle",
+          "rel": "author"
+        }
+      ],
+      "meta": [
+        {
+          "type": "core/softcrop",
+          "data": {
+            "crop": "0 0 1 1",
+            "focus": "0.37057 0.66287"
+          }
+        }
+      ]
+    },
+    {
       "type": "core/text",
       "role": "preamble",
       "data": {

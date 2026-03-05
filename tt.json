@@ -13,6 +13,19 @@
       }
     },
     {
+      "name": "Image types",
+      "description": "Customises allowed image types.",
+      "match": "core://image-types",
+      "values": {
+        "tt/picture": {
+          "description": "Picture in the TT image archive"
+        },
+        "tt/graphic": {
+          "description": "Graphic/illustration in the TT image archive"
+        }
+      }
+    },
+    {
       "name": "Account types",
       "description": "Defines TT-specific account types.",
       "match": "core://account-types",

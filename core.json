@@ -832,6 +832,15 @@
       "values": {}
     },
     {
+      "declare": "core://image-types",
+      "name": "Image types",
+      "values": {
+        "core/image": {
+          "description": "Image document/asset in the repository"
+        }
+      }
+    },
+    {
       "declare": "core://text-roles",
       "name": "Text block roles",
       "values": {
@@ -1046,9 +1055,12 @@
         "declares": {"type":"core/image"},
         "data": {
           "text": {
-            "allowEmpty": true
+            "name": "Plain text caption",
+            "allowEmpty": true,
+            "optional": true
           },
           "html_caption": {
+            "name": "HTML caption",
             "format": "html",
             "allowEmpty": true,
             "optional": true
@@ -1070,11 +1082,13 @@
           {
             "name": "Image reference",
             "description": "Link to the image document",
-            "declares": {"rel":"image", "type":"core/image"},
+            "declares": {"rel":"image"},
             "count": 1,
             "attributes": {
-              "uuid": {},
-              "uri": {"glob":["core://image/*"]}
+              "type": {"enumReference": "core://image-types"},
+              "uuid": {"optional": true},
+              "uri": {},
+              "url": {"optional": true}
             }
           },
           {
