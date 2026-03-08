@@ -44,6 +44,11 @@
       "description": "A newsitem from a wire service",
       "declares": "tt/wire",
       "links": [
+        {"ref": "core://subject"},
+        {
+          "ref": "core://section",
+          "maxCount": 1
+        },
         {
           "ref": "core://subject",
           "attributes": {
