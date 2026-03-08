@@ -32,10 +32,23 @@
       ]
     },
     {
+      "name": "Wire meta document",
+      "description": "Document used to store background information on a wire",
+      "declares": "tt/wire+meta",
+      "links": [
+        {"ref": "core://subject"}
+      ]
+    },
+    {
       "name": "Wire",
       "description": "A newsitem from a wire service",
       "declares": "tt/wire",
       "links": [
+        {"ref": "core://subject"},
+        {
+          "ref": "core://section",
+          "maxCount": 1
+        },
         {
           "name": "Source",
           "description": "A reference to the source of the content",
@@ -66,32 +79,6 @@
                 "wires://provider/**"
               ]
             },
-            "title": {}
-          }
-        },
-        {
-          "name": "Topics",
-          "description": "Links to IPTC media topics",
-          "declares": {
-            "rel": "subject",
-            "type": "core/category"
-          },
-          "attributes": {
-            "title": {},
-            "uuid": {},
-            "uri": {}
-          }
-        },
-        {
-          "name": "Section",
-          "description": "The editorial section the wire belongs to.",
-          "declares": {
-            "rel": "section",
-            "type": "core/section"
-          },
-          "maxCount": 1,
-          "attributes": {
-            "uuid": {},
             "title": {}
           }
         }
@@ -127,146 +114,61 @@
             "copyright": {}
           }
         },
+        {"ref": "tt://slugline"},
+        {"ref": "core://newsvalue"},
+        {"ref": "core://note"},
         {
-          "name": "Slug",
-          "description": "A slugline used to identify the wire story.",
-          "declares": {
-            "type": "tt/slugline"
-          },
-          "attributes": {
-            "value": {}
-          }
-        },
-        {
-          "name": "Newsvalue",
-          "description": "The editorial priority or news value rating.",
-          "declares": {
-            "type": "core/newsvalue"
-          },
-          "attributes": {
-            "value": {
-              "format": "int"
-            }
-          }
-        },
-        {
-          "name": "Note",
-          "description": "A public or internal editorial note attached to the wire.",
-          "declares": {
-            "type": "core/note"
-          },
-          "attributes": {
-            "role": {
-              "enum": [
-                "public",
-                "internal"
-              ]
-            }
-          },
-          "data": {
-            "text": {
-              "allowEmpty": true
-            }
-          }
+          "ref": "core://translation-source",
+          "maxCount": 1,
+          "content": [
+            {"ref": "tt://wire/text"},
+            {"ref": "core://table"},
+            {"ref": "core://ordered-list"},
+            {"ref": "core://unordered-list"}
+          ]
         }
       ],
       "content": [
-        {
-          "name": "Text block",
-          "description": "A block of text content such as a heading, preamble, or vignette.",
-          "declares": {
-            "type": "core/text"
-          },
-          "attributes": {
-            "role": {
-              "enum": [
-                "heading-1",
-                "heading-2",
-                "preamble",
-                "vignette"
-              ],
-              "optional": true
-            }
-          },
-          "data": {
-            "text": {
-              "allowEmpty": true,
-              "format": "html"
-            }
-          }
-        },
-        {
-          "name": "Table",
-          "description": "A data table with optional caption, header, body, and footer.",
-          "declares": {
-            "type": "core/table"
-          },
-          "data": {
-            "caption": {
-              "allowEmpty": true,
-              "optional": true
-            },
-            "thead": {
-              "format": "html",
-              "htmlPolicy": "table",
-              "optional": true
-            },
-            "tbody": {
-              "format": "html",
-              "htmlPolicy": "table"
-            },
-            "tfoot": {
-              "format": "html",
-              "htmlPolicy": "table",
-              "optional": true
-            }
-          }
-        },
-        {
-          "name": "Ordered list",
-          "description": "A numbered list of text items.",
-          "declares": {
-            "type": "core/ordered-list"
-          },
-          "content": [
-            {
-              "name": "List text",
-              "description": "A text item within the ordered list.",
-              "declares": {
-                "type": "core/text"
-              },
-              "data": {
-                "text": {
-                  "allowEmpty": true,
-                  "format": "html"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Unordered list",
-          "description": "A bulleted list of text items.",
-          "declares": {
-            "type": "core/unordered-list"
-          },
-          "content": [
-            {
-              "name": "List text",
-              "description": "A text item within the unordered list.",
-              "declares": {
-                "type": "core/text"
-              },
-              "data": {
-                "text": {
-                  "allowEmpty": true,
-                  "format": "html"
-                }
-              }
-            }
-          ]
-        }
+        {"ref": "tt://wire/text"},
+        {"ref": "core://table"},
+        {"ref": "core://ordered-list"},
+        {"ref": "core://unordered-list"}
       ]
+    }
+  ],
+  "enums": [
+    {
+      "declare": "tt://wire/text-roles",
+      "values": {
+        "heading-1": {},
+        "heading-2": {},
+        "preamble": {},
+        "vignette": {}
+      }
+    }
+  ],
+  "content": [
+    {
+      "id": "tt://wire/text",
+      "block": {
+        "name": "Text block",
+        "description": "A block of text content such as a heading, preamble, or vignette.",
+        "declares": {
+          "type": "core/text"
+        },
+        "attributes": {
+          "role": {
+            "enumReference": "tt://wire/text-roles",
+            "optional": true
+          }
+        },
+        "data": {
+          "text": {
+            "allowEmpty": true,
+            "format": "html"
+          }
+        }
+      }
     }
   ]
 }
