@@ -44,7 +44,18 @@
       "description": "A newsitem from a wire service",
       "declares": "tt/wire",
       "links": [
-        {"ref": "core://subject"},
+        {
+          "ref": "core://subject",
+          "attributes": {
+            "uri": {
+              "optional": true,
+              "deprecated": {
+                "label": "wire_subject_uri",
+                "doc": "Unnecessary when we have the UUID"
+              }
+            }
+          }
+        },
         {
           "ref": "core://section",
           "maxCount": 1
