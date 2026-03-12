@@ -1024,6 +1024,22 @@
           "uuid": {}
         }
       }
+    },
+    {
+      "id": "core://translation-source",
+      "block": {
+        "name": "Translation source",
+        "description": "Preserves the original content of a document before translation. Contains the original title, content blocks, and source language.",
+        "declares": {"type":"core/translation-source"},
+        "attributes": {
+          "title": {}
+        },
+        "data": {
+          "language": {
+            "description": "The BCP47 language tag of the original content"
+          }
+        }
+      }
     }
   ],
   "content": [
