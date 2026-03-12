@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "ntb",
+  "documents": [
+    {
+      "name": "Article",
+      "description": "Extensions for article documents.",
+      "match": {"type": {"const":"core/article"}},
+      "meta": [
+        {
+          "name": "Hast",
+          "description": "Mark articles to be sent as 'hast'",
+          "declares": {"type": "ntb/hast"},
+          "attributes": {
+            "value": {
+              "format": "int",
+              "description": "Published version (usable ID) that should be sent as a 'hast'"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
