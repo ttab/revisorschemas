@@ -135,6 +135,10 @@
     {
       "type": "tt/slugline",
       "value": "champ-inter"
+    },
+    {
+      "type": "ntb/hast",
+      "value": "2"
     }
   ],
   "links": [
