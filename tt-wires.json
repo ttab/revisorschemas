@@ -44,6 +44,7 @@
       "description": "A newsitem from a wire service",
       "declares": "tt/wire",
       "links": [
+        {"ref": "core://content-source"},
         {
           "ref": "core://subject",
           "attributes": {
@@ -141,6 +142,7 @@
       ],
       "content": [
         {"ref": "tt://wire/text"},
+        {"ref": "core://image"},
         {"ref": "core://table"},
         {"ref": "core://ordered-list"},
         {"ref": "core://unordered-list"}
