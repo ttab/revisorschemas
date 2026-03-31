@@ -120,6 +120,11 @@
               "format": "RFC3339",
               "optional": true
             },
+            "embargo_until": {
+              "name": "If present the wire must not be re-published before this time",
+              "format": "RFC3339",
+              "optional": true
+            },
             "version": {
               "name": "Opaque version identifier from the source"
             },
