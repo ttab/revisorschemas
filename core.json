@@ -83,6 +83,15 @@
             }
           }
         }
+      ],
+      "links": [
+        {
+          "declares": {"rel": "same-as", "type": "core/section"},
+          "attributes": {
+            "uuid": {},
+            "title": {"optional": true}
+          }
+        }
       ]
     },
     {
