@@ -149,6 +149,7 @@
       "content": [
         {"ref": "tt://wire/text"},
         {"ref": "core://image"},
+        {"ref": "core://factbox"},
         {"ref": "core://table"},
         {"ref": "core://ordered-list"},
         {"ref": "core://unordered-list"}
