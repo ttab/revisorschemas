@@ -102,6 +102,7 @@
           "declares": {
             "type": "tt/wire"
           },
+          "count": 1,
           "attributes": {
             "role": {
               "enum": [
