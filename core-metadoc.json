@@ -21,6 +21,7 @@
         "declares": {"rel":"subject"},
         "attributes": {
           "uuid": {"optional":true},
+          "uri": {"optional":true},
           "title": {},
           "type": {}
         },
@@ -51,6 +52,7 @@
         "declares": {"rel":"suggestion"},
         "attributes": {
           "uuid": {"optional":true},
+          "uri": {"optional":true},
           "title": {},
           "type": {}
         },
