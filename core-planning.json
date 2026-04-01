@@ -169,6 +169,11 @@
               "description": "The timezone the date is in",
               "optional": true
             },
+            "embargo_until": {
+              "name": "If present the article must not be published before this time",
+              "format": "RFC3339",
+              "optional": true
+            },
             "publish": {
               "description": "The exact time the deliverables will be published",
               "format": "RFC3339",
