@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "name": "core-timeless",
+  "documents": [
+    {
+      "name": "Article",
+      "description": "Extensions for article documents.",
+      "attributes": {
+        "title": {}
+      },
+      "match": {
+        "type": {
+          "const": "core/article#timeless"
+        }
+      },
+      "links": [
+        {
+          "name": "Timeless category",
+          "description": "A category for the timeless article",
+          "declares": {"type": "core/timeless-category", "rel":"subject"},
+          "attributes": {
+            "uuid": {},
+            "title": {}
+          }
+        }
+      ]
+    },
+    {
+      "name": "Timeless category",
+      "description": "A category for timeless content",
+      "declares": "core/timeless-category",
+      "attributes": {
+        "title": {}
+      },
+      "meta": [
+        {"ref":"core://definition"}
+      ]
+    }
+  ]
+}

@@ -25,7 +25,7 @@ func TestFS_ValidSchemas(t *testing.T) {
 
 	// Sanity check so that we don't sail through on any issues that cause
 	// embedding to fail.
-	expectSchemas := 11
+	expectSchemas := 12
 
 	if len(files) != expectSchemas {
 		t.Fatalf("expected there to be %d schema files, got %d",
@@ -174,5 +174,8 @@ func createValidator(t *testing.T) *revisor.Validator {
 		t.Fatalf("failed to create validator with schemas: %v", err)
 	}
 
-	return validator
+	return validator.WithVariants(revisor.Variant{
+		Name:  "timeless",
+		Types: []string{"core/article"},
+	})
 }

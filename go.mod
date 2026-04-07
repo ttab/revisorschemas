@@ -5,7 +5,7 @@ go 1.25.5
 require (
 	github.com/google/go-cmp v0.7.0
 	github.com/ttab/newsdoc v0.8.0
-	github.com/ttab/revisor v0.11.0
+	github.com/ttab/revisor v0.11.2
 )
 
 require (
