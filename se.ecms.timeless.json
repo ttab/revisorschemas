@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "name": "core-timeless",
+  "name": "se.ecms.timeless",
   "documents": [
     {
       "name": "Article",

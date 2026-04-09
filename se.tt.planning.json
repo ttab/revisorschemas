@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "name": "tt-planning",
+  "name": "se.tt.planning",
   "documents": [
     {
       "match": {"type": {"const": "core/planning-item"}},

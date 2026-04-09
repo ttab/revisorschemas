@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "name": "core-metadoc",
+  "name": "se.ecms.metadoc",
   "documents": [
     {
       "name": "Article meta document",
