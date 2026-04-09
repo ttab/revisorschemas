@@ -18,6 +18,7 @@
           "name": "Timeless category",
           "description": "A category for the timeless article",
           "declares": {"type": "core/timeless-category", "rel":"subject"},
+          "count": 1,
           "attributes": {
             "uuid": {},
             "title": {}
