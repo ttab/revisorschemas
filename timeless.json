@@ -36,5 +36,13 @@
         {"ref":"core://definition"}
       ]
     }
+  ],
+  "enums": [
+    {
+      "match": "core://assignment-types",
+      "values": {
+        "timeless": {}
+      }
+    }
   ]
 }
