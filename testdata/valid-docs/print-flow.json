@@ -43,6 +43,12 @@
       "type": "tt/print-content",
       "name": "t1",
       "title": "T1",
+      "links": [
+        {
+          "rel": "template",
+          "uuid": "7c93a47a-6a2a-4202-8048-8035d54b24dd"
+        }
+      ],
       "meta": [
         {
           "type": "tt/print-features",

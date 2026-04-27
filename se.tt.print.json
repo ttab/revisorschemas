@@ -388,6 +388,16 @@
           "name": {},
           "title": {}
         },
+        "links": [
+          {
+            "name": "Article template",
+            "description": "Article that will be used as a template",
+            "declares": {"rel":"template"},
+            "attributes": {
+              "uuid": {}
+            }
+          }
+        ],
         "meta": [
           {"ref": "tt://print-flow/features"}
         ],
