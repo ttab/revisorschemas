@@ -307,6 +307,8 @@
       }
     },
     {
+      "name": "Assignment statuses",
+      "description": "Statuses used to describe what stage the work with an assignment has reached.",
       "declare": "core://assignment-statuses",
       "values": {
         "todo": {
