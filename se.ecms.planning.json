@@ -190,7 +190,7 @@
             },
             "status": {
               "optional": true,
-              "enum": ["todo", "started", "done"]
+              "enumReference": "core://assignment-statuses"
             }
           },
           "meta": [
@@ -304,6 +304,28 @@
         "graphic": {},
         "flash": {},
         "editorial-info": {}
+      }
+    },
+    {
+      "name": "Assignment statuses",
+      "description": "Statuses used to describe what stage the work with an assignment has reached.",
+      "declare": "core://assignment-statuses",
+      "values": {
+        "todo": {
+          "description": "Pending task"
+        },
+        "en-route": {
+          "description": "Used when we want to communicate that a journalist/photographer is on the way"
+        },
+        "started": {
+          "description": "Work has started / photographer is at the scene"
+        },
+        "finished": {
+          "description": "Work has finished, but we still might be waiting for deliverables to arrive or be approved"
+        },
+        "done": {
+          "description": "Everything is done, no more deliverables forthcoming for the assignment"
+        }
       }
     }
   ]
