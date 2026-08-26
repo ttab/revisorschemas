@@ -38,18 +38,7 @@
         }
       ],
       "links": [
-        {
-          "name": "Related place",
-          "description": "A relationship to another place",
-          "declares": {"type":"core/place"},
-          "attributes": {
-            "rel": {
-              "enumReference": "core://place-relationships"
-            },
-            "title": {},
-            "uuid": {}
-          }
-        }
+        {"ref": "core://place-relationship"}
       ]
     },
     {
@@ -1509,6 +1498,21 @@
         "attributes": {
           "uri": {},
           "title": {}
+        }
+      }
+    },
+    {
+      "id": "core://place-relationship",
+      "block": {
+        "name": "Related place",
+        "description": "A relationship to another place",
+        "declares": {"type":"core/place"},
+        "attributes": {
+          "rel": {
+            "enumReference": "core://place-relationships"
+          },
+          "title": {},
+          "uuid": {}
         }
       }
     }

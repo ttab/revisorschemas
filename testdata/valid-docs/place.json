@@ -1,0 +1,29 @@
+{
+  "uuid": "94b0f663-b8f3-5536-a669-68eb8e91303c",
+  "type": "core/place",
+  "uri": "core://place/94b0f663-b8f3-5536-a669-68eb8e91303c",
+  "title": "Stockholm",
+  "meta": [
+    {
+      "type": "core/position",
+      "value": "POINT(18.0649 59.3326)"
+    },
+    {
+      "type": "core/place-type",
+      "value": "city"
+    },
+    {
+      "type": "core/alias",
+      "title": "Eken"
+    }
+  ],
+  "links": [
+    {
+      "uuid": "78c0e468-aefa-54a7-81c7-5f6971e3061e",
+      "type": "core/place",
+      "title": "Stockholms län",
+      "rel": "county"
+    }
+  ],
+  "language": "sv-se"
+}

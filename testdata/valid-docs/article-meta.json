@@ -1,0 +1,57 @@
+{
+  "uuid": "b8f2ec4b-5f34-4b4a-9dd2-2f5cf3ffdd08",
+  "type": "core/article+meta",
+  "uri": "core://article/1b1e7f4f-1bd6-4a3d-9b8d-1cbb0a2b1e0a/meta",
+  "title": "Analysis for Stockholmsartikeln",
+  "links": [
+    {
+      "uuid": "355ae8be-49ad-4f2e-ab01-c08ad9817ba1",
+      "type": "core/person",
+      "title": "Brendan Shinnimin",
+      "data": {
+        "confidence": "0.987",
+        "status": "automatic"
+      },
+      "rel": "subject"
+    },
+    {
+      "uuid": "94b0f663-b8f3-5536-a669-68eb8e91303c",
+      "type": "core/place",
+      "title": "Stockholm",
+      "data": {
+        "confidence": "1.000",
+        "place_type": "city",
+        "position": "POINT(18.0649 59.3326)",
+        "status": "automatic"
+      },
+      "links": [
+        {
+          "uuid": "78c0e468-aefa-54a7-81c7-5f6971e3061e",
+          "type": "core/place",
+          "title": "Stockholms län",
+          "data": {
+            "position": "POINT(18.166667 59.333333)"
+          },
+          "rel": "county"
+        },
+        {
+          "uuid": "05a70b22-7708-51be-b986-81f3548a8e6b",
+          "type": "core/place",
+          "title": "Sverige",
+          "rel": "country"
+        }
+      ],
+      "rel": "subject"
+    },
+    {
+      "type": "core/place",
+      "title": "Kvarnholmen",
+      "data": {
+        "confidence": "0.612",
+        "status": "automatic"
+      },
+      "rel": "suggestion"
+    }
+  ],
+  "language": "sv-se"
+}

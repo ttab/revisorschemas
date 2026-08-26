@@ -1,0 +1,71 @@
+[
+  {
+    "entity": [
+      {
+        "refType": "data attribute",
+        "name": "position"
+      },
+      {
+        "refType": "block",
+        "kind": "link",
+        "type": "core/person",
+        "rel": "subject"
+      }
+    ],
+    "error": "unknown attribute"
+  },
+  {
+    "entity": [
+      {
+        "refType": "data attribute",
+        "name": "place_type"
+      },
+      {
+        "refType": "block",
+        "kind": "link",
+        "index": 1,
+        "type": "core/place",
+        "rel": "subject"
+      }
+    ],
+    "error": "must be one of: \"city\", \"country\", \"county\", \"municipality\", \"poi\", \"province\", \"region\", \"state\""
+  },
+  {
+    "entity": [
+      {
+        "refType": "data attribute",
+        "name": "position"
+      },
+      {
+        "refType": "block",
+        "kind": "link",
+        "index": 1,
+        "type": "core/place",
+        "rel": "subject"
+      }
+    ],
+    "error": "WKT validation: failed to parse: detect geometry type: unexpected geometry type: 18.0649"
+  },
+  {
+    "entity": [
+      {
+        "refType": "attribute",
+        "name": "rel"
+      },
+      {
+        "refType": "block",
+        "kind": "link",
+        "type": "core/place",
+        "rel": "broader"
+      },
+      {
+        "refType": "block",
+        "kind": "link",
+        "index": 1,
+        "type": "core/place",
+        "rel": "subject"
+      }
+    ],
+    "error": "must be one of: \"capital-of\", \"country\", \"county\", \"municipality\", \"province\", \"region\", \"state\""
+  }
+]

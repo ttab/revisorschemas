@@ -8,7 +8,8 @@
       "declares": "core/article+meta",
       "links": [
         {"ref": "core://subject"},
-        {"ref": "core://suggestion"}
+        {"ref": "core://suggestion"},
+        {"ref": "core://place-details"}
       ]
     }
   ],
@@ -66,6 +67,43 @@
             "enum": ["automatic", "rejected", "accepted"]
           }
         }
+      }
+    },
+    {
+      "id": "core://place-details",
+      "block": {
+        "name": "Place details",
+        "description": "Position, type and containing places for a recognised place, added by eidos when the place resolved to a place document.",
+        "match": {
+          "type": {"const": "core/place"},
+          "rel": {"enum": ["subject", "suggestion"]}
+        },
+        "data": {
+          "place_type": {
+            "description": "The type of the place, from the place document's core/place-type block.",
+            "enumReference": "core://place-types",
+            "optional": true
+          },
+          "position": {
+            "description": "The position of the place, from the place document's core/position block.",
+            "format": "wkt",
+            "geometry": "point",
+            "optional": true
+          }
+        },
+        "links": [
+          {
+            "ref": "core://place-relationship",
+            "data": {
+              "position": {
+                "description": "The position of the containing place.",
+                "format": "wkt",
+                "geometry": "point",
+                "optional": true
+              }
+            }
+          }
+        ]
       }
     }
   ]
