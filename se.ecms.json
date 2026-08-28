@@ -116,6 +116,7 @@
       "declares": "core/person",
       "meta": [
         {"ref":"core://definition"},
+        {"ref":"core://description"},
         {
           "name": "Main metadata block",
           "description": "Core person data",
@@ -130,6 +131,7 @@
               "optional":true,
               "labels": ["sortable"]
             },
+            "birthName": {"optional":true},
             "employer": {"optional":true},
             "title": {"optional":true}
           }
