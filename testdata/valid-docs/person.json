@@ -15,6 +15,13 @@
       "type": "core/person"
     },
     {
+      "type": "core/birthday",
+      "value": "1991-01-07",
+      "data": {
+        "year": "1991"
+      }
+    },
+    {
       "type": "tt/eidos-entity",
       "meta": [
         {

@@ -141,6 +141,10 @@
           "description": "An alternative name for the person",
           "declares": {"type":"core/alias"},
           "attributes": {"title":{}}
+        },
+        {
+          "ref": "core://birthday",
+          "maxCount": 1
         }
       ],
       "links": [
@@ -1037,6 +1041,42 @@
         "data": {
           "language": {
             "description": "The BCP47 language tag of the original content"
+          }
+        }
+      }
+    },
+    {
+      "id": "core://birthday",
+      "block": {
+        "name": "Birthday",
+        "description": "Date of birth and optional death information",
+        "declares": {"type":"core/birthday"},
+        "attributes": {
+          "value": {
+            "description": "The date of birth",
+            "time": "2006-01-02",
+            "optional": true
+          }
+        },
+        "data": {
+          "year": {
+            "description": "The year of birth, used when the full date is unknown",
+            "format":"int",
+            "optional": true
+          },
+          "died": {
+            "description": "The date of death",
+            "time": "2006-01-02",
+            "optional": true
+          },
+          "died_year": {
+            "description": "The year of death, used when the full date is unknown",
+            "format":"int",
+            "optional": true
+          },
+          "died_note": {
+            "description": "A note about the circumstances of the death",
+            "optional": true
           }
         }
       }
