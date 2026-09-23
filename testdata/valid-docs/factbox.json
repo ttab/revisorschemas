@@ -2,6 +2,23 @@
   "uuid": "8cd588f5-5b25-4c1e-88b4-a4c44a79ef4a",
   "type": "core/factbox",
   "title": "Rökt vättersik",
+  "meta": [
+    {
+      "type": "core/accepted-spelling",
+      "value": "Sjöstrand",
+      "data": {
+        "created": "2026-09-23T10:15:00Z"
+      },
+      "links": [
+        {
+          "rel": "creator",
+          "type": "core/author",
+          "uuid": "9187712c-a795-4cdc-bd4e-560e4f93dc4e",
+          "title": "Lasse Mannheimer/TT"
+        }
+      ]
+    }
+  ],
   "content": [
     {
       "type": "core/text",

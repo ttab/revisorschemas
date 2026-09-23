@@ -321,7 +321,8 @@
           "data": {
             "byline": {"optional":true}
           }
-        }
+        },
+        {"ref": "core://accepted-spelling"}
       ],
       "content": [
         {
@@ -380,6 +381,9 @@
       "attributes": {
         "title": {}
       },
+      "meta": [
+        {"ref": "core://accepted-spelling"}
+      ],
       "links": [
         {"ref": "core://byline"},
         {"ref": "core://section"},
@@ -429,6 +433,7 @@
           "count": 1
         },
         {"ref": "core://note"},
+        {"ref": "core://accepted-spelling"},
         {"ref": "core://teaser"}
       ],
       "links": [
@@ -508,7 +513,8 @@
         {"ref": "core://factbox"}
       ],
       "meta": [
-        {"ref": "core://note"}
+        {"ref": "core://note"},
+        {"ref": "core://accepted-spelling"}
       ],
       "links": [
         {"ref": "core://byline"},
@@ -904,6 +910,32 @@
         "data": {
           "text": {"allowEmpty":true}
         }
+      }
+    },
+    {
+      "id": "core://accepted-spelling",
+      "block": {
+        "name": "Accepted spelling",
+        "description": "A word or phrase that has been accepted as correctly spelled in this document",
+        "declares": {"type":"core/accepted-spelling"},
+        "attributes": {
+          "value": {"labels": ["keyword"]}
+        },
+        "data": {
+          "created": {"format":"RFC3339"}
+        },
+        "links": [
+          {
+            "name": "Accepted by",
+            "description": "The author that accepted the spelling",
+            "declares": {"type":"core/author", "rel":"creator"},
+            "maxCount": 1,
+            "attributes": {
+              "uuid": {},
+              "title": {}
+            }
+          }
+        ]
       }
     },
     {

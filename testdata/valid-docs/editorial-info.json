@@ -57,6 +57,21 @@
   ],
   "meta": [
     {
+      "type": "core/accepted-spelling",
+      "value": "Sjöstrand",
+      "data": {
+        "created": "2026-09-23T10:15:00Z"
+      },
+      "links": [
+        {
+          "rel": "creator",
+          "type": "core/author",
+          "uuid": "9187712c-a795-4cdc-bd4e-560e4f93dc4e",
+          "title": "Lasse Mannheimer/TT"
+        }
+      ]
+    },
+    {
       "type": "core/note",
       "data": {
         "text": "Obs! Detta meddelande är inte avsett för publicering."
