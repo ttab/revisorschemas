@@ -2,6 +2,23 @@
   "uuid": "99a4a74b-9cb0-4c22-8203-7b61cc1e02f2",
   "type": "core/flash",
   "title": "Flash about thing",
+  "meta": [
+    {
+      "type": "core/spelling-accepted",
+      "value": "Sjöstrand",
+      "data": {
+        "created": "2026-09-23T10:15:00Z"
+      },
+      "links": [
+        {
+          "rel": "creator",
+          "type": "core/author",
+          "uuid": "9187712c-a795-4cdc-bd4e-560e4f93dc4e",
+          "title": "Lasse Mannheimer/TT"
+        }
+      ]
+    }
+  ],
   "links": [
     {
       "rel": "section",

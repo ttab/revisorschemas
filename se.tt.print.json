@@ -18,7 +18,8 @@
       ],
       "meta": [
         {"ref": "tt://print-article"},
-        {"ref": "core://note"}
+        {"ref": "core://note"},
+        {"ref": "core://spelling-accepted"}
       ],
       "links": [
         {"ref": "core://article-source"},
