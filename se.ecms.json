@@ -322,7 +322,7 @@
             "byline": {"optional":true}
           }
         },
-        {"ref": "core://spelling-accepted"}
+        {"ref": "core://accepted-spelling"}
       ],
       "content": [
         {
@@ -382,7 +382,7 @@
         "title": {}
       },
       "meta": [
-        {"ref": "core://spelling-accepted"}
+        {"ref": "core://accepted-spelling"}
       ],
       "links": [
         {"ref": "core://byline"},
@@ -433,7 +433,7 @@
           "count": 1
         },
         {"ref": "core://note"},
-        {"ref": "core://spelling-accepted"},
+        {"ref": "core://accepted-spelling"},
         {"ref": "core://teaser"}
       ],
       "links": [
@@ -514,7 +514,7 @@
       ],
       "meta": [
         {"ref": "core://note"},
-        {"ref": "core://spelling-accepted"}
+        {"ref": "core://accepted-spelling"}
       ],
       "links": [
         {"ref": "core://byline"},
@@ -913,11 +913,11 @@
       }
     },
     {
-      "id": "core://spelling-accepted",
+      "id": "core://accepted-spelling",
       "block": {
         "name": "Accepted spelling",
         "description": "A word or phrase that has been accepted as correctly spelled in this document",
-        "declares": {"type":"core/spelling-accepted"},
+        "declares": {"type":"core/accepted-spelling"},
         "attributes": {
           "value": {"labels": ["keyword"]}
         },
@@ -932,7 +932,7 @@
             "maxCount": 1,
             "attributes": {
               "uuid": {},
-              "title": {"allowEmpty":true}
+              "title": {}
             }
           }
         ]

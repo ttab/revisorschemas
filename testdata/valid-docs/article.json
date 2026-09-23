@@ -141,7 +141,7 @@
       "value": "2"
     },
     {
-      "type": "core/spelling-accepted",
+      "type": "core/accepted-spelling",
       "value": "Sjöstrand",
       "data": {
         "created": "2026-09-23T10:15:00Z"
@@ -156,7 +156,7 @@
       ]
     },
     {
-      "type": "core/spelling-accepted",
+      "type": "core/accepted-spelling",
       "value": "rekordvarma",
       "data": {
         "created": "2026-09-23T10:15:00Z"
