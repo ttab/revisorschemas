@@ -434,6 +434,7 @@
         },
         {"ref": "core://note"},
         {"ref": "core://accepted-spelling"},
+        {"ref": "core://byline-credit", "maxCount": 1},
         {"ref": "core://teaser"}
       ],
       "links": [
@@ -936,6 +937,17 @@
             }
           }
         ]
+      }
+    },
+    {
+      "id": "core://byline-credit",
+      "block": {
+        "name": "Byline credit",
+        "description": "Who the published byline names, when it is not the article's authors",
+        "declares": {"type":"core/byline-credit"},
+        "attributes": {
+          "value": {"enum": ["org"]}
+        }
       }
     },
     {
