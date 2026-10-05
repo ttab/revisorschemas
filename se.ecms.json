@@ -946,7 +946,7 @@
         "description": "Who the published byline names, when it is not the article's authors",
         "declares": {"type":"core/byline-credit"},
         "attributes": {
-          "value": {"enum": ["organisation"]}
+          "value": {"enum": ["org"]}
         }
       }
     },
