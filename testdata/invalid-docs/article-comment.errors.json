@@ -1,0 +1,16 @@
+[
+  {
+    "entity": [
+      {
+        "refType": "data attribute",
+        "name": "text"
+      },
+      {
+        "refType": "block",
+        "kind": "content",
+        "type": "core/text"
+      }
+    ],
+    "error": "invalid html after line 1 char 20: missing required \u003ccomment\u003e attribute \"id\""
+  }
+]

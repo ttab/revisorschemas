@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "name": "se.ecms.comments",
+  "htmlPolicies": [
+    {
+      "description": "Anchors a comment thread in text. The id names the thread, the kind what sort of comment it is, such as factcheck.",
+      "extends": "default",
+      "elements": {
+        "comment": {
+          "attributes": {
+            "id": {},
+            "kind": {"optional": true}
+          }
+        }
+      }
+    }
+  ]
+}
