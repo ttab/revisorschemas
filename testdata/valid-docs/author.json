@@ -45,6 +45,10 @@
       "type": "tt/commission-code",
       "value": "56789",
       "role": "revenue"
+    },
+    {
+      "type": "tt/camera-prefix",
+      "value": "huw"
     }
   ],
   "language": "sv-se"
