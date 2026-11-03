@@ -170,6 +170,18 @@
               "enumReference": "tt://commission-code-roles"
             }
           }
+        },
+        {
+          "name": "Camera prefix",
+          "description": "The filename prefix set in the photographer's camera, in the form MediaManager matches it: lower case, exactly three characters, letters or digits. At most one per author.",
+          "declares": {"type":"tt/camera-prefix"},
+          "maxCount": 1,
+          "attributes": {
+            "value": {
+              "pattern": "^[a-z0-9]{3}$",
+              "labels": ["keyword"]
+            }
+          }
         }
       ],
       "links": [
