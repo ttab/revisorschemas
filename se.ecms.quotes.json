@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "se.ecms.quotes",
+  "htmlPolicies": [
+    {
+      "description": "A quote taken from a recording's transcript. The text is the words as printed; the attributes name where they were said: the planning item, the assignment and the recording, when, and by whom when the transcript knows.",
+      "extends": "default",
+      "elements": {
+        "quote": {
+          "attributes": {
+            "id": {"optional": true},
+            "data-planning": {"format": "uuid"},
+            "data-assignment": {"format": "uuid"},
+            "data-recording": {"format": "uuid"},
+            "data-start": {"format": "RFC3339"},
+            "data-end": {"format": "RFC3339"},
+            "data-speaker": {"optional": true},
+            "data-speaker-id": {"format": "uuid", "optional": true}
+          }
+        }
+      }
+    }
+  ]
+}
