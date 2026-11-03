@@ -9,7 +9,7 @@
       "type": "core/text",
       "role": "heading-1",
       "data": {
-        "text": "Hon sa <quote id=\"b1e2c3d4-0000-4000-8000-000000000001\" data-planning=\"b9307c0e-8bc9-49ab-a4d0-dd9d4e785750\" data-assignment=\"2c0727ce-a40c-407b-822b-19db5b8da4be\" data-recording=\"01a18ea1-c4ae-7254-a2f2-dd3cf219c418\" data-start=\"2026-10-30T21:05:33.877Z\" data-end=\"2026-10-30T21:05:36.120Z\" data-speaker=\"Anna Svensson\" data-speaker-id=\"0c8e3a52-5d1f-4b7e-9a63-8f1d2e4c5b6a\">”Det var en <em>fantastisk</em> match”</quote> efter slutsignalen."
+        "text": "– <quote id=\"b1e2c3d4-0000-4000-8000-000000000001\" data-planning=\"b9307c0e-8bc9-49ab-a4d0-dd9d4e785750\" data-assignment=\"2c0727ce-a40c-407b-822b-19db5b8da4be\" data-recording=\"01a18ea1-c4ae-7254-a2f2-dd3cf219c418\" data-start=\"2026-10-30T21:05:33.877Z\" data-end=\"2026-10-30T21:05:36.120Z\" data-speaker=\"Anna Svensson\" data-speaker-id=\"0c8e3a52-5d1f-4b7e-9a63-8f1d2e4c5b6a\"><ts start=\"2026-10-30T21:05:33.877Z\" end=\"2026-10-30T21:05:34.100Z\">Det</ts> <ts start=\"2026-10-30T21:05:34.120Z\" end=\"2026-10-30T21:05:34.300Z\">var</ts> <ts start=\"2026-10-30T21:05:34.320Z\" end=\"2026-10-30T21:05:34.500Z\">en</ts> <ts start=\"2026-10-30T21:05:34.520Z\" end=\"2026-10-30T21:05:35.100Z\"><em>fantastisk</em></ts> <ts start=\"2026-10-30T21:05:35.120Z\" end=\"2026-10-30T21:05:36.120Z\">match</ts></quote>, Anna Svensson."
       }
     },
     {

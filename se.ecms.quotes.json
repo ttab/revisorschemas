@@ -3,7 +3,7 @@
   "name": "se.ecms.quotes",
   "htmlPolicies": [
     {
-      "description": "A quote taken from a recording's transcript. The text is the words as printed; the attributes name where they were said: the planning item, the assignment and the recording, when, and by whom when the transcript knows.",
+      "description": "A quote taken from a recording's transcript. The text is the words as printed; the quote's attributes name where they were said: the planning item, the assignment and the recording, when, and by whom when the transcript knows. Each word may be marked with when it was said, so that the times follow the words through edits.",
       "extends": "default",
       "elements": {
         "quote": {
@@ -16,6 +16,12 @@
             "data-end": {"format": "RFC3339"},
             "data-speaker": {"optional": true},
             "data-speaker-id": {"format": "uuid", "optional": true}
+          }
+        },
+        "ts": {
+          "attributes": {
+            "start": {"format": "RFC3339"},
+            "end": {"format": "RFC3339"}
           }
         }
       }
