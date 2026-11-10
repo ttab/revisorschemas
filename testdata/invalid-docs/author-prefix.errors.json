@@ -1,0 +1,20 @@
+[
+  {
+    "entity": [
+      {
+        "refType": "attribute",
+        "name": "value"
+      },
+      {
+        "refType": "block",
+        "kind": "meta",
+        "index": 5,
+        "type": "tt/camera-prefix"
+      }
+    ],
+    "error": "\"_AWX\" must match \"^[a-z0-9]{3}$\""
+  },
+  {
+    "error": "there must be 1 or less meta block where type is \"tt/camera-prefix\""
+  }
+]
