@@ -15,7 +15,10 @@
       "description": "Extensions for editorial info documents.",
       "match": {"type": {"const":"core/editorial-info"}},
       "meta": [
-        {"ref": "ntb://hast"}
+        {
+          "ref": "ntb://hast",
+          "maxCount": 1
+        }
       ]
     }
   ],
