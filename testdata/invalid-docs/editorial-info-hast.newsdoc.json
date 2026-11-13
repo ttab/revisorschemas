@@ -1,0 +1,41 @@
+{
+  "uuid": "4f0c2b1e-8d3a-4c6e-9a51-2e7d6b3f9c08",
+  "type": "core/editorial-info",
+  "uri": "core://editorial-info/4f0c2b1e-8d3a-4c6e-9a51-2e7d6b3f9c08",
+  "title": "PRIV: Pressekonferanse klokken 14",
+  "content": [
+    {
+      "id": "a1d5e3c7-6b2f-4e89-8c40-7f3b9d2e1a56",
+      "type": "core/text",
+      "data": {
+        "text": "PRIV: Pressekonferanse klokken 14"
+      },
+      "role": "heading-1"
+    },
+    {
+      "id": "c8e2f4a6-1b3d-4f57-9e02-5a7c9b1d3e84",
+      "type": "core/text",
+      "data": {
+        "text": "Regjeringen holder pressekonferanse klokken 14."
+      }
+    }
+  ],
+  "meta": [
+    {
+      "type": "core/note",
+      "data": {
+        "text": "Ikke for publisering."
+      },
+      "role": "public"
+    },
+    {
+      "type": "ntb/hast",
+      "value": "1"
+    },
+    {
+      "type": "ntb/hast",
+      "value": "2"
+    }
+  ],
+  "language": "nb-no"
+}
