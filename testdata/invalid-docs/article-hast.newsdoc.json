@@ -1,0 +1,38 @@
+{
+  "uuid": "7b3e9d21-5c4a-4f86-b0d2-9e1a6c8f4d37",
+  "type": "core/article",
+  "uri": "core://article/7b3e9d21-5c4a-4f86-b0d2-9e1a6c8f4d37",
+  "title": "Regjeringen holder pressekonferanse",
+  "content": [
+    {
+      "id": "e4b7a2d9-3f61-4c08-a5e3-1d9c7b2f6a40",
+      "type": "core/text",
+      "data": {
+        "text": "Regjeringen holder pressekonferanse"
+      },
+      "role": "heading-1"
+    },
+    {
+      "id": "2f8c6e1a-9d4b-4e73-b1a5-6c3e8f0d2b91",
+      "type": "core/text",
+      "data": {
+        "text": "Regjeringen holder pressekonferanse klokken 14."
+      }
+    }
+  ],
+  "meta": [
+    {
+      "type": "core/newsvalue",
+      "value": "3"
+    },
+    {
+      "type": "ntb/hast",
+      "value": "1"
+    },
+    {
+      "type": "ntb/hast",
+      "value": "2"
+    }
+  ],
+  "language": "nb-no"
+}

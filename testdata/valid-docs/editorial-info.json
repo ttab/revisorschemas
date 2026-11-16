@@ -81,6 +81,10 @@
     {
       "type": "tt/slugline",
       "value": "tillred"
+    },
+    {
+      "type": "ntb/hast",
+      "value": "1"
     }
   ],
   "links": [
