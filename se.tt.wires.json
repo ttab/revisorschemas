@@ -28,7 +28,23 @@
         }
       },
       "links": [
-        {"ref":"core://content-source/use"}
+        {"ref":"core://content-source/use"},
+        {
+          "name": "Source",
+          "description": "A wire source that wires from this provider have arrived on. A provider can appear under several sources.",
+          "declares": {
+            "rel": "source"
+          },
+          "attributes": {
+            "uuid": {},
+            "uri": {
+              "glob": [
+                "wires://source/**"
+              ]
+            },
+            "title": {}
+          }
+        }
       ]
     },
     {

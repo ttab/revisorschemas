@@ -1,0 +1,14 @@
+{
+  "uuid": "6b2d4f8a-1c3e-5a7b-9d0f-2e4a6c8b0d1f",
+  "type": "tt/wire-provider",
+  "uri": "wires://provider/ap",
+  "title": "AP",
+  "links": [
+    {
+      "rel": "use-source",
+      "type": "core/content-source",
+      "uri": "tt://content-source/ap",
+      "title": "AP"
+    }
+  ]
+}
