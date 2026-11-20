@@ -30,20 +30,8 @@
       "links": [
         {"ref":"core://content-source/use"},
         {
-          "name": "Source",
-          "description": "A wire source that wires from this provider have arrived on. A provider can appear under several sources.",
-          "declares": {
-            "rel": "source"
-          },
-          "attributes": {
-            "uuid": {},
-            "uri": {
-              "glob": [
-                "wires://source/**"
-              ]
-            },
-            "title": {}
-          }
+          "ref": "tt://wire-source",
+          "description": "A wire source that has delivered wires from this provider. There is one link per wire source."
         }
       ]
     },
@@ -78,21 +66,9 @@
           "maxCount": 1
         },
         {
-          "name": "Source",
-          "description": "A reference to the source of the content",
-          "declares": {
-            "rel": "source"
-          },
-          "count": 1,
-          "attributes": {
-            "uuid": {},
-            "uri": {
-              "glob": [
-                "wires://source/**"
-              ]
-            },
-            "title": {}
-          }
+          "ref": "tt://wire-source",
+          "description": "The wire source that this wire was obtained from.",
+          "count": 1
         },
         {
           "name": "Provider",
@@ -203,6 +179,27 @@
             "allowEmpty": true,
             "format": "html"
           }
+        }
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "tt://wire-source",
+      "block": {
+        "name": "Wire source",
+        "description": "A reference to a tt/wire-source document: the wire service or feed that wires are obtained from, e.g. AP, Ritzau or an RSS feed. Not the wire provider (who created the content) and not a core/content-source (who is credited for it).",
+        "declares": {
+          "rel": "source"
+        },
+        "attributes": {
+          "uuid": {},
+          "uri": {
+            "glob": [
+              "wires://source/**"
+            ]
+          },
+          "title": {}
         }
       }
     }

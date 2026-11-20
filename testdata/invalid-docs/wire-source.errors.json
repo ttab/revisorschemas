@@ -1,0 +1,20 @@
+[
+  {
+    "entity": [
+      {
+        "refType": "attribute",
+        "name": "uri"
+      },
+      {
+        "refType": "block",
+        "kind": "link",
+        "index": 1,
+        "rel": "source"
+      }
+    ],
+    "error": "must match \"wires://source/**\""
+  },
+  {
+    "error": "there must be 1 link where rel is \"source\""
+  }
+]
