@@ -1,0 +1,62 @@
+{
+  "uuid": "0b6d3c1e-5a47-5e0b-9a53-3f2c1d7e8a90",
+  "type": "tt/wire",
+  "uri": "ntb://content/NTB00000000-0000-0000-0000-000000000001",
+  "title": "Example wire headline",
+  "content": [
+    {
+      "type": "core/text",
+      "data": {
+        "text": "Example wire headline"
+      },
+      "role": "heading-1"
+    },
+    {
+      "type": "core/text",
+      "data": {
+        "text": "A short example preamble."
+      },
+      "role": "preamble"
+    },
+    {
+      "type": "core/text",
+      "data": {
+        "text": "A short example body paragraph."
+      }
+    }
+  ],
+  "meta": [
+    {
+      "type": "tt/wire",
+      "data": {
+        "copyright": "NTB",
+        "issued": "2024-06-14T11:33:30Z",
+        "version": "3"
+      },
+      "role": "article"
+    },
+    {
+      "type": "tt/slugline",
+      "value": "example-wire"
+    },
+    {
+      "type": "core/newsvalue",
+      "value": "2"
+    }
+  ],
+  "links": [
+    {
+      "uuid": "493c6949-688e-5efe-805f-bca141ac55be",
+      "uri": "wires://provider/NTB",
+      "title": "NTB",
+      "rel": "provider"
+    },
+    {
+      "uuid": "111932dc-99f3-4ba4-acf2-ed9d9f2f1c7c",
+      "type": "core/section",
+      "title": "Utrikes",
+      "rel": "section"
+    }
+  ],
+  "language": "nb-NO"
+}
