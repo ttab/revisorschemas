@@ -1,0 +1,30 @@
+{
+  "uuid": "5d0f6f0c-52f4-4f0c-9d6e-0b1f2a3c4d5e",
+  "type": "core/corkboard",
+  "uri": "core://corkboard/personal/core%3A%2F%2Fuser%2F1b0e7c2a-93f4-4d4e-8a57-6f0d2c9b3e11/5d0f6f0c-52f4-4f0c-9d6e-0b1f2a3c4d5e",
+  "title": "Valet",
+  "language": "sv-se",
+  "links": [
+    {
+      "rel": "board-of",
+      "type": "core/user",
+      "uri": "core://user/1b0e7c2a-93f4-4d4e-8a57-6f0d2c9b3e11",
+      "title": "Valet"
+    }
+  ],
+  "content": [
+    {
+      "id": "c4d5e6f7-a8b9-4c0d-8e1f-2a3b4c5d6e07",
+      "type": "core/corkboard-view",
+      "data": {
+        "x": "24",
+        "y": "24",
+        "widget_w": "640",
+        "widget_h": "480",
+        "created": "2026-11-25T09:10:00.000Z",
+        "presentation": "widget",
+        "widget": "{\"widgetId\":\"w0\",\"handlerId\":\"se.ecms.tables.table-widget\",\"intent\":{\"action\":\"se.ecms.widget\",\"subject\":{\"type\":\"se.ecms.tables.table\",\"id\":\"5d0f6f0c-52f4-4f0c-9d6e-0b1f2a3c4d5e/1\",\"within\":{\"type\":\"core/corkboard\",\"uuid\":\"5d0f6f0c-52f4-4f0c-9d6e-0b1f2a3c4d5e\"}}},\"state\":{},\"min\":{\"width\":200,\"height\":48}}"
+      }
+    }
+  ]
+}

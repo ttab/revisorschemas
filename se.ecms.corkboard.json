@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "name": "se.ecms.corkboard",
+  "documents": [
+    {
+      "name": "Corkboard",
+      "description": "A board on which notes, groups, links and cards showing views and widgets are laid out freely. It belongs to a user, an assignment or a story. A user can have several, each named by its title.",
+      "declares": "core/corkboard",
+      "attributes": {
+        "title": {"allowEmpty": true},
+        "uri": {"glob": ["core://corkboard/**"]}
+      },
+      "links": [
+        {
+          "name": "Personal board owner",
+          "description": "The user a personal board belongs to, named by the subject of their login.",
+          "declares": {"rel": "board-of", "type": "core/user"},
+          "maxCount": 1,
+          "attributes": {
+            "uri": {},
+            "title": {"optional": true}
+          }
+        },
+        {
+          "name": "Assignment board owner",
+          "description": "The assignment the board belongs to, named by the id of its block in the planning item that holds it. The planning item is not recorded: an assignment can be moved to another.",
+          "declares": {"rel": "board-of", "type": "core/assignment"},
+          "maxCount": 1,
+          "attributes": {
+            "uuid": {},
+            "title": {"optional": true}
+          }
+        },
+        {
+          "name": "Story board owner",
+          "description": "The story the board belongs to.",
+          "declares": {"rel": "board-of", "type": "core/story"},
+          "maxCount": 1,
+          "attributes": {
+            "uuid": {},
+            "title": {"optional": true}
+          }
+        }
+      ],
+      "content": [
+        {"ref": "core://corkboard-note"},
+        {"ref": "core://corkboard-group"},
+        {"ref": "core://corkboard-link"},
+        {"ref": "core://corkboard-view"}
+      ]
+    }
+  ],
+  "content": [
+    {
+      "id": "core://corkboard-note",
+      "block": {
+        "name": "Note",
+        "description": "A note of formatted text: its paragraphs are the text blocks in its content.",
+        "declares": {"type": "core/corkboard-note"},
+        "data": {
+          "x": {"format": "int"},
+          "y": {"format": "int"},
+          "w": {"format": "int"},
+          "h": {"format": "int"},
+          "created": {"format": "RFC3339"},
+          "colour": {
+            "optional": true,
+            "enumReference": "core://corkboard-note-colours"
+          },
+          "author": {
+            "name": "Author name",
+            "description": "The display name of whoever wrote the note.",
+            "optional": true,
+            "allowEmpty": true
+          },
+          "author_sub": {
+            "name": "Author subject",
+            "description": "The subject of whoever wrote the note.",
+            "optional": true,
+            "allowEmpty": true
+          }
+        },
+        "meta": [
+          {"ref": "core://corkboard-reminder"}
+        ],
+        "content": [
+          {"ref": "core://text"}
+        ]
+      }
+    },
+    {
+      "id": "core://corkboard-group",
+      "block": {
+        "name": "Group",
+        "description": "A named frame that carries the items lying in it.",
+        "declares": {"type": "core/corkboard-group"},
+        "attributes": {
+          "title": {"optional": true, "allowEmpty": true}
+        },
+        "data": {
+          "x": {"format": "int"},
+          "y": {"format": "int"},
+          "w": {"format": "int"},
+          "h": {"format": "int"},
+          "created": {"format": "RFC3339"}
+        },
+        "meta": [
+          {"ref": "core://corkboard-reminder"}
+        ]
+      }
+    },
+    {
+      "id": "core://corkboard-link",
+      "block": {
+        "name": "Link",
+        "description": "A link to a web address.",
+        "declares": {"type": "core/corkboard-link"},
+        "attributes": {
+          "url": {"optional": true, "allowEmpty": true},
+          "title": {"optional": true, "allowEmpty": true}
+        },
+        "data": {
+          "x": {"format": "int"},
+          "y": {"format": "int"},
+          "w": {"format": "int"},
+          "h": {"format": "int"},
+          "created": {"format": "RFC3339"}
+        },
+        "meta": [
+          {"ref": "core://corkboard-reminder"}
+        ]
+      }
+    },
+    {
+      "id": "core://corkboard-view",
+      "block": {
+        "name": "Card",
+        "description": "A card about one thing, a document, a part of one, an object outside the documents or a value, shown as its full view or as its widget. It names its thing by reference and keeps no title of it.",
+        "declares": {"type": "core/corkboard-view"},
+        "data": {
+          "x": {"format": "int"},
+          "y": {"format": "int"},
+          "w": {
+            "description": "The width of the card as a view.",
+            "optional": true,
+            "format": "int"
+          },
+          "h": {
+            "description": "The height of the card as a view.",
+            "optional": true,
+            "format": "int"
+          },
+          "widget_w": {
+            "description": "The width of the card as a widget.",
+            "optional": true,
+            "format": "int"
+          },
+          "widget_h": {
+            "description": "The height of the card as a widget.",
+            "optional": true,
+            "format": "int"
+          },
+          "created": {"format": "RFC3339"},
+          "presentation": {
+            "description": "Which of the two the card shows: its widget, or its view, which an empty value also means.",
+            "optional": true,
+            "allowEmpty": true,
+            "enum": ["widget", "view"]
+          },
+          "view": {
+            "description": "The view as the application encodes it: its id, handler, intent and parameters.",
+            "optional": true,
+            "allowEmpty": true
+          },
+          "widget": {
+            "description": "The widget as the application encodes it: its id, handler, the intent carrying the reference or value it shows, stored state and least size.",
+            "optional": true,
+            "allowEmpty": true
+          },
+          "follows": {
+            "description": "The id of the card this one is attached to: the view to its left in a row, or the widget it is attached beneath.",
+            "optional": true,
+            "allowEmpty": true
+          },
+          "attached_as": {
+            "description": "The key a widget attached this card under.",
+            "optional": true,
+            "allowEmpty": true
+          },
+          "hidden": {
+            "description": "Set while the widget this card is attached to hides it.",
+            "optional": true,
+            "allowEmpty": true,
+            "format": "bool"
+          }
+        },
+        "meta": [
+          {"ref": "core://corkboard-reminder"}
+        ]
+      }
+    }
+  ],
+  "meta": [
+    {
+      "id": "core://corkboard-reminder",
+      "block": {
+        "name": "Reminder",
+        "description": "A reminder on an item: one for everyone on the board, or one of a person's own, which only they are shown. An item holds at most one for everyone and one for each person.",
+        "declares": {"type": "core/corkboard-reminder"},
+        "data": {
+          "at": {
+            "description": "When the reminder falls due.",
+            "format": "RFC3339"
+          },
+          "for": {
+            "description": "Who the reminder is for: whoever set it, or everyone on the board.",
+            "enumReference": "core://corkboard-reminder-audiences"
+          },
+          "by": {
+            "description": "The subject of whoever set it: the one it is for, or the last to set one for everyone."
+          }
+        }
+      }
+    }
+  ],
+  "enums": [
+    {
+      "declare": "core://corkboard-note-colours",
+      "name": "Note colours",
+      "values": {
+        "yellow": {},
+        "green": {},
+        "blue": {},
+        "pink": {}
+      }
+    },
+    {
+      "declare": "core://corkboard-reminder-audiences",
+      "name": "Reminder audiences",
+      "values": {
+        "me": {"description": "Whoever set the reminder."},
+        "all": {"description": "Everyone on the board."}
+      }
+    }
+  ]
+}

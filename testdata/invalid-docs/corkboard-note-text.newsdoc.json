@@ -1,0 +1,30 @@
+{
+  "uuid": "c2b9a3e4-5f61-4d7a-8b90-1e2f3a4b5c6d",
+  "type": "core/corkboard",
+  "uri": "core://corkboard/personal/core%3A%2F%2Fuser%2F0001",
+  "title": "",
+  "language": "sv-se",
+  "links": [
+    {"rel": "board-of", "type": "core/user", "uri": "core://user/0001"}
+  ],
+  "content": [
+    {
+      "id": "0c5d2c0e-7f43-4a55-8a0d-51c9d0f6b1a1",
+      "type": "core/corkboard-note",
+      "data": {
+        "x": "0",
+        "y": "0",
+        "w": "200",
+        "h": "140",
+        "created": "2026-11-16T09:12:44.512Z",
+        "text": "Ring kommunen"
+      },
+      "content": [
+        {
+          "type": "core/text",
+          "data": {"text": "Ring <script>kommunen</script>"}
+        }
+      ]
+    }
+  ]
+}

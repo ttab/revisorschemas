@@ -1,0 +1,35 @@
+[
+  {
+    "entity": [
+      {
+        "refType": "data attribute",
+        "name": "text"
+      },
+      {
+        "refType": "block",
+        "kind": "content",
+        "type": "core/corkboard-note"
+      }
+    ],
+    "error": "unknown attribute"
+  },
+  {
+    "entity": [
+      {
+        "refType": "data attribute",
+        "name": "text"
+      },
+      {
+        "refType": "block",
+        "kind": "content",
+        "type": "core/text"
+      },
+      {
+        "refType": "block",
+        "kind": "content",
+        "type": "core/corkboard-note"
+      }
+    ],
+    "error": "invalid html after line 1 char 5: unsupported tag \u003cscript\u003e"
+  }
+]
