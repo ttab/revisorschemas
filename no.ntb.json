@@ -32,7 +32,8 @@
         {
           "ref": "core://section",
           "maxCount": 1
-        }
+        },
+        {"ref": "core://assignment"}
       ]
     }
   ],

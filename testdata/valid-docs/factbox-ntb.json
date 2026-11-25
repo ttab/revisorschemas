@@ -16,6 +16,16 @@
       "type": "core/section",
       "title": "Innenriks",
       "rel": "section"
+    },
+    {
+      "uuid": "e42bcd66-9823-4895-9966-af50056ea933",
+      "type": "core/assignment",
+      "rel": "assignment"
+    },
+    {
+      "uuid": "5b1f8d3e-2a7c-4e95-b6d0-9c4e1a7f3b26",
+      "type": "core/assignment",
+      "rel": "assignment"
     }
   ],
   "content": [
