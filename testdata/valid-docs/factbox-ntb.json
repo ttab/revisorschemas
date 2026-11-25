@@ -1,0 +1,41 @@
+{
+  "uuid": "3c9e5a17-8b2d-4f60-9e41-7d0a6b5c2f88",
+  "type": "core/factbox",
+  "title": "Stortingsvalget 2025",
+  "meta": [
+    {
+      "type": "core/factbox",
+      "data": {
+        "byline": "NTB"
+      }
+    }
+  ],
+  "links": [
+    {
+      "uuid": "0730efa9-43f2-468d-979a-aaffc74d7582",
+      "type": "core/section",
+      "title": "Innenriks",
+      "rel": "section"
+    }
+  ],
+  "content": [
+    {
+      "type": "core/text",
+      "data": {
+        "text": "Stortingsvalget ble avholdt 8. september 2025."
+      }
+    },
+    {
+      "type": "core/unordered-list",
+      "content": [
+        {
+          "type": "core/text",
+          "data": {
+            "text": "Valgdeltakelsen var 79,2 prosent."
+          }
+        }
+      ]
+    }
+  ],
+  "language": "nb-no"
+}

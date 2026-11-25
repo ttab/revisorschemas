@@ -23,6 +23,17 @@
           "maxCount": 1
         }
       ]
+    },
+    {
+      "name": "Factbox",
+      "description": "Extensions for factbox documents.",
+      "match": {"type": {"const":"core/factbox"}},
+      "links": [
+        {
+          "ref": "core://section",
+          "maxCount": 1
+        }
+      ]
     }
   ],
   "meta": [
