@@ -1,0 +1,28 @@
+{
+  "uuid": "9a4d2e6b-1f73-4c58-8b0e-3d7c5a9f1e42",
+  "type": "core/factbox",
+  "title": "Stortingsvalget 2025",
+  "links": [
+    {
+      "uuid": "0730efa9-43f2-468d-979a-aaffc74d7582",
+      "type": "core/section",
+      "title": "Innenriks",
+      "rel": "section"
+    },
+    {
+      "uuid": "6e2b9c4a-7d18-4f35-a0c9-2b5e8d1f7a63",
+      "type": "core/section",
+      "title": "Sport",
+      "rel": "section"
+    }
+  ],
+  "content": [
+    {
+      "type": "core/text",
+      "data": {
+        "text": "Stortingsvalget ble avholdt 8. september 2025."
+      }
+    }
+  ],
+  "language": "nb-no"
+}
